@@ -7,13 +7,13 @@ Con sus antiguos viñedos de 100 años el producto principal es vino Malbec, dif
     * y la otra de alta gama, con vinos añejos, mas complejos, orientada a adultos apasionados por vino quienes buscan vinos sofisticados.
 
 ***Miembros del equipo***
-Rosario Bertona: Licienciada en Administración recientemente graduda. Soy una persona optimista, con motivación a adquirir nuevos conocimientos y habilidades. Me apasiona viajar y la vida al aire libre. 
+Rosario Bertona: Licenciada en Administración recientemente graduada. Soy una persona optimista, con motivación a adquirir nuevos conocimientos y habilidades. Me apasiona viajar y la vida al aire libre. 
 
 Bárbara Arcioni: Diseñadora Textil y Gráfica, egresada en ambas carreras de la FADU, UBA. Me apasiona todo lo referente a diseño y tecnología.
 
 
 ***Sitios de referencia***
-*  https://www.rutiniwines.com/?lang=en
+* https://www.rutiniwines.com/?lang=en
 * http://www.norton.com.ar/
 * https://bodegaslopez.com.ar/
 * http://www.andeluna.com.ar
