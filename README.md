@@ -9,15 +9,15 @@ Con sus antiguos viñedos de 100 años el producto principal es vino Malbec, dif
 ***Miembros del equipo***
 Rosario Bertona: Licienciada en Administración recientemente graduda. Soy una persona optimista, con motivación a adquirir nuevos conocimientos y habilidades. Me apasiona viajar y la vida al aire libre. 
 
-Barbara Arcioni: Diseñadora Textil y Gráfica, egresada en ambas carreras de la FADU, UBA. Me apasiona todo lo referente a diseño y tecnología.
+Bárbara Arcioni: Diseñadora Textil y Gráfica, egresada en ambas carreras de la FADU, UBA. Me apasiona todo lo referente a diseño y tecnología.
 
 
 ***Sitios de referencia***
-https://www.rutiniwines.com/?lang=en
-http://www.norton.com.ar/
-https://bodegaslopez.com.ar/
-http://www.andeluna.com.ar
-https://zuccardiwines.com/
-https://www.bodegasbianchi.com.ar/
-http://www.bodegasalentein.com/es/home.html
-https://www.bodegavistalba.com/es/index.html
+*  https://www.rutiniwines.com/?lang=en
+* http://www.norton.com.ar/
+* https://bodegaslopez.com.ar/
+* http://www.andeluna.com.ar
+* https://zuccardiwines.com/
+* https://www.bodegasbianchi.com.ar/
+* http://www.bodegasalentein.com/es/home.html
+* https://www.bodegavistalba.com/es/index.html
