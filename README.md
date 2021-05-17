@@ -13,6 +13,8 @@ Rosario Bertona: Licenciada en Administración recientemente graduada. Soy una p
 
 Bárbara Arcioni: Diseñadora Textil y Gráfica, egresada en ambas carreras de la FADU, UBA. Me apasiona todo lo referente a diseño y tecnología.
 
+Guillermo Sanfeliu: Licenciado en Administracion de empresas con casi una decada de experiencia en el sector financiero. Persona analitica y con ganas constantes de seguir aprendiendo. Autodidacta en muchos aspectos.
+
 
 ***Sitios de referencia***
 * https://www.rutiniwines.com/?lang=en
