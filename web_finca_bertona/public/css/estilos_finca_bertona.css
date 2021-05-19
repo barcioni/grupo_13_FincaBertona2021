@@ -9,6 +9,78 @@
     list-style: none;
     -webkit-text-size-adjust: none;
 }
-#baseNavegador{
-    background-color: rgb(212, 212, 235);
+.contenedor-nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
 }
+.contenedor-nav li{
+    margin: 0 25px;
+}
+.contenedor-nav a{
+    color: rgb(14, 11, 11);
+    font-weight: 600;
+}
+.logo{
+  width: 80%;
+  padding: 3%;
+}
+.contenedor-logo-nav{
+   display: flex;
+   justify-content: center;
+}
+.img-ppal-home{
+    max-width: 100%;
+}
+/*----- Burguer ---------------------*/
+.burger-menu{
+    background-color: #03264C;
+    display: block;
+    max-width: 50px;
+    border-radius: 8px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    color: #fff;
+}
+.contenedor-nav{
+    display: none;
+}
+main{
+    margin-top: 3%;
+}
+/* ----------FIN del NAVEGADOR ----principio main --------*/
+
+
+
+
+/* ===================================== COMIENZO MEDIA QUERIES =============================================== */
+    /* ======================================= 0 ===================================== */
+    @media screen and (min-width:768px){
+        /* =============================================================================== */  
+        .logo{
+            width: 10%;
+            padding: 0;
+            margin: 1,5% 60% 0 7%
+          }
+          .burger-menu{
+              display: none;
+          }
+          .contenedor-logo-nav{
+            display: inline-block;
+            position: absolute;
+            margin-left: 3%;
+         }
+         .contenedor-nav{
+            display:flex;
+            justify-content: flex-end;
+        }
+        .contenedor__nav__secciones{
+            display:flex;
+        }
+         main{
+            margin-top: 0;
+        }
+    }
