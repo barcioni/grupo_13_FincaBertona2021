@@ -27,8 +27,10 @@ Guillermo Sanfeliu: Licenciado en Administracion de empresas con casi una decada
 * https://www.bodegavistalba.com/es/index.html
 
 ***Wireframes***
+
 https://github.com/barcioni/grupo_13_FincaBertona2021/tree/main/Proceso_de_Dise%C3%B1o/Wireframes
 
 ***Boceto 1er Sprint***
+
 https://github.com/barcioni/grupo_13_FincaBertona2021/tree/main/Proceso_de_Dise%C3%B1o/Bocetos_Dise%C3%B1o_Sprint_0
 
