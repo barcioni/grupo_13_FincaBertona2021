@@ -2,7 +2,7 @@
 
 ***Market Place***
 
-Desarrollo de tienda online para familia Bertona, oriunda de la provincia de Mendoza, productores vitivinícolas de Luján de Cuyo.
+Desarrollo de tienda online para la familia Bertona, oriunda de la provincia de Mendoza, productores vitivinícolas de Luján de Cuyo.
 Con sus antiguos viñedos de 100 años el producto principal es vino Malbec, difenciando su mercado en dos líneas:
 ***una linea de vinos jóvenes y frutados***, orientada a jóvenes adultos quienes buscan un vino fácil de elegir y beber.
 ***y la otra de alta gama***, con vinos añejos, mas complejos, orientada a adultos apasionados por vino quienes buscan vinos sofisticados.
@@ -15,6 +15,10 @@ Bárbara Arcioni: Diseñadora Textil y Gráfica, egresada en ambas carreras de l
 
 Guillermo Sanfeliu: Licenciado en Administracion de empresas con casi una decada de experiencia en el sector financiero. Persona analitica y con ganas constantes de seguir aprendiendo. Autodidacta en muchos aspectos.
 
+_______________________________________________________________________________________________________________________________________________
+
+***PROCESO DE DISEÑO***
+_______________________________________________________________________________________________________________________________________________
 
 ***Sitios de referencia***
 * https://www.rutiniwines.com/?lang=en
