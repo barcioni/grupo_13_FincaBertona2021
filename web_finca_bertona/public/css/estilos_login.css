@@ -23,7 +23,7 @@ header{
     margin: 0 25px;
 }
 .contenedor-nav a{
-    color: rgb(14, 11, 11);
+    color: #fff;
     font-weight: 600;
 }
 .logo{
@@ -82,10 +82,10 @@ main{
             width: 10%;
             padding: 0;
             margin: 1,5% 60% 0 7%
-          }
+          }/*
           header{
             background-color: #fff;
-        }
+        }*/
           .burger-menu{
               display: none;
           }

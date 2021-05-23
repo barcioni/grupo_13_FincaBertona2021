@@ -9,7 +9,9 @@
     list-style: none;
     -webkit-text-size-adjust: none;
 }
-
+header{
+    background-color: rgb(90, 14, 22);
+}
 .contenedor-nav{
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +22,7 @@
     margin: 0 25px;
 }
 .contenedor-nav a{
-    color: rgb(14, 11, 11);
+    color: #fff;
     font-weight: 600;
 }
 .logo{
@@ -33,6 +35,7 @@
 }
 .img-ppal-familia{
     max-width: 100%;
+    margin-top: 35px;
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
