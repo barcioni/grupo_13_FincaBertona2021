@@ -9,6 +9,9 @@
     list-style: none;
     -webkit-text-size-adjust: none;
 }
+header{
+    background-color: rgb(90, 14, 22);
+}
 
 .contenedor-nav{
     display: flex;
@@ -31,8 +34,13 @@
    display: flex;
    justify-content: center;
 }
-.img-ppal-login{
+.img-ppal-login img{
     max-width: 100%;
+    background-color: rgb(90, 14, 22);
+    padding-top: 35px;
+}
+.img-ppal-login-2{
+    border-bottom: solid 15px #fff;
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
@@ -50,7 +58,8 @@
     display: none;
 }
 main{
-    margin-top: 3%;
+    background-color: #fff;
+    margin-top: -5px;
 }
 /* ----------FIN del NAVEGADOR ----principio main --------*/
 
@@ -74,6 +83,9 @@ main{
             padding: 0;
             margin: 1,5% 60% 0 7%
           }
+          header{
+            background-color: #fff;
+        }
           .burger-menu{
               display: none;
           }
