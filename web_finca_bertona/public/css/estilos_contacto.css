@@ -56,7 +56,8 @@ a:hover{
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
-    background-color: #03264C;
+    /*background-color: #03264C; */
+    background-color: rgb(58, 12, 16);
     display: block;
     max-width: 50px;
     border-radius: 8px;
@@ -65,6 +66,10 @@ a:hover{
     font-size: 18px;
     margin: auto;
     color: #fff;
+    margin-bottom: 35px;
+}
+.burger-menu{
+    border: solid rgba(red, green, rgb(56, 56, 131), 0.8);
 }
 .contenedor-nav{
     display: none;
