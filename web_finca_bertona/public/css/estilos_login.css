@@ -70,12 +70,12 @@ a:hover{
 .contenedor-nav{
     display: none;
 }
+
+/* ----------FIN del NAVEGADOR ----principio main --------*/
 main{
     background-color: #fff;
     margin-top: -5px;
 }
-/* ----------FIN del NAVEGADOR ----principio main --------*/
-
 .titulo-login{
     margin-top: -2rem;
     font-size: 3em;
