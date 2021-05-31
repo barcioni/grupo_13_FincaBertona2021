@@ -92,8 +92,11 @@ main{
 .parrafos{
     padding: 5% 15%;
 }
-
-
+/*----------- inicio footer -------------*/
+footer{
+    background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
+    padding: 10% 7%;
+}
 
 
 
