@@ -38,3 +38,6 @@ https://github.com/barcioni/grupo_13_FincaBertona2021/tree/main/Proceso_de_Dise%
 
 https://github.com/barcioni/grupo_13_FincaBertona2021/tree/main/Proceso_de_Dise%C3%B1o/Bocetos_Dise%C3%B1o_Sprint_0
 
+***Trello***
+
+https://trello.com/invite/proyectointegradordhfincabertona/25fafc5850024beeff9911bde6d06edf
