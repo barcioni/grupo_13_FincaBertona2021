@@ -77,10 +77,18 @@ main{
     margin-bottom: 2.5rem;
 }
 .sub__titulo__ppal__familia{
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 500;
     margin-bottom: 2.5rem;
     text-align: center;
+    font-style: italic;
+    color: rgb(90, 14, 22);
+}
+.parrafo_1_a{
+    margin-bottom: 1em;
+}
+.parrafo_1_b{
+    margin-bottom: 5em;
 }
 .img__seccion1__familia{
     max-width: 100%;
