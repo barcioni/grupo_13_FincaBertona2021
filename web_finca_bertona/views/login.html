@@ -33,15 +33,24 @@
     </header>
     <main> 
     <section class="contenedorSeccion1">
-        <h1 class="titulo-login">LOGIN</h1>
-        <h4 class="sub-titulo-login">to account</h4>
-       <form action="/login" method="POST">
-        <fieldset>
-            <input type="text" name="usuario">
-            <input type="" >
+        <h1 class="titulo-login">LOG IN TO ACCOUNT</h1>
+        <form class= "formulario-login" action="/login" method="POST">
+        <fieldset class= "campo-formulario">
+            <label for="email"></label>
+            <input type="email" name="email" id="email" value="E-mail" class="control" required placeholder>
         </fieldset>
+        <fieldset class= "campo-formulario">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" value="Contraseña" class="control" required placeholder>
+        </fieldset>
+        <div class="opciones-login">
+            <a href="#">¿Olvidó su contraseña?</a> <a href="/registro">Crear cuenta</a>          
+        </div>
+        <button type="submit" class="boton-formulario-ingresar">INGRESAR</button>
        </form>
-
+<footer>
+    <p>ACÁ VA EL FOOTER</p>
+</footer>
 
 
     </section>

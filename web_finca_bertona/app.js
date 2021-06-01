@@ -16,3 +16,5 @@ app.get("/nuestraFamilia",(req,res)=>res.sendFile(path.join(__dirname,"views", "
 app.get("/tienda",(req,res)=>res.sendFile(path.join(__dirname,"views", "tienda.html")))
 
 app.get("/vinos",(req,res)=>res.sendFile(path.join(__dirname,"views", "vinos.html")))
+
+app.get("/registro",(req,res)=>res.sendFile(path.join(__dirname,"views", "registro.html")))
