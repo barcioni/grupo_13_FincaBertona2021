@@ -108,6 +108,9 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.contenedor__footer__sector-izq{
+    padding-top: 3%;
+}
 .linea__superior-izquierda__footer{
     background-color: rgb(90, 14, 22);
     margin: 3% 0 3% 0;
