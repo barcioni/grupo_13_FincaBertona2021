@@ -90,7 +90,47 @@ main{
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
-    padding: 10% 7%;
+    padding: 3% 5%;
+    margin-top: 10%;
+}
+.contenedor__footer__general{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor__footer__general li{
+    padding: 2px 0 4px 0;
+}
+.contenedor__footer__sector-izq{
+    padding-top: 3%;
+    color: #fff;
+    font-weight: 500;
+}
+.linea__superior-izquierda__footer{
+    background-color: rgb(90, 14, 22);
+    margin: 3% 0 3% 0;
+    display: block;
+    height: 7px;
+    width: 95%;
+    border-radius: 5px;
+}
+.linea__superior-derecha__footer{
+    background-color: rgb(90, 14, 22);
+    display: block;
+    height: 15px;
+    width: 100%;
+    border-radius: 5px;
+}
+.contenedor__footer__mapa{
+    position: relative;
+}
+.titulo-mapa{
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #fff;
+}
+.mapa{
+    border-radius: 8px;
 }
 
 
