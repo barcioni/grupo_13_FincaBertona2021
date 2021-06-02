@@ -78,6 +78,7 @@ main{
     text-align: center;
     margin: 2em 0 2.5rem 0;
     font-weight: 800;
+    text-shadow: 4px 3px 0 #fff,9px 8px 0 rgba(0,0,0,0.15);
 }
 .sub__titulo__ppal__home{
     font-size: 1.65em;
