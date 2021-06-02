@@ -116,19 +116,20 @@ footer{
     font-weight: 500;
 }
 .linea__superior-izquierda__footer{
-    background-color: rgb(90, 14, 22);
-    margin: 3% 0 3% 0;
-    display: block;
-    height: 7px;
-    width: 95%;
-    border-radius: 5px;
+    border-top: solid 6px rgb(90, 14, 22);
+    border-radius: 5px;  
+    margin-top: 2%;
 }
-.linea__superior-derecha__footer{
-    background-color: rgb(90, 14, 22);
-    display: block;
-    height: 15px;
-    width: 100%;
-    border-radius: 5px;
+.linea__superior-izquierda__footer p{
+    margin-top: 2%;
+}
+.contenedor__footer__sector-izq li p{
+    padding-left: 7px;
+}
+.contenedor__footer__sector-izq{
+    padding-top: 3%;
+    color: #fff;
+    font-weight: 500;
 }
 .contenedor__footer__mapa{
     position: relative;
@@ -141,7 +142,6 @@ footer{
 .mapa{
     border-radius: 8px;
 }
-
 .formulario-login{
     display: flex;
     justify-content: center;
