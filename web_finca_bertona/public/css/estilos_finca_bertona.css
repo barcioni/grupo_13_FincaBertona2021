@@ -102,7 +102,7 @@ main{
     position: relative;
 }
 .titulo-banner1{
-    color: rgb(90, 14, 22);
+    color: rgb(107, 21, 30);
     position: absolute;
     margin: 25% 0% 0 59%;
     width: 395px;
@@ -151,6 +151,12 @@ footer{
 }
 .contenedor__footer__sector-izq li p{
     padding-left: 7px;
+    color: rgb(236, 233, 234);
+    font-weight: 700;
+}
+.contenedor__footer__sector-izq li p #footer__info__1, #footer__info__0{
+    font-weight: 400;
+    color: rgb(243, 238, 238);
 }
 .contenedor__footer__sector-izq{
     padding-top: 3%;
@@ -168,6 +174,7 @@ footer{
 .mapa{
     border-radius: 8px;
 }
+
 
 
 
