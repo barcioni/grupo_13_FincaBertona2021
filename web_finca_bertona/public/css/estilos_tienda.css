@@ -134,21 +134,21 @@ footer{
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
     @media screen and (min-width:768px){
-        /* =============================================================================== */  
+    /* =============================================================================== */  
         .logo{
             width: 10%;
             padding: 0;
             margin: 1,5% 60% 0 7%
-          }
-          .burger-menu{
-              display: none;
-          }
-          .contenedor-logo-nav{
+        }
+        .burger-menu{
+            display: none;
+        }
+        .contenedor-logo-nav{
             display: inline-block;
             position: absolute;
             margin-left: 3%;
-         }
-         .contenedor-nav{
+        }
+        .contenedor-nav{
             display:flex;
             justify-content: flex-end;
         }
@@ -158,10 +158,10 @@ footer{
          main{
             margin-top: 0;
         }
-    }
+}
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
     /* =============================================================================== */
     
     
-        }    
+}    
