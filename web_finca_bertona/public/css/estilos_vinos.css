@@ -65,13 +65,59 @@ a:hover{
 .contenedor-nav{
     display: none;
 }
-main{
-    margin-top: 3%;
-}
 /* ----------FIN del NAVEGADOR ----principio main --------*/
+.contenedor__general{
+    padding-left: 20%;
+    padding-top: 10%;
+    margin-top: -15em;
+    background-color: #fff;
 
-
-
+}
+.contenedor__seccion1, .contenedor__seccion2{
+    display: flex;
+}
+.contenedor__seccion1 figure{
+    width: 35%;
+}
+.contenedor__seccion2 figure{
+    width: 35%;
+}
+.contenedor__seccion1 p, .contenedor__seccion2 p{
+    padding: 5% 0 3% 0;
+}
+.contenedor__seccion2 p{
+    text-align: right;
+}
+.titulo__ficha-tecnica, .titulo__ficha-tecnica2{
+    padding: 3% 3%;
+    font-weight: 400;
+    font-size: 1.5em;
+    border-top:solid 2px rgb(90, 14, 22);
+    border-bottom:solid 2px  rgb(90, 14, 22);
+    background-color: rgba(90, 14, 22, 0.3);
+}
+.titulo__ficha-tecnica2{
+    text-align: right;
+}
+.botella-funes, .botella-ruta15{
+    max-width: 80%;
+}
+.fa-check-square{
+    margin-right: 7px;
+    color:rgb(90, 14, 22);
+}
+.contenedor__secc1__imagen{
+    margin-top: -6%;
+}
+.contenedor__secc2__imagen{
+    margin-top: 8%;
+}
+.contenedor__secc1__listado{
+    margin-top: -5%;
+}
+.contenedor__secc2__listado{
+    margin-top: 10%;
+}
 
 
 
