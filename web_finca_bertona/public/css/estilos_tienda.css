@@ -119,17 +119,11 @@ main{
 }
 .fa-shopping-cart{
    color: rgb(58, 12, 16);
-   border: solid 2px rgb(143, 137, 49);
+   border: solid 2px rgb(105, 18, 54);
    padding: 7px 9px 7px 7px;
    border-radius: 5px;
-   background-color: rgba(58, 12, 16, 0.4);
+   background-color: rgb(214, 153, 158);
 }
-
-
-
-
-
-
 
 /*----------- inicio footer -------------*/
 footer{
