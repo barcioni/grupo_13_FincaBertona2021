@@ -54,7 +54,6 @@ a:hover{
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
-    /*background-color: #03264C; */
     background-color: rgb(58, 12, 16);
     display: block;
     max-width: 50px;
@@ -140,8 +139,6 @@ a{
     background: rgb(240, 139, 148);
     color: black;
 }
-
-
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
@@ -206,19 +203,16 @@ footer{
             width: 10%;
             padding: 0;
             margin: 1,5% 60% 0 7%
-          }/*
-          header{
-            background-color: #fff;
-        }*/
-          .burger-menu{
-              display: none;
-          }
-          .contenedor-logo-nav{
+        }
+        .burger-menu{
+            display: none;
+        }
+        .contenedor-logo-nav{
             display: inline-block;
             position: absolute;
             margin-left: 3%;
-         }
-         .contenedor-nav{
+        }
+        .contenedor-nav{
             display:flex;
             justify-content: flex-end;
         }

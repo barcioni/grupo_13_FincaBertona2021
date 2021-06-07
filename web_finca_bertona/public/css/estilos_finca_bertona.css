@@ -127,8 +127,6 @@ main{
 .parrafos{
     padding: 0% 15% 2% 15%;
 }
-
-
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
@@ -181,12 +179,6 @@ footer{
 .mapa{
     border-radius: 8px;
 }
-
-
-
-
-
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
        @media screen and (min-width:768px){

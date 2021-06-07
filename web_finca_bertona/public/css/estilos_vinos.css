@@ -50,7 +50,6 @@ a:hover{
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
-    /*background-color: #03264C; */
     background-color: rgb(58, 12, 16);
     display: block;
     max-width: 50px;
@@ -120,16 +119,6 @@ a:hover{
 .contenedor__secc2__listado{
     margin-top: 10%;
 }
-
-
-
-
-
-
-
-
-
-
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
@@ -182,13 +171,6 @@ footer{
 .mapa{
     border-radius: 8px;
 }
-
-
-
-
-
-
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
     @media screen and (min-width:768px){
@@ -232,7 +214,7 @@ footer{
         }
 }
     /* ======================================= 1 ===================================== */
-       @media screen and (min-width:1200px){
+        @media screen and (min-width:1200px){
     /* =============================================================================== */        
        .contenedor__general{
         padding: 10% 20%;

@@ -103,7 +103,6 @@ main{
 .parrafos{
     padding: 1% 15%;
 }
-
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
@@ -156,14 +155,6 @@ footer{
 .mapa{
     border-radius: 8px;
 }
-
-
-
-
-
-
-
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
        @media screen and (min-width:768px){
@@ -172,15 +163,15 @@ footer{
             width: 10%;
             padding: 0;
             margin: 1,5% 60% 0 7%
-          }
-          .burger-menu{
-              display: none;
-          }
-          .contenedor-logo-nav{
+        }
+        .burger-menu{
+            display: none;
+        }
+        .contenedor-logo-nav{
             display: inline-block;
             position: absolute;
             margin-left: 3%;
-         }
+        }
          .contenedor-nav{
             display:flex;
             justify-content: flex-end;
@@ -204,12 +195,9 @@ footer{
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
     /* =============================================================================== */ 
-    .titulo__ppal__familia{
-        margin-top: -4.5rem;
-        font-size: 4em;
-        margin-bottom: 5rem;
-    }
-
-
-
+        .titulo__ppal__familia{
+            margin-top: -4.5rem;
+            font-size: 4em;
+            margin-bottom: 5rem;
+        }
 }

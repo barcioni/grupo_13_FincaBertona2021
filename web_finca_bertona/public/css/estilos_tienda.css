@@ -124,7 +124,6 @@ main{
    border-radius: 5px;
    background-color: rgb(214, 153, 158);
 }
-
 /*----------- inicio footer -------------*/
 footer{
     background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
@@ -177,13 +176,9 @@ footer{
 .mapa{
     border-radius: 8px;
 }
-
-
-
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
-    @media screen and (min-width:768px){
+        @media screen and (min-width:768px){
     /* =============================================================================== */  
         .logo{
             width: 10%;
@@ -212,11 +207,11 @@ footer{
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
     /* =============================================================================== */
-    #contenedor__general h1{
-        margin-top: -80px;
-        padding: 0 20%;
-    }
-    .contenedor__seccion2, .contenedor__seccion1{
-        margin: 0 10%;
-    }
+        #contenedor__general h1{
+            margin-top: -80px;
+            padding: 0 20%;
+        }
+        .contenedor__seccion2, .contenedor__seccion1{
+            margin: 0 10%;
+        }
 }    
