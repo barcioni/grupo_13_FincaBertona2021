@@ -9,6 +9,7 @@
     list-style: none;
     -webkit-text-size-adjust: none;
 }
+
 header{
     background-color: rgb(90, 14, 22);
 }
@@ -79,13 +80,13 @@ main{
     }
 .titulo-login{
     margin-top: -2rem;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
     padding-top: 1.5rem;
 }
 .sub-titulo-login{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     margin-top: -0.5rem;
@@ -95,69 +96,21 @@ main{
     border: none;
     padding-top: 30px;
 }
-
-/*----------- inicio footer -------------*/
-footer{
-    background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
-    padding: 3% 5%;
-    margin-top: 10%;
-}
-.contenedor__footer__general{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.contenedor__footer__general li{
-    padding: 2px 0 4px 0;
-}
-.contenedor__footer__sector-izq{
-    padding-top: 3%;
-    color: #fff;
-    font-weight: 500;
-}
-.linea__superior-izquierda__footer{
-    border-top: solid 6px rgb(90, 14, 22);
-    border-radius: 5px;  
-    margin-top: 2%;
-}
-.linea__superior-izquierda__footer p{
-    margin-top: 2%;
-}
-.contenedor__footer__sector-izq li p{
-    padding-left: 7px;
-}
-.contenedor__footer__sector-izq{
-    padding-top: 3%;
-    color: #fff;
-    font-weight: 500;
-}
-.contenedor__footer__mapa{
-    position: relative;
-}
-.titulo-mapa{
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #fff;
-}
-.mapa{
-    border-radius: 8px;
-}
 .formulario-login{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 80%;
     margin: auto;
+    margin-top: 1rem;
 }
 .campo-formulario {
     border: none;
     margin: auto;
     padding-top: 0.5em;
-  
-}
-
+  }
 .control{
-    font-size: 1em;
+    font-size: 1.5rem;
     border: solid 1px black;
     border-radius: 8px ;
     padding: 2% 2% 2% 3%;
@@ -165,9 +118,9 @@ footer{
 .opciones-login {
     display: flex;
     border:none;
-    justify-content: space-around;
-    font-size: 0.8em;
-    padding-top: 00.5rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding-top: 0.8rem;
     color: black;
 }
 a {
@@ -181,6 +134,7 @@ a {
     margin: 2rem;
     transition: all 0.5s;
     align-self: center;
+    font-size: 1rem;
 
 }
 
@@ -188,6 +142,7 @@ a {
         background: rgb(240, 139, 148);
         color: black;
     }
+
 
 /*----------- inicio footer -------------*/
 footer{
@@ -274,11 +229,13 @@ footer{
         }
          main{
             margin-top: 0;
-            font-size: 20px;
-        }
+            }
 }
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
+           html {
+               font-size: 20px;
+           }
     /* =============================================================================== */
     
     

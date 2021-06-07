@@ -33,17 +33,42 @@
         <figure class="img-ppal-login"><img src="../public/imagenes/img_ppal_contacto.png" class="img-ppal-contacto" alt="finca-bertona"></figure>
     </header>
     <main> 
+        <section class="contenedorSeccion1">
         <h1 class="titulo-contacto">CONSULTAS Y COMENTARIOS</h1>
-        <form action="/login" method="POST">
-            <fieldset>
-                <input type="text" name="usuario">
-                <input type="" >
+        <form class="formulario-contacto" action="/contacto" method="POST">
+            <fieldset class= "campo-formulario">
+                <label for="nombre-completo"></label>
+                <input type="text" name="nombre-completo" id="nombre-completo" placeholder="Nombre y Apellido" class="control" required placeholder>
             </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="E-mail" class="control" required placeholder>
+            </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="pais"></label>
+                <input type="text" name="pais" id="pais" placeholder="País de residencia" class="control" required placeholder>
+            </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="provincia"></label>
+                <input type="text" name="provincia" id="provincia" placeholder="Provincia" class="control" >
+            </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="localidad"></label>
+                <input type="text" name="localidad" id="localidad" placeholder="Localidad" class="control" >
+            </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="telefono"></label>
+                <input type="number" name="telefono" id="telefono" placeholder="Teléfono" class="control" >
+            </fieldset>
+            <fieldset class= "campo-formulario">
+                <label for="mensaje"></label>
+                <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje..." class="control-mensaje"></textarea>
+            </fieldset>
+            <button type="submit" class= "boton-formulario-enviar" >ENVIAR</button>
            </form>
+        </section>
     
-    <section class="contenedor-seccion1">
     
-    </section>
     </main>
     
     <footer>
