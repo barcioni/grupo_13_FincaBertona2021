@@ -82,7 +82,7 @@ a:hover{
     width: 50%;
 }
 .contenedor__seccion1 p, .contenedor__seccion2 p{
-    padding: 5% 0 3% 0;
+    padding: 1% 0 1% 0;
 }
 .contenedor__seccion2 p{
     text-align: right;
@@ -221,6 +221,15 @@ footer{
             margin-top: -10em;
             background-color: #fff;
            }   
+           .contenedor__seccion1 p, .contenedor__seccion2 p{
+            padding: 2% 0 1% 0;
+        }
+        .contenedor__seccion1 .botella-ruta15{
+            width: 130%;
+        }
+        .botella-funes, .botella-ruta15{
+            max-width: 100%;
+        }
 }
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
@@ -238,7 +247,7 @@ footer{
             width: 40%;
         }
         .contenedor__seccion1 p, .contenedor__seccion2 p{
-            padding: 5% 0 3% 0;
+            padding: 1% 0 0.5% 0;
         }
         .contenedor__seccion2 p{
             text-align: right;
@@ -259,7 +268,6 @@ footer{
         }
         .fa-check-square{
             margin-right: 7px;
-            color:rgb(90, 14, 22);
         }
         .contenedor__secc2__listado .fa-check-square{
             margin-left: 7px;
@@ -268,12 +276,18 @@ footer{
             margin-top: -6%;
         }
         .contenedor__secc2__imagen{
-            margin-top: 8%;
+            margin-top: 9%;
         }
         .contenedor__secc1__listado{
             margin-top: -5%;
         }
         .contenedor__secc2__listado{
-            margin-top: 10%;
+            margin-top: 5%;
+        }
+        .botella-ruta15{
+           width: 100vh;
+        }
+        .contenedor__seccion1 figure{
+            width: 100%;
         }
 }

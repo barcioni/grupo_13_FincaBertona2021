@@ -104,7 +104,7 @@ main{
 .titulo-banner1{
     color: rgb(107, 21, 30);
     position: absolute;
-    margin: 25% 0% 0 59%;
+    margin: 13% 0 0 23%;
     width: 395px;
     z-index: 15;
     padding: 15px 0 15px 0;
@@ -118,9 +118,16 @@ main{
     font-size: 1.1em;
     margin: 0 20px 0 27px;
 }
-.parrafos{
-    padding: 5% 15%;
+.parrafos__home1{
+    padding: 3% 15% 2% 15%;
 }
+.parrafos__home2{
+    padding: 0% 15% 0 15%;
+}
+.parrafos{
+    padding: 0% 15% 2% 15%;
+}
+
 
 /*----------- inicio footer -------------*/
 footer{
@@ -220,6 +227,9 @@ footer{
             margin-top: -2px;
             font-size: 3.8em;
         }
+        .titulo-banner1{
+            margin: 18% 0 0 43%;
+        }
 }
     /* ======================================= 1 ===================================== */
        @media screen and (min-width:1200px){
@@ -228,5 +238,29 @@ footer{
         margin-top: -5px;
         font-size: 4em;
         }
-        
+        .parrafos__home1{
+            padding: 3% 20% 2% 20%;
+        }
+        .parrafos__home2{
+            padding: 0% 20%;
+        }
+        .parrafos{
+            padding: 0% 20% 2% 20%;
+        }
+        .banner1{
+            margin: -7em 0 -5em 0;
+            position: relative;
+        }
+        .titulo-banner1{
+            margin: 25% 0% 0 59%;
+            width: 395px;
+            z-index: 15;
+            padding: 15px 0 15px 0;
+        }
+        .titulo-banner1 p{
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 0 20px 0 27px;
+        }
+
 }    

@@ -89,7 +89,13 @@ main{
     margin-bottom: 1em;
 }
 .parrafo_1_b{
-    margin-bottom: 5em;
+    margin-bottom: 0.5em;
+}
+.parrafo_1_c{
+    margin-bottom: 0.5em;
+}
+.parrafo_1_d{
+    margin-bottom: 3em;
 }
 .img__seccion1__familia{
     max-width: 100%;
