@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finca Bertona</title>
-    <link rel="stylesheet" href="../public/css/estilos_registro.css">
+    <link rel="stylesheet" href="/css/estilos_registro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <header>
-        <div class="contenedor-logo-nav"> <img src="../public/imagenes/logo-finca-1.png" class="logo" alt="logo-finca-bertona"></div>
+        <div class="contenedor-logo-nav"> <img src="/imagenes/logo-finca-1.png" class="logo" alt="logo-finca-bertona"></div>
         <!------- Comienzo Barra de Navegación--------------------------------------------------------------------------------------->
         <nav class="contenedor-nav">
             <ul class="contenedor__nav__secciones">
@@ -30,7 +30,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <!----- fin Burguer -- Comienzo main --------------------------------------------------------------------------------------->
-        <div class="img-ppal-login"> <img src="../public/imagenes/img_ppal_login.png" class="img-ppal-login-2" alt="finca-bertona"></div>
+        <div class="img-ppal-login"> <img src="/imagenes/img_ppal_login.png" class="img-ppal-login-2" alt="finca-bertona"></div>
     </header>
     <main>
         <section class="contenedorSeccion1">
@@ -38,37 +38,34 @@
             <form class= "formulario-registro" action="/registro" method="POST">
                 <fieldset class= "campo-formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="control"  required placeholder>
+                    <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="control"  required placeholder="Escriba su nombre">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name= "apellido" id="apellido"  class="control" required placeholder>
+                    <input type="text" name= "apellido" id="apellido"  class="control" required placeholder="Escriba su apellido">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="nombre-de-usuario">Nombre de usuario:</label>
-                    <input type="text" name= "nombre-de-usuario" id="nombre-de-usuario" class="control" required placeholder>
+                    <input type="text" name= "nombre-de-usuario" id="nombre-de-usuario" class="control" required placeholder="Escriba su nombre de usuario">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="fecha-de-nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="fecha" value="2021-07-22" id= "fecha-de.nacimiento"class="control" required placeholder>
+                    <input type="date" name="fecha" value="2021-07-22" id= "fecha-de.nacimiento"class="control" required placeholder="Escriba su fecha de nacimiento">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="domicilio">Domicilio:</label>
-                    <input type="text" name= "domicilio" id="domicilio" class="control" required placeholder>
+                    <input type="text" name= "domicilio" id="domicilio" class="control" required placeholder="Escriba su domicilio">
                 </fieldset>
                 <fieldset class="campo-formulario">
                     <label for="clave">Contraseña:</label>
-                    <input type="password" name="clave" id="clave" class="control" required placeholder>
+                    <input type="password" name="clave" id="clave" class="control" required placeholder="Escriba su contraseña">
                 </fieldset>
         
                 <fieldset class="campo-formulario-mensaje">
                     <label for="confirmacion-clave">Confirme su contraseña:</label>
-                    <input type="password" name="clave" id="clave" class="control" required placeholder>
+                    <input type="password" name="clave" id="clave" class="control" required placeholder="Confirme su contraseña">
                 </fieldset>
-        
-                <button type="submit" class= "boton-formulario-enviar" >ENVIAR</button>
-    </main>
-                
+                <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
     </main>
     <footer>
         <ul class="contenedor__footer__general">
