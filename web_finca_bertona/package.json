@@ -2,9 +2,9 @@
   "name": "web_finca_bertona",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "clear && nodemon app.js -e css,html,js,mjs",
+    "test": "clear && nodemon app.js -e css,ejs,html,js,mjs",
     "start": "node app.js"
   },
   "keywords": [],
