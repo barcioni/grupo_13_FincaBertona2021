@@ -11,18 +11,18 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname,"../views"))
 
 // Routes
-app.get("/",(req,res)=>res.sendFile(path.join(__dirname,"views", "index.ejs")))
+app.get("/",(req,res)=>res.render(path.resolve(__dirname,"views", "index.ejs")))
 
-app.get("/contacto",(req,res)=>res.sendFile(path.join(__dirname,"views", "contacto.ejs")))
+app.get("/contacto",(req,res)=>res.render(path.resolve(__dirname,"views", "contacto.ejs")))
 
-app.get("/login",(req,res)=>res.sendFile(path.join(__dirname,"views", "login.ejs")))
+app.get("/login",(req,res)=>res.render(path.resolve(__dirname,"views", "login.ejs")))
 
-app.get("/nuestraFamilia",(req,res)=>res.sendFile(path.join(__dirname,"views", "nuestraFamilia.ejs")))
+app.get("/nuestraFamilia",(req,res)=>res.render(path.resolve(__dirname,"views", "nuestraFamilia.ejs")))
 
-app.get("/tienda",(req,res)=>res.sendFile(path.join(__dirname,"views", "tienda.ejs")))
+app.get("/tienda",(req,res)=>res.render(path.resolve(__dirname,"views", "tienda.ejs")))
 
-app.get("/vinos",(req,res)=>res.sendFile(path.join(__dirname,"views", "vinos.ejs")))
+app.get("/vinos",(req,res)=>res.render(path.resolve(__dirname,"views", "products", "vinos.ejs")))
 
-app.get("/registro",(req,res)=>res.sendFile(path.join(__dirname,"views", "registro.ejs")))
+app.get("/registro",(req,res)=>res.render(path.resolve(__dirname,"views", "registro.ejs")))
 
-app.get("/carrito",(req,res)=>res.sendFile(path.join(__dirname,"views", "carrito.ejs")))
+app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"views", "carrito.ejs")))
