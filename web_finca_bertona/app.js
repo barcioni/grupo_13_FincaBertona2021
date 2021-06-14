@@ -2,9 +2,15 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
+// Public access
 app.use(express.static(path.resolve(__dirname, "./public")));
+// Server start
 app.listen(3030,()=> console.log("Server Start in http://localhost:3030"))
+// View engine
+app.set("view engine", "ejs");
+app.set("views", path.resolve(__dirname,"./views"))
 
+// Routes
 app.get("/",(req,res)=>res.sendFile(path.join(__dirname,"views", "index.html")))
 
 app.get("/contacto",(req,res)=>res.sendFile(path.join(__dirname,"views", "contacto.html")))
