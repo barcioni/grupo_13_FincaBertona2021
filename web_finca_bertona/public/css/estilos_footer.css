@@ -1,0 +1,58 @@
+footer{
+    background-image: linear-gradient(rgb(85, 150, 218), rgb(68, 121, 156));
+    padding: 3% 5%;
+    margin-top: 10%;
+}
+.contenedor__footer__general{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor__footer__general li{
+    padding: 2px 0 4px 0;
+}
+.contenedor__footer__sector-izq{
+    padding-top: 3%;
+    color: #fff;
+    font-weight: 500;
+}
+.linea__superior-izquierda__footer{
+    border-top: solid 6px rgb(90, 14, 22);
+    border-radius: 5px;  
+    margin-top: 2%;
+}
+.linea__superior-izquierda__footer p{
+    margin-top: 2%;
+}
+.contenedor__footer__sector-izq li p{
+    padding-left: 7px;
+    color: rgb(236, 233, 234);
+    font-weight: 700;
+}
+.contenedor__footer__sector-izq li p #footer__info__1, #footer__info__0{
+    font-weight: 400;
+    color: rgb(243, 238, 238);
+}
+.contenedor__footer__sector-izq{
+    padding-top: 3%;
+    color: #fff;
+    font-weight: 500;
+}
+.contenedor__footer__mapa{
+    position: relative;
+}
+.titulo-mapa{
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #fff;
+}
+.mapa{
+    border-radius: 8px;
+}
+
+/* ===================================== COMIENZO MEDIA QUERIES =============================================== */
+    /* ======================================= 0 ===================================== */
+    @media screen and (min-width:768px){
+        /* =============================================================================== */  
+
+    }
