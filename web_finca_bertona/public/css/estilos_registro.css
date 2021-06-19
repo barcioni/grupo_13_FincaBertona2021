@@ -12,38 +12,7 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-.contenedor-nav{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    justify-content: center;
-}
-.contenedor-nav li{
-    margin: 0 15px;
-}
-.contenedor-nav a{
-    color: #fff;
-    font-weight: 600;
-}
-a:hover{
-    text-shadow:
-    0 0 7px #fff,
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 25px rgb(125, 63, 150),
-    0 0 42px rgb(125, 63, 150),
-    0 0 50px rgb(125, 63, 150),
-    0 0 52px rgb(125, 63, 150),
-    0 0 50px rgb(125, 63, 150);
-} 
-.logo{
-  width: 80%;
-  padding: 3%;
-}
-.contenedor-logo-nav{
-   display: flex;
-   justify-content: center;
-}
+
 .img-ppal-login img{
     max-width: 100%;
     background-color: rgb(90, 14, 22);
@@ -52,22 +21,7 @@ a:hover{
 .img-ppal-login-2{
     border-bottom: none;
 }
-/*----- Burguer ---------------------*/
-.burger-menu{
-    background-color: rgb(58, 12, 16);
-    display: block;
-    max-width: 50px;
-    border-radius: 8px;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 18px;
-    margin: auto;
-    color: #fff;
-    margin-bottom: 35px;
-}
-.contenedor-nav{
-    display: none;
-}
+
 /* ----------FIN del NAVEGADOR ----principio main --------*/
 main{
     background-color: #fff;
@@ -173,26 +127,7 @@ footer{
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){
     /* =============================================================================== */  
-        .logo{
-           width: 10%;
-           padding: 0;
-           margin: 1,5% 60% 0 7%
-        }
-        .burger-menu{
-           display: none;
-        }
-        .contenedor-logo-nav{
-           display: inline-block;
-           position: absolute;
-           margin-left: 3%;
-        }
-        .contenedor-nav{
-           display:flex;
-           justify-content: flex-end;
-        }
-        .contenedor__nav__secciones{
-           display:flex;
-        }
+        
         main{
             margin-top: 0;
         }
