@@ -10,19 +10,15 @@ app.listen(3030,()=> console.log("Server Start in http://localhost:3030"))
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname,"../views"))
 
-// Routes
-app.get("/",(req,res)=>res.render(path.resolve(__dirname,"views", "index.ejs")))
+// Rutas
+const rutasMain = require ("./routes/main");
+app.use ("/", rutasMain);
 
-app.get("/contacto",(req,res)=>res.render(path.resolve(__dirname,"views", "contacto.ejs")))
+const rutasTienda = require ("./routes/tienda");
+app.use ("/tienda", rutasTienda);
 
-app.get("/login",(req,res)=>res.render(path.resolve(__dirname,"views", "login.ejs")))
+const rutasUser = require ("./routes/user");
+app.use ("/", rutasUser);
 
-app.get("/nuestraFamilia",(req,res)=>res.render(path.resolve(__dirname,"views", "nuestraFamilia.ejs")))
 
-app.get("/tienda",(req,res)=>res.render(path.resolve(__dirname,"views", "tienda.ejs")))
-
-app.get("/vinos",(req,res)=>res.render(path.resolve(__dirname,"views", "products", "vinos.ejs")))
-
-app.get("/registro",(req,res)=>res.render(path.resolve(__dirname,"views", "registro.ejs")))
-
-app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"views", "carrito.ejs")))
+app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
