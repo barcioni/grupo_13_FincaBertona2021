@@ -23,7 +23,7 @@ Buena iniciativa por parte de los integrantes a la hora de realizar research, ex
 
 4. Hacer menos & Dejar de hacer.
 
-Con express tuvimos una dificultad que nos retrasó de forma significativa al tener que iniciarlo cada vez que queriamos hacer un cambio que finalmente se soluciono mediante el ruteo de todos los links para lograr trabajar de manera mas eficiente sin tener que estar iniciando a cada rato el servidor. Hasta que se determino que se debia rutear cada uno de los links perdimos una cantidad considerable de tiempo.
+Con express tuvimos una dificultad que nos retrasó de forma significativa al tener que iniciarlo cada vez que queriamos hacer un cambio que finalmente se soluciono mediante el ruteo de todos los links para lograr trabajar de manera mas eficiente sin tener que estar iniciando a cada rato el servidor. Hasta que se determino que se debia rutear cada uno de los links perdimos una cantidad considerable de tiempo. A su vez tuvimos varias dudas acerca de las vistas de los formularios y si era necesario volverlos dinamicos para esta entre o no.
 
 Guillermo (Autocritica): En mi caso particular el estar atrasado con el material teorico del curso generó un lastre para el equipo en estas ultimas semanas a la hora de poder avanzar colectivamente con el mismo. Ya buscando generar tiempo para arrancar Julio al dia.
 
