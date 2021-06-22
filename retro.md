@@ -1,30 +1,31 @@
-***FEEDBACK SPRINT 1: RETROSPECTIVA***
+***FEEDBACK SPRINT 2: RETROSPECTIVA***
 
 Responsabilidad: Se cumplio con la entrega en tiempo y forma. Se muestra compromiso con el trabajo.
 
-Trabajo en equipo: Se trabaja de manera colaborativa y coordinada para alcanzar los objetivos del equipo, gestionando el tiempo de manera eficiente. Se denota compromiso con las tareas y buena comunicacion entre los integrantes.
+Trabajo en equipo: Se trabaja de manera colaborativa y coordinada para alcanzar los objetivos del equipo, gestionan el tiempo que tienen y lo utilizan de forma eficiente. Estan comprometidos con sus tareas. Buena comunicacion entre los integranes.
 
-Comentario Global: Los felicito por cumplir con casi todo. Pero a no perder de vista el tablero de Trello que nos ayuda a evidenciar el progreso y la distribucion de las tareas. Ademas de los requisitos opcionables del entregable. Sigan con esa actitud. 
+Comentario Global: Revisen por favor las clases y las propuedades de los css, atencion con las medidas y con los hipervinculos vacios o sin redireccion. Mejorar la maquetacion con etiquetas semanticas, y la utilizacion correcta de los atributos de las etiquetas.
 
 ***Dinamica de la estrella de mar***
 
 1. Comenzar a hacer.
 
-Uso continuo y eficiente de Trello para lograr una mejor distribucion de las tareas y conseguir una comunicacion mas fluida entre los integrantes del equipo, distribuyendo responsabilidades de manera mas efectiva.
+Volver a trabajar sobre la comunicacion y la fluidez de los encuentros entre los miembros del equipo. En este sentido la dinamica propuesta en clase de dedicar parte de la misma a trabajar en el proyecto seria un gran empuje para compartir updates del proyecto y favorecer el intercambio de opiniones.
 
 2. Hacer más.
 
-Realizar calls o encuentros para compartir los updates del proyecto y generar un intercambio de opiniones entre los miembros del equipo. Es una realidad que la distancia geografica y la diferencia de horarios influyen a la hora de realizar esto pero es una practica muy valiosa para el equipo. De esta manera de logra buscar formas alternativas para solucionar problemas que surjen a lo largo del trabajo.
-
+Uso continuo y eficiente de Trello para lograr una mejor distribucion de las tareas y conseguir una comunicacion mas fluida entre los integrantes del equipo, distribuyendo responsabilidades de manera mas efectiva.
+ 
 3. Continuar haciendo.
 
-Buena iniciativa por parte de los integrantes a la hora de realizar research, explorar distintas opciones en el mercado y compartir ideas para implementar y desarrollar en el proyecto. Esto es de suma importancia para el proceso creativo del desarrollo de la web.
+Buena iniciativa por parte de los integrantes a la hora de realizar research, explorar distintas opciones en el mercado y compartir ideas para implementar y desarrollar en el proyecto. Esto es de suma importancia para el proceso creativo del desarrollo de la web. A su vez, la busqueda de material visual o fotografico para mejorar la estetica de la web es de valorar.
+
 
 4. Hacer menos & Dejar de hacer.
 
 Con express tuvimos una dificultad que nos retrasó de forma significativa al tener que iniciarlo cada vez que queriamos hacer un cambio que finalmente se soluciono mediante el ruteo de todos los links para lograr trabajar de manera mas eficiente sin tener que estar iniciando a cada rato el servidor. Hasta que se determino que se debia rutear cada uno de los links perdimos una cantidad considerable de tiempo.
 
-
+Guillermo (Autocritica): En mi caso particular el estar atrasado con el material teorico del curso generó un lastre para el equipo en estas ultimas semanas a la hora de poder avanzar colectivamente con el mismo. Ya buscando generar tiempo para arrancar Julio al dia.
 
 _______________________________________________________________________________________________________________________________________________
 
