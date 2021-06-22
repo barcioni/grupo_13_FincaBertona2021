@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+    <%- include('../include/head')%>
+    <link rel="stylesheet" href="/css/estilos_tienda.css">
+</head>
+
+<body>
+    <header>
+        <%- include('../include/nav')%>
+        <figure class="img-ppal-tienda"><img src="/imagenes/img_ppal_tienda3.png" class="img__ppal__tienda" alt="finca-bertona"></figure>
+    </header>
+    <main id="contenedor__general">
+        <h1 class="titulo-registro">Edición de productos</h1>
+        <main id="contenedor__general">
+            <h1 class="titulo-edicion">Edición de productos</h1>
+            <form class= "formulario-alta-productos" action="/alta" method="POST" enctype="multipart/form-data">
+                <fieldset class="campo-formulario">
+                    <label for="editar-marca">Editar Marca:</label>
+                    <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="edicion" required placeholder="Edite la marca">
+                </fieldset>
+                <fieldset class="campo-formulario">
+                    <label for="editar-descripcion">Editar Descripción:</label>
+                    <input type="text" name= "apellido" id="apellido"  class="edicion" required placeholder="Edite la descripción del producto">
+                </fieldset>
+                <fieldset class="campo-formulario">
+                    <label for="editar-cosecha-año">Editar Cosecha/Año:</label>
+                    <input type="text" name= "nombre-de-usuario" id="nombre-de-usuario" class="edicion" required placeholder="Edite el año de cosecha">
+                </fieldset>
+                <fieldset class= "campo-formulario">
+                    <label for="editar-precio">Editar Precio:</label>
+                    <input type="text" name="precio" value="2021-07-22" id= "precio"class="edicion" required placeholder="Edite el precio">
+                </fieldset>
+                <fieldset class="campo-formulario">
+                    <label for="editar-uploads">Editar imagen:</label>
+                    <input type="file" name=" " id="clave" class="edicion" required placeholder="suba su imagen">
+                </fieldset>
+                <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
+
+
+
+
+
+
+
+    </main>
+    <%- include('../include/footer')%>
+    </body>
+    </html>

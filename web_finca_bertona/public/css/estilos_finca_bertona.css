@@ -12,14 +12,12 @@
 header{
     background-color: rgb(86, 145, 207);
 }
-
 .img-ppal-home-mobile, .img-ppal-home-desktop{
     max-width: 100%;
 }
 .img-ppal-home-desktop{
     display: none;
 }
-
 /* ----------FIN del NAVEGADOR ----principio main --------*/
 main{
     background-color: #fff;
