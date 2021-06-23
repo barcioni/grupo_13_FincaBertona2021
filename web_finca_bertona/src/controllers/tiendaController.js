@@ -10,10 +10,6 @@ const controlador = {
     edicion: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"))
     },
-
 };
-
-
-
 
 module.exports = controlador ;
