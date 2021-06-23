@@ -12,7 +12,6 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img-ppal-login img{
     max-width: 100%;
     background-color: rgb(90, 14, 22);
@@ -21,13 +20,10 @@ header{
 .img-ppal-login-2{
     border-bottom: solid 15px #fff;
 }
-
 main{
     background-color: #fff;
     margin-top: -5px;
 }
-/* ----------FIN del NAVEGADOR ----principio main --------*/
-
 .titulo-contacto{
     font-size: 2rem;
     font-weight: 500;
