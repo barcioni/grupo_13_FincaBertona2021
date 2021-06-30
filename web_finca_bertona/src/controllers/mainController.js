@@ -10,11 +10,5 @@ const controlador = {
     vinos: (req,res)=>{
         res.render(path.resolve(__dirname,"../views", "products", "vinos.ejs"))
     },
-
-
 };
-
-
-
-
 module.exports = controlador ;
