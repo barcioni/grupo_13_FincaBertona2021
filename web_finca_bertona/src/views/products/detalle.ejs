@@ -17,8 +17,7 @@
         <% } else { %>
             <figure ><img class="imagen-producto" src="/imagenes/default.jpg" alt=""></figure>
         <% } %>
-        <article>
-
+        <article id="contenedor-general">
             <h2 class="subtitulo-general"><%= product.name %></h2>
             <p class="marca-vino"><%= product.brand.name %></p> 
             <p class="cosecha"><%= product.cosecha %></p>
@@ -35,7 +34,6 @@
                     <button type="submit">comprar</button>
                 </fieldset>
             </form>
-            
         </article>
     </section>
 

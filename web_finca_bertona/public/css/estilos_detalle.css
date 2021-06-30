@@ -12,14 +12,12 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img__ppal__tienda{
     max-width: 100%;
 }
 .img-ppal-tienda{
     margin-top: 35px;
 }
-
 main{
     background-color: #fff;
     margin-top: -5px;
@@ -42,12 +40,16 @@ main{
     padding-top: 2rem;
     font-size: 3em;
     font-weight: 500;
-    text-align: center;
+ /*   text-align: center;*/
     margin-bottom: 3%;
 }
 .imagen-producto {
-    size: 1px;
-    width: 50%;
-    align-self: center;
+   /* size: 1px;*/
+    width: 30%;
+   /* align-self: center;*/
     padding-bottom: 15px;
+}
+#contenedor-general{
+    align-content: center;
+    padding-left: 15%;
 }
