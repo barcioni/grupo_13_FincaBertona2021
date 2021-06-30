@@ -12,7 +12,7 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-.img__ppal__tienda{
+.img-ppal-detalle, .img__ppal__vinos{
     max-width: 100%;
 }
 .img-ppal-tienda{
@@ -26,7 +26,9 @@ main{
 #contenedor__general{
     margin-top: -50px;
     background-color: #fff;
-    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .titulo-general{
     font-size: 3em;
@@ -40,16 +42,31 @@ main{
     padding-top: 2rem;
     font-size: 3em;
     font-weight: 500;
- /*   text-align: center;*/
     margin-bottom: 3%;
 }
-.imagen-producto {
-   /* size: 1px;*/
-    width: 30%;
-   /* align-self: center;*/
+.imagen-producto{
+    width: 50%;
+    align-items: center; 
     padding-bottom: 15px;
 }
-#contenedor-general{
-    align-content: center;
-    padding-left: 15%;
+.subtitulo-general, .marca-vino, .cosecha, .precio{
+    font-weight: 700;
+    padding-top: 5px;
+    color: rgb(90, 14, 22);
+}
+.descripcion{
+    margin: 3% 0;
+}
+.campo__formulario fieldset{
+    border: none;
+}
+.boton-comprar{
+    background: rgb(58, 12, 16);
+    color: white;
+    padding: 3% 7%;
+    border-radius: 15px;
+    margin: 2rem;
+    transition: all 0.5s;
+    align-self: center;
+    font-size: 1rem;
 }
