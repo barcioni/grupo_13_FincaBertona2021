@@ -14,10 +14,15 @@ const controlador = {
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
     },
     edicion: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"))
+        res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
+    },
+    actualizar: (req,res) => {
+        let result = product.edit(req.body,req.file,req.params.id)
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
     },
     detalle: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id)})},
+        res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id)})
+    },
 
 };
  

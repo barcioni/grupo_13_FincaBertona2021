@@ -1,14 +1,21 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const methodOverride = require ("method-override")
 
 // Public access
 app.use(express.static(path.resolve(__dirname, "../public")));
+
 // Server start
-app.listen(3030,()=> console.log("Server Start in http://localhost:3030"))
+app.listen(3030,()=> console.log("Server Start in http://localhost:3030"));
+
 // View engine
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname,"../views"))
+app.set("views", path.resolve(__dirname,"../views"));
+
+// Data config
+app.use(express.urlencoded({extended:false})); // Not fund req.body
+app.use(methodOverride("_method")); // ?_method=PUT
 
 // Rutas
 const rutasMain = require ("./routes/main");

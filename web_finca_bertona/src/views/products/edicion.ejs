@@ -7,46 +7,44 @@
 <body>
     <header>
         <%- include('../include/nav')%>
-        <figure class="img-ppal-tienda"><img src="/imagenes/img_ppal_tienda3.png" class="img__ppal__tienda" alt="finca-bertona"></figure>
+    <figure class="img-ppal-detalle"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
     </header>
-    <main id="contenedor__general">
-        <h1 class="titulo-registro">Edición de productos</h1>
-        <main id="contenedor__general">
-            <form class= "formulario-alta-productos" action="../views/products/alta" method="POST" enctype="multipart/form-data">
-                <fieldset class="campo-formulario">
-                    <label for="editar-marca">Editar Marca:</label>
-                    <input type="text" name="nombre" id="nombre" pattern="{4,30}" class="edicion" required placeholder="Edite la marca">
-                </fieldset>
-                <fieldset class="campo-formulario">
-                    <label for="editar-descripcion">Editar Descripción:</label>
-                    <input type="text" name="apellido" id="apellido"  class="edicion" required placeholder="Edite la descripción del producto">
-                </fieldset>
-                <fieldset class="campo-formulario">
-                    <label for="editar-cosecha-año">Editar Cosecha/Año:</label>
-                    <input type="text" name= "nombre-de-usuario" id="nombre-de-usuario" class="edicion" required placeholder="Edite el año de cosecha">
-                </fieldset>
-                <fieldset class= "campo-formulario">
-                    <label for="editar-precio">Editar Precio:</label>
-                    <input type="text" name="precio" value="2021-07-22" id= "precio"class="edicion" required placeholder="Edite el precio">
-                </fieldset>
-                <fieldset class="campo-formulario">
-                    <label for="editar-uploads">Editar imagen:</label>
-                    <input type="file" name=" " id="clave" class="edicion" required placeholder="suba su imagen">
-                </fieldset>
-                <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
-<<<<<<< HEAD
-
-                
-
-
-
-
-
-
-
-=======
->>>>>>> 6abf3edd4fb1939465fb283cf0b0ca9c08dda7fb
-    </main>
+    <section id="contenedor__general">
+        <fieldset>
+            <form action="/tienda/actualizar/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
+                <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
+                <label for="image">Imágen</label>
+                <input type="file" name="image" id="image" value="/uploads/products/<%= product.image%>">
+        </fieldset>
+        <fieldset>
+            <label for="marca">Marca</label>
+            <select name="brand" id="brand">
+                <% brands.forEach(brand => { %>
+                    <% if (product.brand.id == brand.id) { %>
+                        <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                    <% } else { %>
+                        <option value="<%= brand.id %>"><%= brand.name %></option>
+                    <% } %>
+                <% }) %>
+            </select>        
+        </fieldset>
+        <fieldset>
+            <label for="name">Cosecha</label>
+            <input type="text" name="year" id="year" value="<%= product.year %>" >
+        </fieldset>
+        <fieldset>
+            <label for="name">Precio</label>
+            <input type="text" name="price" id="price" value="<%= product.price %>" >
+        </fieldset>
+        <fieldset>
+            <label for="name">Descripción</label>
+            <input type="text" name="description" id="description" value="<%= product.description %>" >
+        </fieldset>
+         <fieldset>
+            <button type="submit" class="boton-comprar">EDITAR PRODUCTO</button>
+        </fieldset>
+        </form>
+    </section> 
     <%- include('../include/footer')%>
-    </body>
-    </html>
+</body>
+</html>
