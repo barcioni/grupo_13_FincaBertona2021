@@ -4,46 +4,34 @@
     <%- include('../include/head')%>
     <link rel="stylesheet" href="/css/estilos_detalle.css">
 </head>
-
 <body>
     <header>
         <%- include('../include/nav')%>
-    <figure class="img-ppal-detalle"><img src="/imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
-</header>
-
+    <figure class="img-ppal-detalle"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
+    </header>
     <section id="contenedor__general">
         <% if (product.image) { %>
-            <figure ><img class="imagen-producto" src="/uploads/products/<%= product.image%>" alt=""></figure>
+        <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
         <% } else { %>
-            <figure ><img class="imagen-producto" src="/imagenes/default.jpg" alt=""></figure>
+            <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
         <% } %>
         <article>
-
             <h2 class="subtitulo-general"><%= product.name %></h2>
             <p class="marca-vino"><%= product.brand.name %></p> 
             <p class="cosecha"><%= product.cosecha %></p>
             <p class="precio"><%= product.price %></p>
             <p class="descripcion"><%= product.description %></p>
-
-            <form action="/cart/add" method="post">
-
+        </article>
+            <form action="/cart/add" method="post" class="campo__formulario">
                 <fieldset>
                     <label for="quantity">Quantity</label>
                     <input type="number" min="1" max="12" value="1" required>
                 </fieldset>
                 <fieldset>
-                    <button type="submit">comprar</button>
+                    <button type="submit" class="boton-comprar">comprar</button>
                 </fieldset>
             </form>
-            
-        </article>
-    </section>
-
-
-
-
-
-
-<%- include('../include/footer')%>
+    </section> 
+    <%- include('../include/footer')%>
 </body>
 </html>
