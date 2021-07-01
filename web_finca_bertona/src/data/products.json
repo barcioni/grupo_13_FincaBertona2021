@@ -1,54 +1,54 @@
 [
-    {
-      "id": 1,
-      "brand": 1,
-      "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia." ,
-      "cosecha": 2016,
-      "image": "botella-ruta15.png",
-      "price" : "$1000"
-    },
-    {
-      "id": 2,
-      "brand": 1,
-      "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia." ,
-      "cosecha": 2017,
-      "image": "botella-ruta15.png",
-      "price" : "$900"
-    },
-    {
-      "id": 3,
-      "brand": 1,
-      "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia." ,
-      "cosecha": 2018,
-      "image": "botella-ruta15.png",
-      "price" : "$800"
-    },
-    {
-        "id": 4,
-        "name": "Calle Funes",
-        "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez." ,
-        "brand": 2,
-        "aniada": 2018,
-        "image": "botella-funes.png",
-        "price" : "$700"
-    },
-    {
-        "id": 5,
-        "name": "Calle Funes",
-        "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez." ,
-        "brand": 2,
-        "aniada": 2019,
-        "image": "botella-funes.png",
-        "price" : "$500"
-    },
-    {
-        "id": 6,
-        "name": "Calle Funes",
-        "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez." ,
-        "brand": 2,
-        "aniada": 2020,
-        "image": "botella-funes.png",
-        "price" : "$400"
-    }
+  {
+    "id": 1,
+    "brand": 1,
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
+    "year": 2016,
+    "image": "botella-ruta15.png",
+    "price": "$1000"
+  },
+  {
+    "id": 2,
+    "brand": 1,
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
+    "year": 2017,
+    "image": "botella-ruta15.png",
+    "price": "$900"
+  },
+  {
+    "id": 3,
+    "brand": 1,
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
+    "year": 2018,
+    "image": "botella-ruta15.png",
+    "price": "$800"
+  },
+  {
+    "id": 4,
+    "name": "Calle Funes",
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
+    "brand": 2,
+    "year": 2018,
+    "image": "botella-funes.png",
+    "price": "$700"
+  },
+  {
+    "id": 5,
+    "name": "Calle Funes",
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
+    "brand": 2,
+    "year": 2019,
+    "image": "botella-funes.png",
+    "price": "$500"
+  },
+  {
+    "id": 6,
+    "name": "Calle Funes",
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
+    "brand": 2,
+    "year": 2020,
+    "image": "botella-funes.png",
+    "price": "$400"
+  }
 
-    ]
+]

@@ -12,28 +12,36 @@
     </header>
     <main id="contenedor__general">
         <h1 id="titulo-alta">Alta de productos</h1>
-        <form class= "formulario-alta-productos" action="/alta" method="POST" enctype="multipart/form-data">
+        <form class= "formulario-alta-productos" action="/tienda/guardar" method="POST" enctype="multipart/form-data">
             <fieldset class="campo-formulario">
-                <label for="marca">Marca:</label>
-                <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="alta"  required placeholder="Escriba la marca">
+                <label for="brand">Marca</label>
+                <select name="brand" id="brand">
+                    <option value="" selected disabled>Seleccione una marca</option>
+                    <% brands.forEach(brand => { %>
+                        <option value="<%= brand.id %>">
+                            <%= brand.name %>
+                        </option>
+                    <% }) %>
+                </select>
             </fieldset>
+        
             <fieldset class="campo-formulario">
-                <label for="descripcion">Descripción:</label>
-                <input type="text" name= "apellido" id="apellido"  class="alta" required placeholder="Escriba la descripción del producto">
+                <label for="description">Descripción:</label>
+                <input type="text" name= "description" id="description"  class="alta" required placeholder="Escriba la descripción del producto">
             </fieldset>
             <fieldset class= "campo-formulario">
-                <label for="cosecha-año">Cosecha/Año:</label>
-                <input type="text" name= "nombre-de-usuario" id="nombre-de-usuario" class="alta" required placeholder="Escriba el año de cosecha">
+                <label for="year">Cosecha/Año:</label>
+                <input type="text" name= "year" id="year" class="alta" required placeholder="Escriba el año de cosecha">
             </fieldset>
             <fieldset class="campo-formulario">
-                <label for="precio">Precio:</label>
-                <input type="text" name="precio" value="2021-07-22" id= "precio"class="alta" required placeholder="Escriba el precio">
+                <label for="price">Precio:</label>
+                <input type="text" name="price" value="$0,00" id= "price" class="alta" required placeholder="Escriba el precio">
             </fieldset>
             <fieldset class="campo-formulario">
                 <label for="uploads">Subir imagen:</label>
-                <input type="file" name="imagen" id="clave" class="alta" required placeholder="suba su imagen">
+                <input type="file" name="image" id="clave" class="alta" required placeholder="suba su imagen">
             </fieldset>
-            <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
+            <button type="submit" class= "boton-formulario-enviar">CREAR PRODUCTO</button>  
 </main>
 <%- include('../include/footer')%>
 </body>

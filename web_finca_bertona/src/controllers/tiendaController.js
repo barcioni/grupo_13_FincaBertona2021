@@ -7,7 +7,11 @@ const controlador = {
         res.render(path.resolve(__dirname,"../views","products", "tienda.ejs"))
     },
     alta: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "alta.ejs"))
+        res.render(path.resolve(__dirname,"../views","products", "alta.ejs"), {brands:brand.all()})
+    },
+    guardar: (req,res) => {
+        let result = product.new(req.body,req.file)
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
     },
     edicion: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"))

@@ -23,6 +23,21 @@ const model = {
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
+    new: function (data,file) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        let nuevo = {
+            id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
+            description: data.description,
+            brand: parseInt(data.brand),
+            year: data.year,
+            image: file.filename,
+            price: data.price
+        }    
+        productos.push(nuevo)
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;    
+    },
 
  }
 
