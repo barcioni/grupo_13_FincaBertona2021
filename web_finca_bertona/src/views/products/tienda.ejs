@@ -12,49 +12,23 @@
     </header>
     <main id="contenedor__general"> 
         <h1 class="titulo-general">¡Llena tu carrito con la cosecha que prefieras!</h1>
-        <h2 class="subtitulo-general">Ruta 15</h2>
     <section class="contenedor__seccion1">
-        <div class="contenedor-botella">
-            <figure class="figure__ruta15__tienda"><img src="/imagenes/botella-ruta15.png" class="img__ruta15__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Ruta 15</p> 
-            <p class="cosecha">Cosecha Año 2016</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
-        <div class="contenedor-botella">
-            <figure class="figure__ruta15__tienda"><img src="/imagenes/botella-ruta15.png" class="img__ruta15__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Ruta 15</p> 
-            <p class="cosecha">Cosecha Año 2017</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
-        <div class="contenedor-botella">
-            <figure class="figure__ruta15__tienda"><img src="/imagenes/botella-ruta15.png" class="img__ruta15__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Ruta 15</p> 
-            <p class="cosecha">Cosecha Año 2018</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
+        <% list.forEach(product => { %>
+        <article class="contenedor-botella">
+            <% if (product.image) { %>
+            <figure class="figure__ruta15__tienda"><img src="/uploads/products/<%= product.image%>" class="img__ruta15__tienda" alt="finca-bertona"></figure>
+            <% } else { %>
+            <figure><img src="/imagenes/default.jpg" alt=""></figure>
+            <% } %>
+            <section>
+                <h2><%= product.brand.name %></h2>
+                <p class="cosecha"><%= product.year %> </p>
+                <a href="/tienda/<%= product.id %>"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
+            </section>  
+        </article>
+        <% }) %>
     </section>
-    <h2 class="subtitulo-general">Calle Funes</h2>
-    <section class="contenedor__seccion2">
-        <div class="contenedor-botella">
-            <figure class="figure__funes__tienda"><img src="/imagenes/botella-funes.png" class="img__funes__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Funes</p> 
-            <p class="cosecha">Cosecha Año 2018</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
-        <div class="contenedor-botella">
-            <figure class="figure__funes__tienda"><img src="/imagenes/botella-funes.png" class="img__funes__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Funes</p> 
-            <p class="cosecha">Cosecha Año 2019</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
-        <div class="contenedor-botella">
-            <figure class="figure__funes__tienda"><img src="/imagenes/botella-funes.png" class="img__funes__tienda" alt="finca-bertona"></figure>
-            <p class="marca-vino">Funes</p> 
-            <p class="cosecha">Cosecha Año 2020</p>  
-            <a href="/carrito"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
-        </div>
-    </section>
-    </main>
-    <%- include('../include/footer')%>
-    </body>
-    </html>
+</main>
+<%- include('../include/footer')%>
+</body>
+</html>

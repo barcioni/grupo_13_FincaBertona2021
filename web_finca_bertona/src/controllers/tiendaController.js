@@ -4,7 +4,7 @@ const brand = require('../models/brand');
 
 const controlador = {
     tienda: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "tienda.ejs"))
+        res.render(path.resolve(__dirname,"../views","products", "tienda.ejs"), {list:product.allWithExtra()})
     },
     alta: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "alta.ejs"), {brands:brand.all()})
