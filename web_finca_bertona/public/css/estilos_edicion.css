@@ -12,14 +12,12 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
-.img__ppal__tienda{
+.img-ppal-edicion{
     max-width: 100%;
-}
+}/*
 .img-ppal-tienda{
     margin-top: 35px;
-}
-
+}*/
 main{
     background-color: #fff;
     margin-top: -5px;
