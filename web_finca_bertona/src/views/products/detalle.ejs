@@ -19,8 +19,14 @@
             <h2 class="subtitulo-general"><%= product.name %></h2>
             <p class="marca-vino"><%= product.brand.name %></p> 
             <p class="cosecha"><%= product.year %></p>
-            <p class="precio"><%= product.price %></p>
+            <p class="precio"><%= product.currency %><%= product.price %></p>
             <p class="descripcion"><%= product.description %></p>
+            <ul>
+                <li class= "caracteriticas">Varietal: <%= product.varietal %></li>
+                <li class= "caracteriticas">Graduación: <%= product.graduacion %>% Vol.</li>
+                <li class= "caracteriticas">Tiempo en barrica: <%= product.barrica %></li>
+                <li class= "caracteriticas">Tiempo de guarda: <%= product.guarda %></li>
+            </ul>
         </article>
             <form action="/cart/add" method="post" class="campo__formulario">
                 <fieldset>

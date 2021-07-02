@@ -29,10 +29,15 @@ const model = {
         let nuevo = {
             id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
             brand: parseInt(data.brand),
-            description: data.description,
             year: data.year,
+            varietal: data.varietal,
+            graduacion: data.graduacion,
+            barrica: data.barrica,
+            guarda: data.guarda,
+            description: data.description,
             image: file.filename,
-            price: data.price
+            price: data.price,
+            currency: "$"
         }    
         productos.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
@@ -44,9 +49,13 @@ const model = {
         productos.map(producto => {
             if(producto.id == id ){
                 producto.brand = parseInt(data.brand),
-                producto.description = data.description,
                 producto.year = data.year,
-                producto.image = file.filename,
+                varietal = data.varietal,
+                graduacion = data.graduacion,
+                barrica = data.barrica,
+                guarda = data.guarda,
+                producto.description = data.description,
+                producto.image = file.filename, 
                 producto.price = data.price
                 return producto
             }

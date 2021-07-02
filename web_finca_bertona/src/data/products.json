@@ -2,53 +2,80 @@
   {
     "id": 1,
     "brand": 1,
-    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "year": 2016,
+    "varietal": "Malbec",
+    "graduacion": 14.2 ,
+    "barrica": "8 meses",
+    "guarda": "8 a 10 años",
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
-    "price": "$1000"
+    "price": 1000,
+    "currency": "$"
+
   },
   {
     "id": 2,
     "brand": 1,
-    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "year": 2017,
+    "varietal":"Malbec" ,
+    "graduacion": 14.3,
+    "barrica": "8 meses" ,
+    "guarda": "8 a 10 años",
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
-    "price": "$900"
+    "price": 900,
+    "currency": "$"
   },
   {
     "id": 3,
     "brand": 1,
-    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "year": 2018,
+    "varietal": "Malbec" ,
+    "graduacion": 14.2,
+    "barrica": "8 meses",
+    "guarda": "8 a 10 años",
+    "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
-    "price": "$800"
+    "price": 800,
+    "currency": "$"
   },
   {
     "id": 4,
-    "name": "Calle Funes",
-    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "brand": 2,
     "year": 2018,
+    "varietal": "Malbec" ,
+    "graduacion": 13.7 ,
+    "barrica": "4 meses" ,
+    "guarda": "3 a 5 años" ,
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
-    "price": "$700"
+    "price": 700,
+    "currency": "$"
   },
   {
     "id": 5,
-    "name": "Calle Funes",
-    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "brand": 2,
     "year": 2019,
+    "varietal": "Malbec" ,
+    "graduacion": 13.8 ,
+    "barrica": "4 meses",
+    "guarda": "3 a 5 años" ,
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
-    "price": "$500"
+    "price": 500,
+    "currency": "$"
   },
   {
     "id": 6,
-    "name": "Calle Funes",
-    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "brand": 2,
     "year": 2020,
+    "varietal": "Malbec" ,
+    "graduacion": 13.7 ,
+    "barrica": "4 meses" ,
+    "guarda": "3 a 5 años" ,
+    "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
-    "price": "$400"
+    "price": 400,
+    "currency": "$"
   }
-
 ]
