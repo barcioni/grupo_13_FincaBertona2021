@@ -53,13 +53,17 @@
             <input type="text" name="description" id="description" value="<%= product.description %>" >
         </fieldset>
          <fieldset>
-            <button type="submit" class="boton-comprar">EDITAR PRODUCTO</button>
+            <button type="submit" class="boton-editar">EDITAR PRODUCTO</button>
         </fieldset>
         <!--- <fieldset>
             <button type="submit" class="boton-comprar">ELIMINAR PRODUCTO</button>
         </fieldset>  CONSULTAR COMO LINKEAR ESTE BOTÓN A LA RUTA DINAMICA DE DELETE---> 
         </form>
     </section> 
+    <section>
+        <form action="/tienda/eliminar/<%= product.id %>?_method=DELETE" method="post" id="edit-form" enctype="multipart/form-data">
+            <a href="/tienda/eliminar/<%= product.id %>"></a><button type="submit" class="boton-eliminar">ELIMINAR PRODUCTO</button>
+    </section>
     <%- include('../include/footer')%>
 </body>
 </html>

@@ -1,3 +1,4 @@
+PRODUCTOS INICIALES
 [
   {
     "id": 1,
@@ -41,14 +42,14 @@
   {
     "id": 4,
     "brand": 2,
-    "year": "2018",
+    "year": 2018,
     "varietal": "Malbec",
     "graduacion": 13.8,
     "barrica": "4 meses",
     "guarda": "3 a 5 años",
     "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
-    "price": "700",
+    "price": 600,
     "currency": "$"
   },
   {
@@ -77,4 +78,17 @@
     "price": 400,
     "currency": "$"
   }
+]
+
+MARCAS INICIALES
+
+[
+    {
+        "id": 1,
+        "name": "Ruta 15"
+    },
+    {
+        "id": 2,
+        "name": "Calle Funes"
+    }
 ]

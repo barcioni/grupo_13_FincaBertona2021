@@ -20,12 +20,15 @@ router.get("/", tiendaController.tienda);
 
 router.get("/alta", tiendaController.alta);
 
+router.get("/:id", tiendaController.detalle);
+
 router.post ("/guardar", [upload.single ("image")], tiendaController.guardar)
 
 router.get("/editar/:id", tiendaController.edicion);
 
 router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.actualizar);
 
-router.get("/:id", tiendaController.detalle);
+router.delete("/eliminar/:id",tiendaController.eliminar)
+
 
 module.exports = router;

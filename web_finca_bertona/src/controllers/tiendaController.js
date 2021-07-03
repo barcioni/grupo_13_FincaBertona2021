@@ -24,6 +24,10 @@ const controlador = {
     detalle: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id)})
     },
+    eliminar: (req,res) => {
+        let result = product.delete(req.params.id);
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
+    } 
 
 };
  

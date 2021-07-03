@@ -55,15 +55,26 @@ const model = {
                 barrica = data.barrica,
                 guarda = data.guarda,
                 producto.description = data.description,
-                producto.image = file.filename, 
                 producto.price = data.price
                 return producto
             }
             return producto
+            //producto.image = file.filename, ---> hACER OTRO FORMULARIO PARA EDITAR LA IMAGEN
         })
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
     },
+    delete: function (id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",deleted.image))
+        // filtarmos el producto que deaseamos eliminar
+        productos = productos.filter(producto => producto.id != deleted.id )
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    }
 
  }
 
