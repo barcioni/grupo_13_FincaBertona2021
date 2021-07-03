@@ -11,7 +11,8 @@
         <figure class="img-ppal-tienda"><img src="/imagenes/img_ppal_tienda3.png" class="img__ppal__tienda" alt="finca-bertona"></figure>
     </header>
     <main id="contenedor__general">
-        <h1 id="titulo-alta">Alta de productos</h1>
+        <h1 id="titulo-alta">Alta de Productos</h1>
+        <section id="contenedor-alta">
         <form class= "formulario-alta-productos" action="/tienda/guardar" method="POST" enctype="multipart/form-data">
             <fieldset class="campo-formulario">
                 <label for="brand">Marca</label>
@@ -24,7 +25,6 @@
                     <% }) %>
                 </select>
             </fieldset>
-        
             <fieldset class= "campo-formulario">
                 <label for="year">Cosecha/Año:</label>
                 <input type="number" name= "year" id="year" class="alta" required placeholder="Escriba el año de cosecha">
@@ -42,7 +42,7 @@
                 <input type="text" name= "barrica" id="barrica" class="alta" required placeholder="Escriba el tiempo en barrica">
             </fieldset>
             <fieldset class= "campo-formulario">
-                <label for="guarda">Timpo de guarda:</label>
+                <label for="guarda">Tiempo de guarda:</label>
                 <input type="text" name= "guarda" id="guarda" class="alta" required placeholder="Escriba el tiempo de guarda">
             </fieldset>
             <fieldset class="campo-formulario">
@@ -57,7 +57,8 @@
                 <label for="uploads">Subir imagen:</label>
                 <input type="file" name="image" id="clave" class="alta" required placeholder="Suba la imágen del producto">
             </fieldset>
-            <button type="submit" class= "boton-formulario-enviar">CREAR PRODUCTO</button>  
+            <button type="submit" class= "boton-formulario-enviar">CREAR PRODUCTO</button> 
+        </section>         
 </main>
 <%- include('../include/footer')%>
 </body>

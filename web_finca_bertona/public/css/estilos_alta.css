@@ -12,12 +12,17 @@
 header{
     background-color: rgb(90, 14, 22);
 }
+#contenedor__general{
+    margin-top: -15px;
+    background-color: #fff;
+}
 #titulo-alta{
-    margin-top: -2rem;
+    margin: -2rem 0 1.5rem 0;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     padding-top: 1.5rem;
+    color: rgb(90, 14, 22);
 }
 .formulario-contacto{
     margin: auto;
@@ -31,7 +36,27 @@ header{
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;    
-}/*
-.alta{
-
-}*/
+    padding: 15px 7px 5px 0;
+    margin: 4px 0px 2px 0px;
+}
+.img__ppal__tienda{
+    max-width: 100%;
+}
+#contenedor-alta{
+    background-color: rgba(168, 159, 160, 1);
+    padding: 8%;
+    color: rgb(90, 14, 22);
+    font-weight: 600;
+}
+fieldset input{
+    width: 100%;
+    border-radius: 8px;
+    padding: 3px 0px 4px 7px;
+}
+button{
+    background-color: rgb(90, 14, 22);
+    border-radius: 8px;
+    padding: 15px 18px;
+    color: #fff;
+    font-weight: 600;
+}
