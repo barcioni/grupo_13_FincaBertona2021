@@ -94,9 +94,15 @@ button:hover{
         /* ======================================= 1 ===================================== */
             @media screen and (min-width:1200px){
         /* =============================================================================== */
+        #contenedor__general{
+            margin-top: -90px;
+        }
         #contenedor-alta{
             padding: 5% 13%;
             margin: 0 23%;
             border-radius: 10px;
+        }
+        #titulo-alta{
+            padding-bottom: 30px;
         }
 }

@@ -12,10 +12,8 @@ var storage = multer.diskStorage({
       cb(null, file.filename + '-' + Date.now() + path.extname(file.originalname))
     }
   })
-   
 const upload = multer({ storage: storage })
   
-
 router.get("/", tiendaController.tienda);
 
 router.get("/alta", tiendaController.alta);
