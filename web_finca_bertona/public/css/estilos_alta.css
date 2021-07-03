@@ -43,20 +43,60 @@ header{
     max-width: 100%;
 }
 #contenedor-alta{
-    background-color: rgba(168, 159, 160, 1);
-    padding: 8%;
-    color: rgb(90, 14, 22);
+    background-color: rgb(90, 14, 22);
+    padding: 15%;
+    color: #fff;
     font-weight: 600;
+    font-size: 1.5em;
 }
 fieldset input{
     width: 100%;
     border-radius: 8px;
     padding: 3px 0px 4px 7px;
+    background-color: rgb(240, 220, 155);
+    color: rgb(90, 14, 22);
+    border: solid 1px rgb(58, 5, 10);
+    margin-top: 4px;
 }
 button{
     background-color: rgb(90, 14, 22);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 15px 18px;
     color: #fff;
     font-weight: 600;
+    border: solid 2px rgb(240, 220, 155);
+    margin-top: 25px;
+}
+button:hover{
+    background-color: rgba(240, 220, 155, 0.5);
+    color: rgb(90, 14, 22);
+    font-weight: 700;
+}
+#brand{
+    background-color: rgb(240, 220, 155);
+    border: solid 1px rgb(58, 5, 10);
+    color: rgb(58, 5, 10);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 5px 7px;
+    margin-left: 5px;
+}
+/* ===================================== COMIENZO MEDIA QUERIES =============================================== */
+    /* ======================================= 0 ===================================== */
+    @media screen and (min-width:768px){
+        /* =============================================================================== */  
+            #contenedor-alta{
+                padding: 5% 10%;
+                margin: 0 20%;
+                border-radius: 8px;
+            }
+}
+        /* ======================================= 1 ===================================== */
+            @media screen and (min-width:1200px){
+        /* =============================================================================== */
+        #contenedor-alta{
+            padding: 5% 13%;
+            margin: 0 23%;
+            border-radius: 10px;
+        }
 }
