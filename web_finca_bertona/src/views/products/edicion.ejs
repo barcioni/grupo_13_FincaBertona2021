@@ -10,8 +10,9 @@
     <figure class="img-ppal-edicion"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
     </header>
     <section id="contenedor__general">
+        <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
+        <a href="/tienda/editarImagen/<%= product.id %>">Click aquí para editar la imágen</a>
         <form action="/tienda/actualizar/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
-            <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
         <fieldset>
             <label for="marca">Marca</label>
             <select name="brand" id="brand">
@@ -55,9 +56,7 @@
          <fieldset>
             <button type="submit" class="boton-editar">EDITAR PRODUCTO</button>
         </fieldset>
-        <!--- <fieldset>
-            <button type="submit" class="boton-comprar">ELIMINAR PRODUCTO</button>
-        </fieldset>  CONSULTAR COMO LINKEAR ESTE BOTÓN A LA RUTA DINAMICA DE DELETE---> 
+    
         </form>
     </section> 
     <section>

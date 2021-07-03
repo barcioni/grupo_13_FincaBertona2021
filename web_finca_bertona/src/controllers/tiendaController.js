@@ -17,8 +17,15 @@ const controlador = {
     edicion: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
     },
+    edicionImagen: (req,res)=>{
+        res.render(path.resolve(__dirname,"../views","products", "edicionImagen.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
+    },
     actualizar: (req,res) => {
         let result = product.edit(req.body,req.file,req.params.id)
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
+    },
+    actualizarImagen: (req,res) => {
+        let result = product.editImage(req.body,req.file,req.params.id)
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
     },
     detalle: (req,res)=>{

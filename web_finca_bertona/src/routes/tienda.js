@@ -28,6 +28,10 @@ router.get("/editar/:id", tiendaController.edicion);
 
 router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.actualizar);
 
+router.get("/editarImagen/:id", tiendaController.edicionImagen);
+
+router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
+
 router.delete("/eliminar/:id",tiendaController.eliminar)
 
 

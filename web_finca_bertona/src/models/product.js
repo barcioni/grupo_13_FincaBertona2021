@@ -64,6 +64,19 @@ const model = {
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
     },
+    editImage: function (data,file,id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        productos.map(producto => {
+            if(producto.id == id ){
+                producto.image = file.filename
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    },
     delete: function (id) {
         const directory = path.resolve(__dirname,"../data","products.json")
         let productos = this.all();

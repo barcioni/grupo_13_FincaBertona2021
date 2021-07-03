@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "María Adela del Rosario",
+    "apellido": "Bertona",
+    "usuario": "rosariob",
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "Boulevard cerro de las mentas 294",
+    "clave": [
+      "123",
+      "123"
+    ]
+  }
+]
