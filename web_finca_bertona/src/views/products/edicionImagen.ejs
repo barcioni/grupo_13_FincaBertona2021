@@ -2,31 +2,31 @@
 <html>
 <head>
     <%- include('../include/head')%>
-    <link rel="stylesheet" href="/css/estilos_edicion.css">
+    <link rel="stylesheet" href="/css/estilos_edicionImagen.css">
 </head>
 <body>
     <header>
         <%- include('../include/nav')%>
-    <figure class="img-ppal-edicion"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
+    <figure class="img-ppal-edicion"><img src="/imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
     </header>
     <section id="contenedor__general">
+        <section id="contenedor__secundario">
         <h1><%= product.brand.name %></h1>
         <h2><%= product.year %></h2>
         <h3>Imagen actual</h3>
         <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt="">
-
-        <form action="/tienda/actualizarImagen/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
+        <article>
+            <form action="/tienda/actualizarImagen/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
             <fieldset class="campo-formulario">
                 <label for="uploads">Subir imagen:</label>
                 <input type="file" name="image" id="clave" class="alta" required placeholder="Suba la imágen del producto">
             </fieldset>
             <fieldset>
-                <button type="submit" class="boton-editar">EDITAR IMÁGEN</button>
+                <button type="submit" id="boton-editar">EDITAR IMÁGEN</button>
             </fieldset>
-        
-
-
-
+            </form>
+        </article>
+        </section>
     </section>
     <%- include('../include/footer')%>
 </body>

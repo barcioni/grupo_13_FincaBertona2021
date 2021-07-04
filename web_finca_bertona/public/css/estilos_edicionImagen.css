@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding:0px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;  
+    text-decoration: none; 
+    list-style: none;
+    -webkit-text-size-adjust: none;
+}
+header{
+    background-color: rgb(90, 14, 22);
+}
+.img__ppal__vinos{
+    max-width: 100%;
+}
+main{
+    background-color: #fff;
+    margin-top: -5px;
+}
+/* ----------FIN del NAVEGADOR ----principio main --------*/
+.campo-formulario {
+    border: none;
+    margin: auto;
+    padding-top: 0.5em;
+    color:rgb(240, 212, 212);
+    text-align: center;
+    font-weight: 500;
+}
+#contenedor__general{
+    background-color: #fff;
+    padding: 5% 10%;
+    margin-top: -50px;
+}
+#contenedor__secundario{
+    background-color: rgb(58, 12, 16);
+    border-radius: 20px;
+    padding: 5% 10%;
+    position: relative;
+    z-index: 19;
+}
+h1, h2, h3{
+    color:rgb(240, 212, 212);
+    display: block;
+    text-align: center;
+}
+h1{
+    font-size: 4rem;
+}
+#botella{
+    width: 60%;
+    display: block;
+    margin: 5% auto;
+    border: solid 5px rgb(90, 14, 22);
+    border-radius: 15px;
+}
+fieldset{
+    border: none;
+}
+#boton-editar{
+    display: block;
+    margin: auto;
+    background: rgb(58, 12, 16);
+    color: rgb(240, 212, 212);
+    padding: 15px 30px;
+    border-radius: 15px;
+    align-self: center;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+#boton-editar:hover{
+    transition: all 0.5s;
+    background: rgb(107, 29, 36);
+    font-weight: 600;
+}
+input{
+    background-color: rgb(90, 14, 22);
+    border-radius: 8px;
+    padding: 3px 10px;
+}
+/* ===================================== COMIENZO MEDIA QUERIES ==========rgb(240, 220, 155);===================================== */
+    /* ======================================= 0 ===================================== */
+    @media screen and (min-width:768px){
+        /* =============================================================================== */  
+        #contenedor__general{
+            padding: 5% 11%;
+            margin-top: -70px;
+        }
+}
+        /* ======================================= 1 ===================================== */
+            @media screen and (min-width:1200px){
+        /* =============================================================================== */
+        #contenedor__general{
+            margin-top: -190px;
+            padding: 5% 20%;
+        }
+    }    
