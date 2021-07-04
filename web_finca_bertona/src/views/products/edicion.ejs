@@ -7,60 +7,60 @@
 <body>
     <header>
         <%- include('../include/nav')%>
-    <figure class="img-ppal-edicion"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
+    <figure class="img-ppal-edicion"><img src="/imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
     </header>
     <section id="contenedor__general">
-        <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
-        <a href="/tienda/editarImagen/<%= product.id %>">Click aquí para editar la imágen</a>
-        <form action="/tienda/actualizar/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
-        <fieldset>
-            <label for="marca">Marca</label>
-            <select name="brand" id="brand">
-                <% brands.forEach(brand => { %>
-                    <% if (product.brand.id == brand.id) { %>
-                        <option value="<%= brand.id %>" selected><%= brand.name %></option>
-                    <% } else { %>
-                        <option value="<%= brand.id %>"><%= brand.name %></option>
-                    <% } %>
-                <% }) %>
-            </select>        
-        </fieldset>
-        <fieldset>
-            <label for="cosecha">Cosecha</label>
-            <input type="text" name="year" id="year" value="<%= product.year %>" >
-        </fieldset>
-        <fieldset>
-            <label for="price">Precio</label>
-            <input type="number" name="price" id="price" value="<%= product.price %>" >
-        </fieldset>
-        <fieldset>
-            <label for="varietal">Varietal</label>
-            <input type="text" name="varietal" id="varietal" value="<%= product.varietal %>" >
-        </fieldset>
-        <fieldset>
-            <label for="graduacion">Graduación alcoholica</label>
-            <input type="number" name="graduacion" id="graduacion" value="<%= product.graduacion %>" >
-        </fieldset>
-        <fieldset>
-            <label for="barrica">Tiempo en barrica</label>
-            <input type="text" name="barrica" id="barrica" value="<%= product.barrica %>" >
-        </fieldset>
-        <fieldset>
-            <label for="guarda">Tiempo de guarda</label>
-            <input type="text" name="guarda" id="guarda" value="<%= product.guarda %>" >
-        </fieldset>
-        <fieldset>
-            <label for="description">Descripción</label>
-            <input type="text" name="description" id="description" value="<%= product.description %>" >
-        </fieldset>
-        <fieldset>
-            <button type="submit" class="boton-editar">EDITAR PRODUCTO</button>
-        </fieldset>
-        </form>
-    </section> 
-    <section>
-        <form action="/tienda/eliminar/<%= product.id %>?_method=DELETE" method="post" id="edit-form" enctype="multipart/form-data">
-            <a href="/tienda/eliminar/<%= product.id %>"></a><button type="submit" class="boton-eliminar">ELIMINAR PRODUCTO</button>
+        <section id="contenedor__secundario">
+                <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
+                <a href="/tienda/editarImagen/<%= product.id %>" id="texto-editar-imagen">Click aquí para editar la imágen</a>
+                <form action="/tienda/actualizar/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
+                    <fieldset>
+                        <label for="marca">Marca</label>
+                        <select name="brand" id="brand">
+                            <% brands.forEach(brand => { %>
+                                <% if (product.brand.id == brand.id) { %>
+                                    <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                                <% } else { %>
+                                    <option value="<%= brand.id %>"><%= brand.name %></option>
+                                <% } %>
+                            <% }) %>
+                        </select>        
+                    </fieldset>
+                    <fieldset>
+                        <label for="cosecha">Cosecha</label>
+                        <input type="text" name="year" id="year" value="<%= product.year %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="price">Precio</label>
+                        <input type="number" name="price" id="price" value="<%= product.price %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="varietal">Varietal</label>
+                        <input type="text" name="varietal" id="varietal" value="<%= product.varietal %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="graduacion">Graduación alcohólica</label>
+                        <input type="number" name="graduacion" id="graduacion" value="<%= product.graduacion %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="barrica">Tiempo en barrica</label>
+                        <input type="text" name="barrica" id="barrica" value="<%= product.barrica %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="guarda">Tiempo de guarda</label>
+                        <input type="text" name="guarda" id="guarda" value="<%= product.guarda %>" >
+                    </fieldset>
+                    <fieldset>
+                        <label for="description">Descripción</label>
+                        <input type="text" name="description" id="description" value="<%= product.description %>" >
+                    </fieldset>
+                </form>
+                <article id="contenedor-botones">
+                    <button type="submit" id="boton-editar">EDITAR PRODUCTO</button>
+                    <form action="/tienda/eliminar/<%= product.id %>?_method=DELETE" method="post" id="edit-form" enctype="multipart/form-data">
+                    <a href="/tienda/eliminar/<%= product.id %>"></a><button type="submit" id="boton-eliminar">ELIMINAR PRODUCTO</button>
+                </article>
+                </section> 
     </section>
     <%- include('../include/footer')%>
 </body>
