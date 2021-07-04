@@ -21,6 +21,7 @@ header{
 }
 h1{
     font-size: 9rem;
+    font-weight: 900;
 }
 h1, h3, #texto404{
     color: rgb(240, 220, 155);
