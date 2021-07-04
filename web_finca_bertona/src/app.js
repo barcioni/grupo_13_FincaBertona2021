@@ -27,5 +27,7 @@ app.use ("/tienda", rutasTienda);
 const rutasUser = require ("./routes/user");
 app.use ("/", rutasUser);
 
+//pagina 404
+app.use((req, res, next) => {res.status(404).render("notFound")});
 
 app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
