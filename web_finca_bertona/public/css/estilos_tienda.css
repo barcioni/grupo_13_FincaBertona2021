@@ -86,7 +86,7 @@ main{
             margin-top: 0;
         }
         .contenedor__seccion1{
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: 33% 33% 33%;
         }
 }
     /* ======================================= 1 ===================================== */
@@ -97,7 +97,7 @@ main{
             padding: 0 20%;
         }
         .contenedor__seccion1{
-            grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+            grid-template-columns: 33% 33% 33%;
             grid-template-rows: 45% 45%;
             margin: 0 10%;
         }
