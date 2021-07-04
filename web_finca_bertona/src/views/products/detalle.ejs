@@ -10,6 +10,7 @@
     <figure class="img-ppal-detalle"><img src="../imagenes/img_ppal_contacto.png" class="img__ppal__vinos" alt="finca-bertona"></figure>
     </header>
     <section id="contenedor__general">
+        <section id="contenedor__secundario">
         <% if (product.image) { %>
         <img src="/uploads/products/<%= product.image%>" class="imagen-producto" id="botella" alt=""> 
         <% } else { %>
@@ -22,14 +23,14 @@
             <p class="precio"><%= product.currency %><%= product.price %></p>
             <p class="descripcion"><%= product.description %></p>
             <ul>
-                <li class= "caracteriticas">Varietal: <%= product.varietal %></li>
-                <li class= "caracteriticas">Graduación: <%= product.graduacion %>% Vol.</li>
-                <li class= "caracteriticas">Tiempo en barrica: <%= product.barrica %></li>
-                <li class= "caracteriticas">Tiempo de guarda: <%= product.guarda %></li>
+                <li class= "caracteriticas"><span class="caracteristicas-bold">Varietal:</span> <%= product.varietal %></li>
+                <li class= "caracteriticas"><span class="caracteristicas-bold">Graduación:</span> <%= product.graduacion %>% Vol.</li>
+                <li class= "caracteriticas"><span class="caracteristicas-bold">Tiempo en barrica:</span> <%= product.barrica %></li>
+                <li class= "caracteriticas"><span class="caracteristicas-bold">Tiempo de guarda:</span> <%= product.guarda %></li>
             </ul>
         </article>
             <form action="/cart/add" method="post" class="campo__formulario">
-                <fieldset>
+                <fieldset id="quantity">
                     <label for="quantity">Quantity</label>
                     <input type="number" min="1" max="12" value="1" required>
                 </fieldset>
@@ -37,6 +38,7 @@
                     <button type="submit" class="boton-comprar">comprar</button>
                 </fieldset>
             </form>
+        </section>
     </section> 
     <%- include('../include/footer')%>
 </body>
