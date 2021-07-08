@@ -29,4 +29,32 @@ Guillermo (Autocritica): En mi caso particular el estar atrasado con el material
 
 _______________________________________________________________________________________________________________________________________________
 
+***FEEDBACK SPRINT 3: RETROSPECTIVA***
+Responsabilidad: Cumplió con la entrega en tiempo y forma. Se muestra comprometidos con el trabajo.
+
+Trabajo en equipo: Trabajan de manera colaborativa y coordinada para alcanzar los objetivos de su equipo. Gestionan el tiempo que tienen y lo utilizan de forma eficiente. Están compromtidos con sus tareas. Buena comunicación entre los integrantes
+
+Comentario Global: Simplificar el nombre de las rutas, mejorar el partial del header con datos dinamicos, ultilizar más utilidades de ejs.
+
+***Dinamica de la estrella de mar***
+
+1. Comenzar a hacer.
+
+Trabajar sobre la comunicacion diaria y la fluidez de los encuentros entre los miembros del equipo. 
+
+2. Hacer más.
+
+Uso del Trello y división temprana de las tareas. 
+ 
+3. Continuar haciendo.
+
+Reuniones organizativas para la división del trabajo y reuniones una vez finalizadas las tareas para confirmar el correcto funcionamiento de todo en su conjunto.
+
+
+4. Hacer menos & Dejar de hacer.
+
+Dejar pasar los primeros días luego de la anterior entrega hasta organizarnos.
+
+
+_______________________________________________________________________________________________________________________________________________
 
