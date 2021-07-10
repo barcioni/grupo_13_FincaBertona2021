@@ -15,12 +15,25 @@ header{
 #img__ppal__vinos{
     max-width: 100%;
 }
+main{
+    background-color: #fff;
+    margin-top: -15px;
+}
 #contenedor__general{
+    background-color: rgb(90, 14, 22);
+    display: column flex;
     text-align: center;
-    margin: 30%;
+    margin: -15% 10% 0 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    /* padding: 15% auto; <--preguntar xq no funciona asi para el responsive*/ 
+    border-radius: 8px;
+    border:dashed 5px rgb(240, 220, 155);
+    position: relative;
+    z-index: 9;
 }
 h1{
-    font-size: 9rem;
+    font-size: 9em;
     font-weight: 900;
 }
 h1, h3, #texto404{
