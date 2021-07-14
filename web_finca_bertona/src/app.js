@@ -29,5 +29,8 @@ app.use ("/", rutasUser);
 
 app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
 
+var logMiddleware = require("./middlewares/logMiddleware");
+app.use(logMiddleware);
+
 //pagina 404
 app.get("*", (req, res) => {res.render("notFound")});
