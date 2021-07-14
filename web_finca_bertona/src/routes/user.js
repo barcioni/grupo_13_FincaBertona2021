@@ -18,9 +18,9 @@ let logDBMiddleware = require("../middlewares/logDBMiddleware");
 
 router.get("/registro", userController.registro);
 
-router.get("/contacto",userController.contacto);
+router.get("/contacto", userController.contacto);
 
-router.get("/login",userController.login);
+router.get("/login", userController.login);
 
 router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], userController.guardar);
 
