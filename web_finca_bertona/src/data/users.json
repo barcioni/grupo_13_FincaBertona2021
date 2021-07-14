@@ -10,5 +10,24 @@
       "123",
       "123"
     ]
+  },
+  {
+    "id": 3,
+    "nombre": "Pali",
+    "apellido": "Bertona",
+    "usuario": "rosariobert.",
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "asdas",
+    "clave": "asdasd"
+  },
+  {
+    "id": 4,
+    "nombre": "María Adela del Rosario",
+    "apellido": "Bertona",
+    "usuario": "EST40127068",
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "Calle 123",
+    "clave": "SDasd",
+    "image": "undefined-1626237446760.JPG"
   }
 ]

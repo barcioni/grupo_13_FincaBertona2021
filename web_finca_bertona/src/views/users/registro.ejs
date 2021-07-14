@@ -13,7 +13,7 @@
     <main>
         <section class="contenedorSeccion1">
             <h1 class="titulo-registro">CREA TU CUENTA</h1>
-            <form class= "formulario-registro" action="/guardarUsuario" method="POST">
+            <form class= "formulario-registro" action="/guardarUsuario" method="POST" enctype="multipart/form-data">
                 <fieldset class= "campo-formulario">
                     <label for="nombre">Nombre:</label>
                     <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="control"  required placeholder="Escriba su nombre">
@@ -41,7 +41,11 @@
         
                 <fieldset class="campo-formulario-mensaje">
                     <label for="confirmacion-clave">Confirme su contraseña:</label>
-                    <input type="password" name="clave" id="clave" class="control" required placeholder="Confirme su contraseña">
+                    <input type="password" name="confirmación-clave" id="confirmación-clave" class="control" required placeholder="Confirme su contraseña">
+                </fieldset>
+                <fieldset class="campo-formulario">
+                    <label for="uploads">Subir imagen de perfil:</label>
+                    <input type="file" name="image" id="image" class="control" placeholder="Suba la imágen del producto">
                 </fieldset>
                 <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
     </main>

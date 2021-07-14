@@ -19,6 +19,7 @@ const model = {
             fechaDeNacimiento: data.fechaDeNacimiento,
             domicilio: data.domicilio,
             clave: data.clave,
+            image: file.filename
         }    
         usuarios.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
