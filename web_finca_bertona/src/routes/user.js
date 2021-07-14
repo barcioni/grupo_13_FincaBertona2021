@@ -13,6 +13,8 @@ var storage = multer.diskStorage({
     }
   })
 const upload = multer({ storage: storage })
+// Middlewares
+let logDBMiddleware = require("../middlewares/logDBMiddleware");
 
 router.get("/registro", userController.registro);
 
@@ -20,6 +22,6 @@ router.get("/contacto",userController.contacto);
 
 router.get("/login",userController.login);
 
-router.post("/guardarUsuario", [upload.single("image")], userController.guardar);
+router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], userController.guardar);
 
 module.exports = router;

@@ -1,7 +1,9 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const methodOverride = require ("method-override")
+const methodOverride = require("method-override")
+// Middlewares
+var logMiddleware = require("./middlewares/logMiddleware");
 
 // Public access
 app.use(express.static(path.resolve(__dirname, "../public")));
@@ -29,7 +31,7 @@ app.use ("/", rutasUser);
 
 app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
 
-var logMiddleware = require("./middlewares/logMiddleware");
+// Middlewares
 app.use(logMiddleware);
 
 //pagina 404
