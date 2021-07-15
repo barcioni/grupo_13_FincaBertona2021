@@ -2,6 +2,15 @@ const express = require ("express");
 const router = express.Router ();
 const path = require ("path")
 const userController = require ("../controllers/userController");
+// Middlewares
+const logDBMiddleware = require("../middlewares/logDBMiddleware");
+//Express Validator
+const {body} = require("express-validator");
+const validaciones = [
+  body("").notEmpty(),
+  body("").notEmpty(),
+  body("").notEmpty(),
+];
 const multer  = require('multer');
 
 var storage = multer.diskStorage({
@@ -13,8 +22,6 @@ var storage = multer.diskStorage({
     }
   })
 const upload = multer({ storage: storage })
-// Middlewares
-let logDBMiddleware = require("../middlewares/logDBMiddleware");
 
 router.get("/registro", userController.registro);
 
@@ -22,13 +29,6 @@ router.get("/contacto", userController.contacto);
 
 router.get("/login", userController.login);
 
-//Express Validator
-const {body} = require("express-validator");
-const validaciones = [
-  body("").notEmpty(),
-  body("").notEmpty(),
-  body("").notEmpty(),
-];
-router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], validaciones, userController.guardar);
+router.post("/guardarUsuario", [upload.single("image") /*logDBMiddleware*/]/*, validaciones*/, userController.guardar);
 
 module.exports = router;

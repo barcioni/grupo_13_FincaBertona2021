@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const bcrypt = require ("bcryptjs")
 
 const model = {
     directory: path.resolve(__dirname,"../data","users.json"),
@@ -19,10 +20,10 @@ const model = {
             id: users.length > 0 ? lastUser.id + 1: 1,
             nombre: data.nombre,
             apellido: data.apellido,
-            usuario: data.usuario,
+            email: data.email,
             fechaDeNacimiento: data.fechaDeNacimiento,
             domicilio: data.domicilio,
-            clave: data.clave,
+            clave: bcrypt.hashSync(data.clave, 10),
             image: file.filename 
         }    
         users.push(nuevo)
@@ -37,5 +38,4 @@ const model = {
     }
 }
 
-console.log(model.all());
 module.exports = model;
