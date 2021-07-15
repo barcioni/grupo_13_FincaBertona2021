@@ -29,6 +29,14 @@ router.get("/contacto", userController.contacto);
 
 router.get("/login", userController.login);
 
-router.post("/guardarUsuario", [upload.single("image") /*logDBMiddleware*/]/*, validaciones*/, userController.guardar);
+//Express Validator
+const {body} = require("express-validator");
+const validaciones = [
+  body("nombre").notEmpty(),
+  body("apellido").notEmpty(),
+  body("nombre-de-usuario").notEmpty(),
+  body("clave").notEmpty(),
+];
+router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], validaciones, userController.guardar);
 
 module.exports = router;
