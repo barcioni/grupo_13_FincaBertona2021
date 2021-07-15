@@ -2,29 +2,40 @@ const path = require('path');
 const fs = require('fs');
 
 const model = {
-    all: function() {
-        const directory = path.resolve(__dirname,"../data","users.json")
-        const file = fs.readFileSync(directory,"utf-8")
-        const convert = JSON.parse(file)
-        return convert
+    directory: path.resolve(__dirname,"../data","users.json"),
+    all: function (){
+        return JSON.parse(fs.readFileSync(this.directory,"utf-8"))
+    },
+    one: function(id){
+        return this.all().find(user => user.id == id);
+    },
+    findByEmail: function (email){
+        return this.all().find(user => user.email == email)
     },
     new: function (data,file) {
-        const directory = path.resolve(__dirname,"../data","users.json")
-        let usuarios = this.all();
+        let users = this.all();
+        let lastUser = users[users.length -1]
         let nuevo = {
-            id: usuarios.length > 0 ? usuarios[usuarios.length -1].id + 1: 1,
+            id: users.length > 0 ? lastUser.id + 1: 1,
             nombre: data.nombre,
             apellido: data.apellido,
             usuario: data.usuario,
             fechaDeNacimiento: data.fechaDeNacimiento,
             domicilio: data.domicilio,
             clave: data.clave,
-            image: file.filename
+            image: file.filename 
         }    
-        usuarios.push(nuevo)
-        fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
+        users.push(nuevo)
+        fs.writeFileSync(this.directory,JSON.stringify(users,null,2));
         return true;    
     },
+    delete: function (id){
+        let users = this.all ()
+        let finalUsers = users.filter (one => one.id !== id);
+        fs.writeFileSync (this.directory, JSON.stringify (finalUsers, null, 2));
+        return true
+    }
 }
 
+console.log(model.all());
 module.exports = model;
