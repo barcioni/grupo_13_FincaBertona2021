@@ -25,9 +25,10 @@ router.get("/login", userController.login);
 //Express Validator
 const {body} = require("express-validator");
 const validaciones = [
-  body("").notEmpty(),
-  body("").notEmpty(),
-  body("").notEmpty(),
+  body("nombre").notEmpty(),
+  body("apellido").notEmpty(),
+  body("nombre-de-usuario").notEmpty(),
+  body("clave").notEmpty(),
 ];
 router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], validaciones, userController.guardar);
 
