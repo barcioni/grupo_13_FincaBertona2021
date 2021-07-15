@@ -76,18 +76,5 @@
     "image": "botella-funes.png",
     "price": 400,
     "currency": "$"
-  },
-  {
-    "id": 7,
-    "brand": 1,
-    "year": "2021",
-    "varietal": "Prueba",
-    "graduacion": "3",
-    "barrica": "4 a 5",
-    "guarda": "5",
-    "description": "Prueba",
-    "image": "undefined-1625295088569.jpg",
-    "price": "1000",
-    "currency": "$"
   }
 ]
