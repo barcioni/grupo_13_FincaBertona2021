@@ -30,6 +30,8 @@ router.get("/registro", userController.registro);
 router.get("/contacto", userController.contacto);
 //Formulario de login
 router.get("/login", userController.login);
+//Perfil del usuario
+router.get("/perfil/:id", userController.perfil);
 //Proceso de registro
 router.post("/guardarUsuario", [upload.single("image"), /*logDBMiddleware*/],/* validaciones,*/ userController.guardar);
 //Proceso de login

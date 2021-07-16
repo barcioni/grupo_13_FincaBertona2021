@@ -17,6 +17,10 @@ const controlador = {
     login: (req,res) => { 
         res.render(path.resolve(__dirname,"../views", "users", "login.ejs"))
     },
+    //Perfil
+    perfil: (req,res) => { 
+        res.render(path.resolve(__dirname,"../views", "users", "perfil.ejs"),{user:user.one(req.params.id)})
+    },
     
     // Proceso de registro
     guardar: (req,res) => {
