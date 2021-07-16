@@ -35,7 +35,7 @@ const model = {
             barrica: data.barrica,
             guarda: data.guarda,
             description: data.description,
-            image: file!= undefined && file.filename != undefined ? file.filename : "botella-funes.png",
+            image: file!= undefined && file.filename != undefined ? file.filename : "botella-ruta15.png",
             price: data.price,
             currency: "$"
         }    

@@ -14,13 +14,14 @@ const controlador = {
         res.render(path.resolve(__dirname,"../views", "users", "login.ejs"))
     },
     guardar: (req,res) => {
+        //return res.send ({data:req.body, file:req.file})
         const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
+        /*if (resultValidation.errors.length > 0) {
 			return res.render('users/registro.ejs', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}
+		}*/
        
         let userInDB = user.findByEmail (req.body.email)
         if (userInDB) {

@@ -24,7 +24,7 @@ const model = {
             fechaDeNacimiento: data.fechaDeNacimiento,
             domicilio: data.domicilio,
             clave: bcrypt.hashSync(data.clave, 10),
-            image: file.filename 
+            image: file!= undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",
         }    
         users.push(nuevo)
         fs.writeFileSync(this.directory,JSON.stringify(users,null,2));
