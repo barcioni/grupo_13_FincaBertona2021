@@ -24,7 +24,17 @@
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="email">E-mail:</label>
-                    <input type="email" name= "email" id="email" class="control" required placeholder="Escriba su direccion de mail">
+                    <input 
+                    type="email" 
+                    name= "email"  
+                    class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.email : null %>"
+                    required placeholder="Escriba su direccion de mail">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="fecha-de-nacimiento">Fecha de nacimiento:</label>

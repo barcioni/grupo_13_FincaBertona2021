@@ -24,14 +24,16 @@ var storage = multer.diskStorage({
   })
 const upload = multer({ storage: storage })
 
+//Formulario de registro
 router.get("/registro", userController.registro);
-
+//Formulario de contacto
 router.get("/contacto", userController.contacto);
-
+//Formulario de login
 router.get("/login", userController.login);
+//Proceso de registro
+router.post("/guardarUsuario", [upload.single("image"), /*logDBMiddleware*/],/* validaciones,*/ userController.guardar);
+//Proceso de login
+router.post('/loginProcess', userController.loginProcess)
 
-//Express Validator
-
-router.post("/guardarUsuario", [upload.single("image"), logDBMiddleware], validaciones, userController.guardar);
 
 module.exports = router;

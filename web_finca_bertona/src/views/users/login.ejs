@@ -13,14 +13,19 @@
     <main> 
     <section class="contenedorSeccion1">
         <h1 class="titulo-login">LOG IN TO ACCOUNT</h1>
-        <form class= "formulario-login" action="/login" method="POST">
+        <form class= "formulario-login" action="/loginProcess" method="POST">
         <fieldset class= "campo-formulario">
             <label for="email"></label>
-            <input type="email" name="email" id="email" value="E-mail" class="control" required placeholder>
+            <input type="email" name="email" id="email" class="control" required placeholder= "E-mail">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
         </fieldset>
         <fieldset class= "campo-formulario">
             <label for="password"></label>
-            <input type="password" name="password" id="password" value="Contraseña" class="control" required placeholder>
+            <input type="password" name="password" id="password" class="control" required placeholder= "Contaseña">
         </fieldset>
         <div class="opciones-login">
             <a href="#" class="opciones-login__olvido-contraseña">¿Olvidó su contraseña?</a> <a href="/registro">Crear cuenta</a>          

@@ -1,12 +1,10 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const methodOverride = require("method-override")
-// Middlewares
-var logMiddleware = require("./middlewares/logMiddleware");
+const methodOverride = require("method-override");
+const session = require("express-session"); //Session
+var logMiddleware = require("./middlewares/logMiddleware"); //Middlewares
 
-// Public access
-app.use(express.static(path.resolve(__dirname, "../public")));
 
 // Server start
 app.listen(3030,()=> console.log("Server Start in http://localhost:3030"));
@@ -15,9 +13,16 @@ app.listen(3030,()=> console.log("Server Start in http://localhost:3030"));
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname,"./views"));
 
-// Data config
+// Middlewares
 app.use(express.urlencoded({extended:false})); // Not fund req.body
 app.use(methodOverride("_method")); // ?_method=PUT
+app.use(express.json());
+app.use(logMiddleware);
+app.use(session({secret: "Secret", resave: false, saveUninitialized: false,})); // add req.session
+
+// Public access
+app.use(express.static(path.resolve(__dirname, "../public")));
+
 
 // Rutas
 const rutasMain = require ("./routes/main");
@@ -31,8 +36,6 @@ app.use ("/", rutasUser);
 
 app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
 
-// Middlewares
-app.use(logMiddleware);
 
 //pagina 404
 app.get("*", (req, res) => {res.render("notFound")});

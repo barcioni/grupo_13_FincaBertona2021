@@ -1,32 +1,12 @@
 [
   {
     "id": 1,
-    "nombre": "María Adela del Rosario",
+    "nombre": "Maria Adela del",
     "apellido": "Bertona",
     "email": "rosariobertona96@gmail.com",
     "fechaDeNacimiento": "2021-07-22",
     "domicilio": "Calle 123",
-    "clave": "$2a$10$10BPgYIfSAEKfrWmvYWO/ebnceaDFxk2.F3OpUDpqXFUQ5I52TfPi",
-    "image": "user-1626404481988.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "Malena",
-    "apellido": "Gimeno",
-    "email": "hola@gmail.com",
-    "fechaDeNacimiento": "2021-07-22",
-    "domicilio": "Calle 123",
-    "clave": "$2a$10$iDC/wkMSCHIdrdeWDnbLe.JeyG/lTwdjJxH3HMZKvTmpOA50ijPUy",
-    "image": "guestUserDefault.png"
-  },
-  {
-    "id": 3,
-    "nombre": "Maria Adela del",
-    "apellido": "Bertona",
-    "email": "rosariob@gmail.com",
-    "fechaDeNacimiento": "2021-07-22",
-    "domicilio": "errr",
-    "clave": "$2a$10$7w7M6pKfrCGbYHbK6aFaMuNhs.GoRF55xAWRN/00FXGLHXYGghIbq",
-    "image": "guestUserDefault.png"
+    "clave": "$2a$10$un9plXJQpbKR0dqu3bQ.1eUO.hakqCf.ffYl9n6TcZyWqU2idumA2",
+    "image": "user-1626412981906.jpg"
   }
 ]
