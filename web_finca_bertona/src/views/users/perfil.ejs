@@ -1,3 +1,5 @@
+<!Doctype html>
+<html>
 <head>
     <%- include('../include/head')%>
     <link rel="stylesheet" href="/css/estilos_perfil.css">
@@ -8,12 +10,16 @@
     </header>
     <section id="contenedor__general">
         <h1> Hola <%= user.nombre %></h1>
-        <section id="contenedor__secundario">
         <% if (user.image) { %>
-        <img src="/uploads/products/<%= user.image%>" class="imagen-usuario" id="" alt=""> 
-        <% } else { %>
-            <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
-        <% } %>
+            <img src="/uploads/users/<%= user.image%>" class="imagen-usuario" id="" alt=""> 
+            <% } else { %>
+                <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
+                <% } %>
+        <section id="contenedor__secundario">
+            <h2><%= user.email %></h2>
+            <h2><%= user.fechaDeNacimiento %></h2>
+            <h2><%= user.direccion %></h2>
+            <button> <a href="/logout"> Log out</a></button>
         </section>
     </section> 
     <%- include('../include/footer')%>

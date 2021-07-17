@@ -18,9 +18,9 @@ const controlador = {
         res.render(path.resolve(__dirname,"../views", "users", "login.ejs"))
     },
     //Perfil
-    perfil: (req,res) => { 
+    /*perfil: (req,res) => { 
         res.render(path.resolve(__dirname,"../views", "users", "perfil.ejs"),{user:user.one(req.params.id)})
-    },
+    },*/
     
     // Proceso de registro
     guardar: (req,res) => {
@@ -57,8 +57,12 @@ const controlador = {
             if (isOkThePassword) {
                 delete userToLogin.clave;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
     
-                return res.redirect('/tienda');
+                return res.redirect('/perfil');
             } 
             return res.render('users/login', {
                 errors: {
@@ -76,7 +80,18 @@ const controlador = {
                 }
             }
         });
-    }
+    },
+    perfil: (req, res) => {
+		return res.render('users/perfil', {
+			user: req.session.userLogged
+		});
+	},
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
+
 };
 
 

@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session"); //Session
+const cookies = require ("cookie-parser"); //Cookies
 var logMiddleware = require("./middlewares/logMiddleware"); //Middlewares
+const userLoggedMiddleware = require ("./middlewares/userLoggedMiddleware")
 
 
 // Server start
@@ -14,11 +16,13 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname,"./views"));
 
 // Middlewares
+app.use(session({secret: "Secret", resave: false, saveUninitialized: false,})); // add req.session
+app.use (cookies ());
 app.use(express.urlencoded({extended:false})); // Not fund req.body
 app.use(methodOverride("_method")); // ?_method=PUT
 app.use(express.json());
 app.use(logMiddleware);
-app.use(session({secret: "Secret", resave: false, saveUninitialized: false,})); // add req.session
+app.use(userLoggedMiddleware);
 
 // Public access
 app.use(express.static(path.resolve(__dirname, "../public")));
