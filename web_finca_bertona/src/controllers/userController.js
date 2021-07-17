@@ -51,11 +51,11 @@ const controlador = {
     //Proceso de login
     loginProcess: (req,res) => { 
         let userToLogin = user.findByEmail(req.body.email);
-        
+        //return res.send ({ data: req.body, user: userToLogin, clave: bcrypt.compareSync(req.body.clave, userToLogin.clave)})
         if(userToLogin) {
-            let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            let isOkThePassword = bcrypt.compareSync(req.body.clave, userToLogin.clave);
             if (isOkThePassword) {
-                delete userToLogin.password;
+                delete userToLogin.clave;
                 req.session.userLogged = userToLogin;
     
                 return res.redirect('/tienda');
