@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require ("bcryptjs")
+const bcrypt = require ("bcryptjs");
+const { getMaxListeners } = require('process');
 
 const model = {
     directory: path.resolve(__dirname,"../data","users.json"),
@@ -21,6 +22,7 @@ const model = {
             nombre: data.nombre,
             apellido: data.apellido,
             email: data.email,
+            admin: data.email == "rosariobertona96@gmail.com"|| data.email == "barcioni7@gmail.com" ? true: false,
             fechaDeNacimiento: data.fechaDeNacimiento,
             domicilio: data.domicilio,
             clave: bcrypt.hashSync(data.clave, 10),

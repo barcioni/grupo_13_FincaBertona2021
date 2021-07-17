@@ -1,12 +1,35 @@
 [
   {
     "id": 1,
-    "nombre": "Maria Adela del",
+    "nombre": "María Adela del Rosario",
     "apellido": "Bertona",
     "email": "rosariobertona96@gmail.com",
+    "admin": true,
     "fechaDeNacimiento": "2021-07-22",
     "domicilio": "Calle 123",
-    "clave": "$2a$10$un9plXJQpbKR0dqu3bQ.1eUO.hakqCf.ffYl9n6TcZyWqU2idumA2",
-    "image": "user-1626412981906.jpg"
+    "clave": "$2a$10$rbgCkQehKQ.YqQbsvQdpvOW2xT/9VQbsgPS9f2/aHFp7x7B4KNr0C",
+    "image": "user-1626501051316.JPG"
+  },
+  {
+    "id": 2,
+    "nombre": "Prueba",
+    "apellido": "Prueba",
+    "email": "prueba@prueba.com",
+    "admin": false,
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "Prueba",
+    "clave": "$2a$10$5Kyeu17tPegUOviUPJIJC.U.cioQUwsppszpUm4qbtWtE8u383J/a",
+    "image": "user-1626501119148.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Prueba sin imagen",
+    "apellido": "Prueba sin imagen",
+    "email": "Pruebasinimagen@ggg.com",
+    "admin": false,
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "Prueba sin imagen",
+    "clave": "$2a$10$.IxQfwcjrWdr55F4w44N0.mIgIBDcyuT5QcdjGjhuydsfL4xbDHty",
+    "image": "guestUserDefault.png"
   }
 ]

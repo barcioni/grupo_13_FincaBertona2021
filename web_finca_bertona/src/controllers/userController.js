@@ -45,7 +45,7 @@ const controlador = {
         
         console.log (req.params)
         let result = user.new(req.body,req.file)
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion")
+        return result == true ? res.redirect("/login") : res.send("Error al cargar la informacion")
     },
     
     //Proceso de login
