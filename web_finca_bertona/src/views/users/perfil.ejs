@@ -9,12 +9,17 @@
         <%- include('../include/nav')%>
     </header>
     <section id="contenedor__general">
-        <h1> Hola <%= user.nombre %></h1>
+        <% if(user.admin) {%>
+            <h1> Hola <%= user.nombre %> - Administrador del sitio - </h1>
+        <% } else {%>
+            <h1> Hola <%= user.nombre %> </h1>
+        <% }%>
+
         <% if (user.image) { %>
             <img src="/uploads/users/<%= user.image%>" class="imagen-usuario" id="" alt=""> 
-            <% } else { %>
-                <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
-                <% } %>
+        <% } else { %>
+            <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
+        <% } %>
         <section id="contenedor__secundario">
             <h2><%= user.email %></h2>
             <h2><%= user.fechaDeNacimiento %></h2>

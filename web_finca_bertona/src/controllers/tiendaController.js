@@ -1,5 +1,6 @@
 const path = require ("path")
 const product = require('../models/product');
+const user = require ("../models/user");
 const brand = require('../models/brand');
 
 const controlador = {
@@ -30,7 +31,7 @@ const controlador = {
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
     },
     detalle: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id)})
+        res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id), user: req.session.userLogged})
     },
     eliminar: (req,res) => {
         let result = product.delete(req.params.id);

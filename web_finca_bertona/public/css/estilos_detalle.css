@@ -101,6 +101,9 @@ main{
     font-size: 1rem;
     margin-top: 15px;
 }
+a {
+    color: rgb(240, 212, 212)
+}
 .boton-comprar:hover{
     transition: all 0.5s;
     background: rgb(107, 29, 36);
