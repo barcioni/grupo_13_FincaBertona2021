@@ -37,9 +37,8 @@ router.get("/perfil", [loggedMiddleware], userController.perfil);
 //Logout
 router.get("/logout", userController.logout);
 //Proceso de registro
-router.post("/guardarUsuario", [upload.single("image"), /*logDBMiddleware*/],/* validaciones,*/ userController.guardar);
+router.post("/guardarUsuario",[upload.single("image"), validaciones, logDBMiddleware], userController.guardar);
 //Proceso de login
 router.post('/loginProcess', userController.loginProcess)
-
 
 module.exports = router;
