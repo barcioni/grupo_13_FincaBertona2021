@@ -56,7 +56,7 @@ main{
     border: none;
     margin: auto;
     padding-top: 0.5em;
-  }
+}
 .control{
     font-size: 1.5rem;
     border: solid 1px black;
@@ -90,6 +90,15 @@ a{
 .boton-formulario-ingresar:hover {
     background: rgb(240, 139, 148);
     color: black;
+}
+.contenedorSeccion1 #recordar-email{
+    display: block;
+    margin: auto;
+    border: none;
+    padding-top: 25px;
+}
+#recordar-email input{
+    margin-right: 7px;
 }
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
