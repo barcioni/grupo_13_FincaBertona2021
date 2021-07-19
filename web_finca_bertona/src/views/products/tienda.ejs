@@ -28,9 +28,11 @@
         </article>
         <% }) %>
     </section>
+    <% if(user!=undefined && user.admin) {%>
     <section>
         <button class="boton-alta"><a href="tienda/alta"> Cargar un nuevo producto </a></button>
     </section>
+    <% } %>
 </main>
 <%- include('../include/footer')%>
 </body>

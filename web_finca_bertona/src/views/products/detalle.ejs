@@ -34,7 +34,7 @@
                     <label for="quantity">Quantity</label>
                     <input type="number" min="1" max="12" value="1" required>
                 </fieldset>
-                <% if(user.admin) {%>
+                <% if(user!=undefined && user.admin) {%>
             
                         <button class="boton-comprar"><a href="editar/<%=product.id%>"> editar producto</a></button>
         

@@ -31,5 +31,16 @@
     "domicilio": "Prueba sin imagen",
     "clave": "$2a$10$.IxQfwcjrWdr55F4w44N0.mIgIBDcyuT5QcdjGjhuydsfL4xbDHty",
     "image": "guestUserDefault.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Frank ",
+    "apellido": "Martucci",
+    "email": "frank@gmail.com",
+    "admin": false,
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "Las calles",
+    "clave": "$2a$10$cGDQYT8FJ3Lu/OobhPFhR.Tke2SxZ8XWVsZrzftRj.Vlh9eN65hWm",
+    "image": "guestUserDefault.png"
   }
 ]
