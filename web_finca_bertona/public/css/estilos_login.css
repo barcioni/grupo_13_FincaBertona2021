@@ -12,7 +12,6 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img-ppal-login img{
     max-width: 100%;
     background-color: rgb(90, 14, 22);
@@ -21,7 +20,6 @@ header{
 .img-ppal-login-2{
     border-bottom: none;
 }
-
 main{
     background-color: #fff;
     margin-top: -10px;

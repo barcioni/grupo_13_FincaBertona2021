@@ -42,5 +42,16 @@
     "domicilio": "Las calles",
     "clave": "$2a$10$cGDQYT8FJ3Lu/OobhPFhR.Tke2SxZ8XWVsZrzftRj.Vlh9eN65hWm",
     "image": "guestUserDefault.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Barbara",
+    "apellido": "Arcioni",
+    "email": "barcioni7@gmail.com",
+    "admin": true,
+    "fechaDeNacimiento": "2021-07-22",
+    "domicilio": "asdfghjk 254689",
+    "clave": "$2a$10$48cYYaWGBmqZ7LUSHn/a6OU92UhWjqY1NwitWBpks47EqFiupzgH2",
+    "image": "guestUserDefault.png"
   }
 ]

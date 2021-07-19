@@ -3,16 +3,18 @@
 <head>
     <%- include('../include/head')%>
     <link rel="stylesheet" href="/css/estilos_perfil.css">
-</head>
+    </head>
 <body>
     <header>
         <%- include('../include/nav')%>
+        <figure><img src="/imagenes/img_ppal_login.png" class="img-ppal-login-2" alt="finca-bertona"></figure>
     </header>
+    <main>
     <section id="contenedor__general">
         <% if(user.admin) {%>
-            <h1> Hola <%= user.nombre %> - Administrador del sitio - </h1>
+            <h1 class="nombre-ppal"> Hola <%= user.nombre %><p id="estilos-texto-admin"> - Administrador del sitio - </p></h1>
         <% } else {%>
-            <h1> Hola <%= user.nombre %> </h1>
+            <h1 class="nombre-ppal"> Hola <%= user.nombre %> </h1>
         <% }%>
         <% if (user.image) { %>
             <img src="/uploads/users/<%= user.image%>" class="imagen-usuario" id="" alt=""> 
@@ -20,12 +22,13 @@
             <img class="imagen-producto" id="botella" src="/imagenes/default.jpg" alt=""> 
         <% } %>
         <section id="contenedor__secundario">
-            <h2><%= user.email %></h2>
-            <h2><%= user.fechaDeNacimiento %></h2>
-            <h2><%= user.direccion %></h2>
-            <button> <a href="/logout"> Log out</a></button>
+            <h2 id="email"><%= user.email %></h2>
+            <h2 id="fecha-nac"><%= user.fechaDeNacimiento %></h2>
+            <h2 id="user-dir"><%= user.direccion %></h2>
+            <button id="boton-perfil"><a href="/logout"> Log out</a></button>
         </section>
     </section> 
+</main>
     <%- include('../include/footer')%>
 </body>
 </html>
