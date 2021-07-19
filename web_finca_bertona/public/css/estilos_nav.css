@@ -34,12 +34,12 @@ a:hover{
     0 0 50px rgb(125, 63, 150);
 } 
 .logo{
-  width: 80%;
-  padding: 3%;
+    width: 80%;
+    padding: 3%;
 }
 .contenedor-logo-nav{
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 /*----- Burguer ---------------------*/
 .burger-menu{
@@ -57,10 +57,9 @@ a:hover{
 .contenedor-nav{
     display: none;
 }
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
-    /* ======================================= 0 ===================================== */
-    @media screen and (min-width:768px){
+        /* ======================================= 0 ===================================== */
+            @media screen and (min-width:768px){
         /* =============================================================================== */
         .logo{
             width: 10%;
@@ -68,7 +67,7 @@ a:hover{
             margin: 1,5% 60% 0 7%
         }
         .burger-menu{
-              display: none;
+            display: none;
         }
         .contenedor-logo-nav{
             display: inline-block;
@@ -82,9 +81,8 @@ a:hover{
         .contenedor__nav__secciones{
             display:flex;
         }
-    }
+}
     /* ======================================= 1 ===================================== */
-    @media screen and (min-width:1200px){
-        /* =============================================================================== */        
-
-    }
+        @media screen and (min-width:1200px){
+    /* =============================================================================== */        
+}

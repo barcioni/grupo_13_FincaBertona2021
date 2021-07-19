@@ -26,7 +26,6 @@ main{
     margin: -15% 10% 0 10%;
     padding-top: 15%;
     padding-bottom: 15%;
-    /* padding: 15% auto; <--preguntar xq no funciona asi para el responsive*/ 
     border-radius: 8px;
     border:dashed 5px rgb(240, 220, 155);
     position: relative;

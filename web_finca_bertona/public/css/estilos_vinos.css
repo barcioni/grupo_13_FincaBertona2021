@@ -12,12 +12,10 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img-ppal-vinos{
     max-width: 100%;
     margin-top: 35px;
 }
-
 /* ----------FIN del NAVEGADOR ----principio main --------*/
 .contenedor__general{
     padding: 10% 15px;
@@ -74,21 +72,19 @@ header{
 .contenedor__secc2__listado{
     margin-top: 10%;
 }
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
     @media screen and (min-width:768px){
     /* =============================================================================== */  
-        
-         main{
+        main{
             margin-top: 0;
         }
         .contenedor__general{
             padding: 10% 15%;
             margin-top: -10em;
             background-color: #fff;
-           }   
-           .contenedor__seccion1 p, .contenedor__seccion2 p{
+        }   
+        .contenedor__seccion1 p, .contenedor__seccion2 p{
             padding: 2% 0 1% 0;
         }
         .contenedor__seccion1 .botella-ruta15{
@@ -101,12 +97,12 @@ header{
     /* ======================================= 1 ===================================== */
         @media screen and (min-width:1200px){
     /* =============================================================================== */        
-       .contenedor__general{
-        padding: 10% 20%;
-        margin-top: -15em;
-        background-color: #fff;
-       }    
-       .contenedor__seccion1 figure{
+        .contenedor__general{
+            padding: 10% 20%;
+            margin-top: -15em;
+            background-color: #fff;
+        }    
+        .contenedor__seccion1 figure{
             width: 43%;
             margin-top: -50px;
         }
@@ -152,7 +148,7 @@ header{
             margin-top: 5%;
         }
         .botella-ruta15{
-           width: 100vh;
+            width: 100vh;
         }
         .contenedor__seccion1 figure{
             width: 100%;

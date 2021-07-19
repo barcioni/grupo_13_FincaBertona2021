@@ -12,7 +12,6 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img-ppal-login img{
     max-width: 100%;
     background-color: rgb(90, 14, 22);
@@ -21,7 +20,6 @@ header{
 .img-ppal-login-2{
     border-bottom: none;
 }
-
 /* ----------FIN del NAVEGADOR ----principio main --------*/
 main{
     background-color: #fff;
@@ -71,16 +69,14 @@ main{
     background: rgb(240, 139, 148);
     color: black;
 }
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){
     /* =============================================================================== */  
-        
         main{
             margin-top: 0;
         }
-       .formulario-registro{
+        .formulario-registro{
             width: 50vw;
             margin: auto;
         }   
@@ -89,7 +85,7 @@ main{
         }
 }
     /* ======================================= 1 ===================================== */
-       @media screen and (min-width:1200px){
+        @media screen and (min-width:1200px){
     /* =============================================================================== */
         body{
             font-size: 24px;

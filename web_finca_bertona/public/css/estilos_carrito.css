@@ -12,7 +12,6 @@
 header{
     background-color: rgb(90, 14, 22);
 }
-
 .img-ppal-login img{
     max-width: 100%;
     background-color: rgb(90, 14, 22);
@@ -22,7 +21,7 @@ header{
     border-bottom: none;
 }
 /* ----------FIN del NAVEGADOR ----principio main --------*/
- main{
+main{
     background-color: #fff;
     margin-top: -30px;
     }
@@ -51,9 +50,9 @@ header{
     display: flex;
 }
 .vino, .cosecha, .precio{
- margin-top: 15%;
- padding-right: 50px;
- font-weight: 700;
+    margin-top: 15%;
+    padding-right: 50px;
+    font-weight: 700;
 }
 .vino{
     color: rgb(90, 14, 22);
@@ -67,18 +66,16 @@ header{
     padding: 1% 2%;
     text-align: center;
 }
-
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
-       @media screen and (min-width:768px){
+        @media screen and (min-width:768px){
     /* =============================================================================== */  
-        
         .carrito_02{
             margin-top: 3%;
         }
 }
     /* ======================================= 1 ===================================== */
-       @media screen and (min-width:1200px){
+        @media screen and (min-width:1200px){
     /* =============================================================================== */
         .carrito_02{
             margin-top: 4.5%;
@@ -87,4 +84,3 @@ header{
             margin: 20 29%;
         }
 }
-   
