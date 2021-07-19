@@ -40,6 +40,10 @@ footer{
 }
 .contenedor__footer__mapa{
     position: relative;
+    margin-top: 30px;
+}
+.contenedor__footer__mapa li{
+    text-align: center;
 }
 .titulo-mapa{
     font-size: 1.4em;
