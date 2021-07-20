@@ -13,6 +13,11 @@
     <main>
         <section class="contenedorSeccion1">
             <h1 class="titulo-registro">CREA TU CUENTA</h1>
+            <% if (locals.errors) {
+                errors.forEach(error => { %>
+                <p><%= error.msg %></p>
+                <% }) 
+                }%>
             <form class= "formulario-registro" action="/guardarUsuario" method="POST" enctype="multipart/form-data">
                 <fieldset class= "campo-formulario">
                     <label for="nombre">Nombre:</label>

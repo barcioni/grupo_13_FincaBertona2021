@@ -98,7 +98,7 @@ store: (req,res) => {
     if (!errores.isEmpty()){
         return res.render ("registro", {mensadeDeError: errores.mapped()})
     }else{
-            res.render('users/login');
+            res.render('users/login', {errors: errors.array()});
     }
 }
 
