@@ -98,7 +98,7 @@ store: (req,res) => {
     if (!errores.isEmpty()){
         return res.render ("registro", {mensadeDeError: errores.mapped()})
     }else{
-            res.render(path.resolve(__dirname,"../views", "users", "registro.ejs"))
+            res.render('users/login');
     }
 }
 
