@@ -9,10 +9,11 @@ const loggedMiddleware = require('../middlewares/loggedMiddleware');
 //Express Validator
 const {body} = require("express-validator");
 const validaciones = [
-    body("nombre").notEmpty(),
-    body("apellido").notEmpty(),
-    body("nombre-de-usuario").notEmpty(),
-    body("clave").notEmpty(),
+    body("nombre").notEmpty().withMessage("Debes completar el campo del nombre"),
+    body("apellido").notEmpty().withMessage("Debes completar el campo del apellido"),
+    body("nombre-de-usuario").notEmpty().withMessage("Debes completar el campo del nombre de usuario"),
+    body("clave").notEmpty().withMessage("Debes completar el campo de la contraseña"),
+    body("email").isEmail().withMessage("Debes completar con un email válido"),
   ];
 const multer  = require('multer');
 
@@ -37,8 +38,8 @@ router.get("/perfil", [loggedMiddleware], userController.perfil);
 //Logout
 router.get("/logout", userController.logout);
 //Proceso de registro
-router.post("/guardarUsuario",[upload.single("image"), /*validaciones, logDBMiddleware*/], userController.guardar);
+router.post("/guardarUsuario",[upload.single("image"), validaciones, logDBMiddleware], userController.guardar);
 //Proceso de login
-router.post('/loginProcess', userController.loginProcess)
+router.post('/loginProcess', validaciones, userController.loginProcess)
 
 module.exports = router;
