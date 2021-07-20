@@ -91,16 +91,16 @@ const controlador = {
 		req.session.destroy();
 		return res.redirect('/');
 	}
-
-};
-store: (req,res) => {
-    let errores = validationResult(req);
-    if (!errores.isEmpty()){
-        return res.render ("registro", {mensadeDeError: errores.mapped()})
-    }else{
-            res.render('users/login', {errors: errors.array()});
+    store: (req,res) => {
+        let errores = validationResult(req);
+        if (!errores.isEmpty()){
+            return res.render ("registro", {mensadeDeError: errores.mapped()})
+        }else{
+                res.render('users/login', {errors: errors.array()});
+        }
     }
-}
+};
+
 
 
 module.exports = controlador ;
