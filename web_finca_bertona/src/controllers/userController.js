@@ -2,7 +2,7 @@ const path = require ("path");
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
-let errors = validationResult(req);
+/*let errors = validationResult(req);*/
 
 const controlador = {
     // Formulario de registro
