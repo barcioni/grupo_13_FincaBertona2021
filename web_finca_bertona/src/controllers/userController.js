@@ -26,7 +26,7 @@ const controlador = {
     guardar: (req,res) => {
         //return res.send ({data:req.body, file:req.file})
         const resultValidation = validationResult(req);
-       /* store: (req,res) => {
+        /* store: (req,res) => {
             let errores = validationResult(req);
             if (!errores.isEmpty()){
                 return res.render ("registro", {mensadeDeError: errores.mapped()})
@@ -101,7 +101,6 @@ const controlador = {
 		return res.redirect('/');
 	}
 };
-
 
 
 module.exports = controlador ;
