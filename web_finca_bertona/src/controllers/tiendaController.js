@@ -14,7 +14,7 @@ const controlador = {
         //return res.send ({data:req.body, file:req.file})
         console.log (req.params)
         let result = product.new(req.body,req.file)
-        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la información")
     },
     edicion: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
@@ -24,7 +24,7 @@ const controlador = {
     },
     actualizar: (req,res) => {
         let result = product.edit(req.body,req.file,req.params.id)
-        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
+        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la información")
     },
     actualizarImagen: (req,res) => {
         let result = product.editImage(req.body,req.file,req.params.id)
@@ -39,7 +39,6 @@ const controlador = {
     } 
 
 };
- 
 
 
 module.exports = controlador ;

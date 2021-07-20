@@ -1,8 +1,8 @@
 const path = require ("path");
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
-const { validationResult } = require ("express-validator");
-
+const { validationResult } = require("express-validator");
+let errors = validationResult(req);
 
 const controlador = {
     // Formulario de registro
@@ -45,7 +45,7 @@ const controlador = {
         
         console.log (req.params)
         let result = user.new(req.body,req.file)
-        return result == true ? res.redirect("/login") : res.send("Error al cargar la informacion")
+        return result == true ? res.redirect("/login") : res.send("Error al cargar la información")
     },
     
     //Proceso de login
