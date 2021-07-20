@@ -90,7 +90,7 @@ const controlador = {
         res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
     store: (req,res) => {
         let errores = validationResult(req);
         if (!errores.isEmpty()){
