@@ -2,7 +2,7 @@ const path = require ("path");
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
-/*let errors = validationResult(req);*/
+
 
 const controlador = {
     // Formulario de registro
@@ -26,14 +26,14 @@ const controlador = {
     guardar: (req,res) => {
         //return res.send ({data:req.body, file:req.file})
         const resultValidation = validationResult(req);
-        /* store: (req,res) => {
+        store: (req,res) => {
             let errores = validationResult(req);
             if (!errores.isEmpty()){
-                return res.render ("registro", {mensadeDeError: errores.mapped()})
+                return res.render ("registro", {mensajeDeError: errores.mapped()})
             }else{
                     res.render('users/login', {errors: errors.array()});
             }
-        }*/
+        }
         if (resultValidation.errors.length > 0) {
             return res.render('users/registro.ejs', {
                 errors: resultValidation.mapped(),
