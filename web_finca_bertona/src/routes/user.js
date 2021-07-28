@@ -16,7 +16,7 @@ const validaciones = [
     body("email").isEmail().withMessage("Debes completar con un email válido"),
 
     body("nombre-completo").notEmpty().withMessage("Debes completar el campo con tu nombre completo"),
-    body("pais").notEmpty().withMessage("Debes completar el campo de Pais"),
+    body("pais").notEmpty().withMessage("Debes completar el campo con tu pais de residencia"),
     body("provincia").notEmpty().withMessage("Debes completar el campo de Provincia"),
     body("localidad").notEmpty().withMessage("Debes completar el campo con tu localidad"),
     body("telefono").notEmpty().withMessage("Debes completar el campo con un teléfono"),
