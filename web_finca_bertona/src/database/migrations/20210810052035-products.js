@@ -45,10 +45,14 @@ module.exports = {
             type: Sequelize.STRING
           },
           createdAt: {
-            type: Sequelize.DATE
+            type: Sequelize.DATE,
+            allowNull: false,
+            defaultValue: Sequelize.NOW
           },
           updatedAt: {
-            type: Sequelize.DATE
+            type: Sequelize.DATE,
+            allowNull: false,
+            defaultValue: Sequelize.NOW
           },
         })      
     } catch (error) {
