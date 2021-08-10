@@ -16,7 +16,7 @@
         <form class= "formulario-login" action="/loginProcess" method="POST">
         <fieldset class= "campo-formulario">
             <label for="email"></label>
-            <input type="email" name="email" id="email" class="control" required placeholder= "E-mail">
+            <input type="email" name="email" id="email" class="control" placeholder= "E-mail">
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= errors.email.msg %>
@@ -25,7 +25,7 @@
         </fieldset>
         <fieldset class= "campo-formulario">
             <label for="clave"></label>
-            <input type="password" name="clave" id="clave" class="control" required placeholder= "Contaseña">
+            <input type="password" name="clave" id="clave" class="control" placeholder= "Contaseña">
         </fieldset>
         <div class="opciones-login">
             <a href="#" class="opciones-login__olvido-contraseña">¿Olvidó su contraseña?</a> <a href="/registro">Crear cuenta</a>          

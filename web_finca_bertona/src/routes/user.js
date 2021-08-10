@@ -14,6 +14,13 @@ const validaciones = [
     body("nombre-de-usuario").notEmpty().withMessage("Debes completar el campo del nombre de usuario"),
     body("clave").notEmpty().withMessage("Debes completar el campo de la contraseña"),
     body("email").isEmail().withMessage("Debes completar con un email válido"),
+
+    body("nombre-completo").notEmpty().withMessage("Debes completar el campo con tu nombre completo"),
+    body("pais").notEmpty().withMessage("Debes completar el campo con tu pais de residencia"),
+    body("provincia").notEmpty().withMessage("Debes completar el campo de Provincia"),
+    body("localidad").notEmpty().withMessage("Debes completar el campo con tu localidad"),
+    body("telefono").notEmpty().withMessage("Debes completar el campo con un teléfono"),
+    body("mensaje").notEmpty().withMessage("Escribe un mensaje"),
   ];
 const multer  = require('multer');
 

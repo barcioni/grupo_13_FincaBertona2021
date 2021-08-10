@@ -21,20 +21,20 @@
             <form class= "formulario-registro" action="/guardarUsuario" method="POST" enctype="multipart/form-data">
                 <fieldset class= "campo-formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="control"  required placeholder="Escriba su nombre">
+                    <input type="text" name= "nombre" id="nombre" pattern="{4,30}" class="control"  placeholder="Escriba su nombre">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="apellido">Apellido:</label>
-                    <input type="text" name= "apellido" id="apellido"  class="control" required placeholder="Escriba su apellido">
+                    <input type="text" name= "apellido" id="apellido"  class="control" placeholder="Escriba su apellido">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="email">E-mail:</label>
                     <input 
-                    type="email" 
+                    type="text" 
                     name= "email"  
                     class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.email : null %>"
-                    required placeholder="Escriba su direccion de mail">
+                    placeholder="Escriba su direccion de mail">
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %>
@@ -43,15 +43,15 @@
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="fecha-de-nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="fechaDeNacimiento" value="2021-07-22" id= "fecha-de.nacimiento"class="control" required placeholder="Escriba su fecha de nacimiento">
+                    <input type="date" name="fechaDeNacimiento" value="2021-07-22" id= "fecha-de.nacimiento"class="control" placeholder= "Escriba su fecha de nacimiento">
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="domicilio">Domicilio:</label>
-                    <input type="text" name= "domicilio" id="domicilio" class="control" required placeholder="Escriba su domicilio">
+                    <input type="text" name= "domicilio" id="domicilio" class="control"  placeholder="Escriba su domicilio">
                 </fieldset>
                 <fieldset class="campo-formulario">
                     <label for="clave">Contraseña:</label>
-                    <input type="password" name="clave" id="clave" class="control" required placeholder="Escriba su contraseña">
+                    <input type="password" name="clave" id="clave" class="control" placeholder="Escriba su contraseña">
                 </fieldset>
         
                 <!----<fieldset class="campo-formulario campo-formulario-mensaje">
