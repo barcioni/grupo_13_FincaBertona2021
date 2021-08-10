@@ -11,11 +11,11 @@ module.exports = {
             primaryKey: true,
             autoIncrement: true
           },
-          name: {
+          nombre: {
             type: Sequelize.STRING,
             allowNull: false
           },
-          last_name:{
+          apellido:{
             type: Sequelize.STRING,
             allowNull: false
           },
@@ -27,15 +27,15 @@ module.exports = {
             type: Sequelize.BOOLEAN,
             allowNull: false
           },
-          birth_date:{
+          fechaDeNacimiento:{
             type: Sequelize.DATE,
             allowNull: false
           },
-          address:{
+          domicilio:{
             type: Sequelize.STRING,
             allowNull: false
           },
-          password:{
+          clave:{
             type: Sequelize.STRING,
             allowNull: false
           },
