@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
           },
-          brand: {
+          brand_id: {
             type: Sequelize.INTEGER.UNSIGNED,
             references: {
               model: 'brands',
@@ -57,6 +57,15 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false,
         tableName: "products"
     }
-    const Movie = sequelize.define(alias,cols,config);
+    const Product = sequelize.define(alias,cols,config);
+
+    Product.associate = function (models) {
+        Product.belongsTo(models.Brand, { 
+            as: "brands",
+            foreignKey: "brand_id"
+        })
+    }
+
+    return Product
 
 };

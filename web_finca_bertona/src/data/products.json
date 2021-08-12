@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "brand": 1,
+    "brand_id": 1,
     "year": 2016,
     "varietal": "Malbec",
     "graduacion": 14.2,
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "brand": 1,
+    "brand_id": 1,
     "year": 2017,
     "varietal": "Malbec",
     "graduacion": 14.3,
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "brand": 1,
+    "brand_id": 1,
     "year": 2018,
     "varietal": "Malbec",
     "graduacion": 14.2,
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "brand": 2,
+    "brand_id": 2,
     "year": "2018",
     "varietal": "Malbec",
     "graduacion": 13.8,
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "brand": 2,
+    "brand_id": 2,
     "year": 2019,
     "varietal": "Malbec",
     "graduacion": 13.8,
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "brand": 2,
+    "brand_id": 2,
     "year": 2020,
     "varietal": "Malbec",
     "graduacion": 13.7,

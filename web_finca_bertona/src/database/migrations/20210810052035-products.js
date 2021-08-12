@@ -11,7 +11,7 @@ module.exports = {
             primaryKey: true,
             autoIncrement: true
           },
-          brand: {
+          brand_id: {
             type: Sequelize.INTEGER,
             references: {
               model: 'brands',
