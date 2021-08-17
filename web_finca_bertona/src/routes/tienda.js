@@ -14,13 +14,13 @@ var storage = multer.diskStorage({
   })
 const upload = multer({ storage: storage })
   
-router.get("/", tiendaController.list);
+router.get("/", tiendaController.list); //Funcionando con la nueva DB
 
-router.get("/alta", tiendaController.add);
+router.get("/alta", tiendaController.add); //Funcionando con la nueva DB
 
-router.get("/:id", tiendaController.detail);
+router.get("/:id", tiendaController.detail); //Funcionando con la nueva DB
 
-router.post ("/guardar", [upload.single ("image")], tiendaController.save)
+router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Funcionando con la nueva DB
 
 router.get("/editar/:id", tiendaController.edicion);
 
@@ -30,7 +30,7 @@ router.get("/editarImagen/:id", tiendaController.edicionImagen);
 
 router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
 
-router.delete("/eliminar/:id",tiendaController.eliminar)
+router.delete("/eliminar/:id",tiendaController.delete)
 
 
 module.exports = router;

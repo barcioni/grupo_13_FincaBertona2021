@@ -4,8 +4,8 @@ const user = require ("../models/user");
 const brand = require('../models/brand');
 
 const db = require('../database/models');
-const Brand = require("../database/models/Brand");
 const Product = db.Product
+const Brand = db.Brand
 
 const controlador = {
     list: (req, res) => {
@@ -22,11 +22,11 @@ const controlador = {
         res.render(path.resolve(__dirname,"../views","products", "tienda.ejs"), {list:product.allWithExtra(), user: req.session.userLogged})
     },*/
     add: (req, res) => {
-        Product.findAll({
-            include: [{ association: 'brands'}]
+        Brand.findAll({
+            include: [{ association: 'products'}]
         })
-            .then(products => {
-                res.render('products/alta.ejs', {products})
+            .then(brands => {
+                res.render('products/alta.ejs', {brands})
             })
             .catch(error => res.send(error))
     },
@@ -34,7 +34,7 @@ const controlador = {
         Product
         .create(
             {
-            brand: req.body.brand,
+            brand_id: req.body.brand,
             year: req.body.year,
             varietal: req.body.varietal,
             graduacion: req.body.graduacion,
@@ -77,21 +77,30 @@ const controlador = {
     detail: (req, res) => {
         Product.findByPk(req.params.id,
             {
-                include : ['brands']
+                include : [{association:'brands'}]
             })
             .then(product => {
-                console.log(product);
-                //res.render('products/detalle.ejs', {product});
+                //console.log(product);
+                res.render('products/detalle.ejs', {product,  user: req.session.userLogged});
             })
             .catch(error => res.send(error))
     },
     /*detalle: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "detalle.ejs"), {product:product.one(req.params.id), user: req.session.userLogged})
     },*/
-    eliminar: (req,res) => {
+
+    delete: function (req,res) {
+        let productId = req.params.id;
+        Product.destroy(
+            {where: {id: productId}, force: true}) 
+        .then(()=>{
+            return res.redirect('/tienda')})
+        .catch(error => res.send(error)) 
+    }
+    /*eliminar: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
-    } 
+    } */
 
 };
 

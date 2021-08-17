@@ -19,8 +19,8 @@
                 <select name="brand" id="brand">
                     <option value="" selected disabled>Seleccione una marca</option>
                     <% brands.forEach(brand => { %>
-                        <option value="<%= brand.id %>">
-                            <%= brands.name %>
+                        <option value="<%= brands.id %>">
+                            <%= brand.name %>
                         </option>
                     <% }) %>
                 </select>
