@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: Sequelize.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
           },
@@ -47,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
         createdAt: 'created_at',
         updatedAt: 'updated_at',
         deletedAt: false,
-        tableName: "brands"
+        tableName: "users"
     }
     const User = sequelize.define(alias, cols, config);
 

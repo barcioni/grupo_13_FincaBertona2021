@@ -13,7 +13,7 @@
     <main id="contenedor__general"> 
         <h1 class="titulo-general">¡Llena tu carrito con la cosecha que prefieras!</h1>
     <section class="contenedor__seccion1">
-        <% list.forEach(product => { %>
+        <% products.forEach(product => { %>
         <article class="contenedor-botella">
             <% if (product.image) { %>
             <figure class="figure__ruta15__tienda"><img src="/uploads/products/<%= product.image%>" class="img__ruta15__tienda" alt="finca-bertona"></figure>
@@ -21,7 +21,7 @@
             <figure><img src="/imagenes/default.jpg" alt=""></figure>
             <% } %>
             <section>
-                <h2><%= product.brand.name %></h2>
+                <h2><%= product.brands.name %></h2>
                 <p class="cosecha"><%= product.year %> </p>
                 <a href="/tienda/<%= product.id %>"><i class="fa fa-shopping-cart" id="icono" alt="añadir al carrito"></i></a>  
             </section>  

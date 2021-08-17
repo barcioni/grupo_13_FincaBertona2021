@@ -8,9 +8,6 @@ module.exports = (sequelize, dataTypes) => {
           },
           brand_id: {
             type: dataTypes.INTEGER.UNSIGNED,
-            references: {
-              model: 'brands',
-              key: 'id' },
             },
           year: {
             type: dataTypes.INTEGER.UNSIGNED,
@@ -39,21 +36,11 @@ module.exports = (sequelize, dataTypes) => {
           currency: {
             type: dataTypes.STRING
           },
-          createdAt: {
-            type: dataTypes.DATE,
-            allowNull: false,
-            defaultValue: dataTypes.NOW
-          },
-          updatedAt: {
-            type: dataTypes.DATE,
-            allowNull: false,
-            defaultValue: dataTypes.NOW
-          },
     };
     let config = {
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
         deletedAt: false,
         tableName: "products"
     }

@@ -14,13 +14,13 @@ var storage = multer.diskStorage({
   })
 const upload = multer({ storage: storage })
   
-router.get("/", tiendaController.tienda);
+router.get("/", tiendaController.list);
 
-router.get("/alta", tiendaController.alta);
+router.get("/alta", tiendaController.add);
 
-router.get("/:id", tiendaController.detalle);
+router.get("/:id", tiendaController.detail);
 
-router.post ("/guardar", [upload.single ("image")], tiendaController.guardar)
+router.post ("/guardar", [upload.single ("image")], tiendaController.save)
 
 router.get("/editar/:id", tiendaController.edicion);
 
