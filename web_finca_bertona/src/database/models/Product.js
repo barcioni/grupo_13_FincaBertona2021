@@ -2,52 +2,52 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product'; // esto debería estar en singular
     let cols = {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true
           },
           brand_id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             references: {
               model: 'brands',
               key: 'id' },
             },
           year: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
           },
           varietal: {
-            type: Sequelize.STRING
+            type: dataTypes.STRING
           },
           graduacion:{
-            type: Sequelize.DECIMAL.UNSIGNED
+            type: dataTypes.DECIMAL.UNSIGNED
           },
           barrica: {
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           guarda:{
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           description:{
-            type: Sequelize.TEXT
+            type: dataTypes.TEXT
           },
           image:{
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           price:{
-            type: Sequelize.DECIMAL.UNSIGNED
+            type: dataTypes.DECIMAL.UNSIGNED
           },
           currency: {
-            type: Sequelize.STRING
+            type: dataTypes.STRING
           },
           createdAt: {
-            type: Sequelize.DATE,
+            type: dataTypes.DATE,
             allowNull: false,
-            defaultValue: Sequelize.NOW
+            defaultValue: dataTypes.NOW
           },
           updatedAt: {
-            type: Sequelize.DATE,
+            type: dataTypes.DATE,
             allowNull: false,
-            defaultValue: Sequelize.NOW
+            defaultValue: dataTypes.NOW
           },
     };
     let config = {
