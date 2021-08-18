@@ -69,7 +69,7 @@ const controlador = {
             // CONSULTAR COMO HACER EL THEN
             )
             .then(()=> {
-                return true)            
+                return true})            
             .catch(error => res.send(error))
 
         return result == true ? res.redirect("/login"): res.send("Error al cargar la información")

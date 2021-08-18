@@ -78,3 +78,27 @@ Seguir trabajando sobre la comunicación y la fluidez de los encuentros entre lo
 
 4. Hacer menos & Dejar de hacer.
 Dejar pasar los primeros días luego de la anterior entrega hasta organizarnos.
+
+____________________________________________________________________________________________________________________________________________
+***FEEDBACK SPRINT 5: RETROSPECTIVA***
+
+Responsabilidad: Cumplió con la entrega en tiempo y forma. Se muestra comprometidos con el trabajo.
+
+Trabajo en equipo:  Trabajan de manera colaborativa y coordinada para alcanzar los objetivos de su equipo. Gestionan el tiempo que tienen y lo utilizan de forma eficiente. Están compromtidos con sus tareas. Buena comunicación entre los integrantes.
+
+Comentario Global: No deberían usar el path.resolve pra estar renderizando las vistas. No hubo manera de hacer funcionar el registro. En la parte de login no den tanta información sobre en que está mal el logeo, simplemente con sus credenciales invalidas es suficiente. Ojo con la estructura del método guardar, contiene unmétodo dentro de otro, demasiadas validaciones de más(pueden pasar las validaciones a un middleware) no se legan a mostrar los errores.
+
+
+***Dinamica de la estrella de mar***
+
+1. Comenzar a hacer.
+   Ajustar detalles que si bien no son indispensables, ayudan a que la página se vea y funcione mejor. Mejorar algunas cosas que no nos terminaron de funcionar.
+
+2. Hacer más.
+   Gestionar mejor el cansancio, los tiempos, las ocupaciones diarias, y los ejercicios de clase, con el trabajo en el proyecto.
+ 
+3. Continuar haciendo.
+   Seguir trabajando sobre la comunicación y la fluidez de los encuentros entre los miembros del equipo. Continuar usando el Trello para organizar las tareas.
+
+4. Hacer menos & Dejar de hacer.
+   Dejar pasar los primeros días luego de la anterior entrega hasta organizarnos.
