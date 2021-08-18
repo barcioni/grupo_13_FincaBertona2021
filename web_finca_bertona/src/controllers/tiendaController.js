@@ -59,9 +59,22 @@ const controlador = {
         let result = product.new(req.body,req.file)
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la información")
     },*/
-    edicion: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
+    edit: function(req,res) {
+        let pedidoProduct =  Product.findByPk(req.params.id,
+            {
+                include : [{association:'brands'}]
+            });
+        let pedidoBrand = Brand.findAll();
+        Promise
+        .all([pedidoProduct, pedidoBrand])
+        .then(([product, brands]) => {
+            res.render("products/edicion.ejs"), {product, brands}})
+        .catch(error => res.send(error))
     },
+
+    /*edicion: (req,res)=>{
+        res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
+    },*/
     edicionImagen: (req,res)=>{
         res.render(path.resolve(__dirname,"../views","products", "edicionImagen.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
     },
@@ -90,17 +103,16 @@ const controlador = {
     },*/
 
     delete: function (req,res) {
-        let productId = req.params.id;
         Product.destroy(
-            {where: {id: productId}, force: true}) 
+            {where: {id: req.params.id}, force: true}) 
         .then(()=>{
             return res.redirect('/tienda')})
         .catch(error => res.send(error)) 
-    }
-    /*eliminar: (req,res) => {
+    },
+    eliminar: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
-    } */
+    }
 
 };
 

@@ -22,7 +22,7 @@ router.get("/:id", tiendaController.detail); //Funcionando con la nueva DB
 
 router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Funcionando con la nueva DB
 
-router.get("/editar/:id", tiendaController.edicion);
+router.get("/editar/:id", tiendaController.edit); 
 
 router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.actualizar);
 
@@ -30,7 +30,7 @@ router.get("/editarImagen/:id", tiendaController.edicionImagen);
 
 router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
 
-router.delete("/eliminar/:id",tiendaController.delete)
+router.delete("/eliminar/:id",tiendaController.eliminar)
 
 
 module.exports = router;

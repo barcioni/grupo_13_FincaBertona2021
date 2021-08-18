@@ -2,15 +2,17 @@ const path = require ("path");
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator");
+const db = require('../database/models');
+const User = db.User
 
 
 const controlador = {
     // Formulario de registro
-    registro: (req,res)=>{
+    register: (req,res)=>{
         res.render(path.resolve(__dirname,"../views", "users", "registro.ejs"))
     },
     // Formulario de contacto
-    contacto: (req,res)=>{
+    contact: (req,res)=>{
         res.render(path.resolve(__dirname,"../views", "users", "contacto.ejs"))
     },
     //Formulario de login
@@ -23,7 +25,7 @@ const controlador = {
     }, */
     
     // Proceso de registro
-    guardar: (req,res) => {
+    save: (req,res) => {
         //return res.send ({data:req.body, file:req.file})
         const resultValidation = validationResult(req);
         store: (req,res) => {
@@ -41,7 +43,8 @@ const controlador = {
 			});
 		}
         
-        let userInDB = user.findByEmail (req.body.email)
+        //let userInDB = user.findByEmail (req.body.email)
+        let userInDB = User.findOne ({ where : {email: req.body.email}})
         if (userInDB) {
             return res.render ( "users/registro.ejs", {
                 errors: {
@@ -52,7 +55,23 @@ const controlador = {
         }
         
         console.log (req.params)
-        let result = user.new(req.body,req.file)
+        //let result = user.new(req.body,req.file)
+        let result = User.create (
+           {nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            admin: req.body.email == "rosariobertona96@gmail.com"|| req.body.email == "barcioni7@gmail.com" ? true: false,
+            fechaDeNacimiento: req.body.fechaDeNacimiento,
+            domicilio: req.body.domicilio,
+            clave: bcrypt.hashSync(req.body.clave, 10),
+            image: req.file!= undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",}
+            
+            // CONSULTAR COMO HACER EL THEN
+            )
+            .then(()=> {
+                return true)            
+            .catch(error => res.send(error))
+
         return result == true ? res.redirect("/login"): res.send("Error al cargar la información")
     },
     
