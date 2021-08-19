@@ -95,7 +95,7 @@ Comentario Global: No deberían usar el path.resolve pra estar renderizando las 
    Ajustar detalles que si bien no son indispensables, ayudan a que la página se vea y funcione mejor. Mejorar algunas cosas que no nos terminaron de funcionar.
 
 2. Hacer más.
-   Gestionar mejor el cansancio, los tiempos, las ocupaciones diarias, y los ejercicios de clase, con el trabajo en el proyecto.
+   Planificarlas tareas de acuerdo a su prioridad. Gestionar mejor el cansancio, los tiempos, las ocupaciones diarias, y los ejercicios de clase, con el trabajo en el proyecto.
  
 3. Continuar haciendo.
    Seguir trabajando sobre la comunicación y la fluidez de los encuentros entre los miembros del equipo. Continuar usando el Trello para organizar las tareas.
