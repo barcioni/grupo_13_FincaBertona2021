@@ -94,14 +94,25 @@ const controlador = {
                     return res.redirect('/tienda')})            
                     .catch(error => res.send(error))
                 },
-            /*actualizar: (req,res) => {
-                let result = product.edit(req.body,req.file,req.params.id)
-                return result == true ? res.redirect("/tienda") : res.send("Error al cargar la información")
-            },*/
-            actualizarImagen: (req,res) => {
-        let result = product.editImage(req.body,req.file,req.params.id)
-        return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
-    },
+                updateImage:(req,res)=>{
+                    Product.update(
+                        {
+                        image: req.file.image!= undefined && file.filename != undefined ? file.filename : "botella-ruta15.png",
+                        },
+                        {
+                            where: {id: req.params.id}
+                        }
+                        )
+                        .then(()=> {
+                            //return res.send (req.body.image)
+                        return res.redirect('/tienda')
+                    })            
+                        .catch(error => res.send(error))
+                    },
+                /*actualizarImagen: (req,res) => {
+                    let result = product.editImage(req.body,req.file,req.params.id)
+                    return result == true ? res.redirect("/tienda") : res.send("Error al cargar la informacion")
+                },*/
     
     detail: (req, res) => {
         Product.findByPk(req.params.id,
@@ -149,4 +160,8 @@ const controlador = {
             },*/
             /*edicion: (req,res)=>{
                 res.render(path.resolve(__dirname,"../views","products", "edicion.ejs"),{product:product.one(req.params.id),brands:brand.all(),})
+            },*/
+            /*actualizar: (req,res) => {
+                let result = product.edit(req.body,req.file,req.params.id)
+                return result == true ? res.redirect("/tienda") : res.send("Error al cargar la información")
             },*/

@@ -24,11 +24,11 @@ router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Fu
 
 router.get("/editar/:id", tiendaController.edit); //Funcionando con la nueva DB
 
-router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.update);
+router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.update); //Funcionando con la nueva DB
 
 router.get("/editarImagen/:id", tiendaController.editImage); //Funcionando con la nueva DB
 
-router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
+router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.updateImage)
 
 router.delete("/eliminar/:id",tiendaController.delete) //Funcionando con la nueva DB
 
