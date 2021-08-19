@@ -47,3 +47,8 @@ https://trello.com/invite/b/hCysPThs/10c7b91c3d79ef107ce4c8f259193271/3er-sprint
 
 CUARTO SPRINT
 https://trello.com/invite/b/qfuhqE71/3bdce23fc8d0e8790122fa3bfd0b7d74/4to-sprint
+
+
+***Wireframe base de datos***
+
+https://github.com/barcioni/grupo_13_FincaBertona2021/tree/main/Proceso_de_Dise%C3%B1o/wireframe_base_de_datos
