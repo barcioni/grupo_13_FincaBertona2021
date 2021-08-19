@@ -25,7 +25,7 @@ const controlador = {
     }, */
     
     // Proceso de registro
-    save: (req,res) => {
+    save: async (req,res) => {
         //return res.send ({data:req.body, file:req.file})
         const resultValidation = validationResult(req);
         store: (req,res) => {
@@ -44,7 +44,7 @@ const controlador = {
 		}
         
         //let userInDB = user.findByEmail (req.body.email)
-        let userInDB = User.findOne ({ where : {email: req.body.email}})
+        let userInDB = await User.findOne  ({ where : {email: req.body.email}})
         if (userInDB) {
             return res.render ( "users/registro.ejs", {
                 errors: {
@@ -56,7 +56,7 @@ const controlador = {
         
         console.log (req.params)
         //let result = user.new(req.body,req.file)
-        let result = User.create (
+        let result =  await User.create (
            {nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
@@ -65,12 +65,9 @@ const controlador = {
             domicilio: req.body.domicilio,
             clave: bcrypt.hashSync(req.body.clave, 10),
             image: req.file!= undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",}
-            
-            // CONSULTAR COMO HACER EL THEN
+    
             )
-            .then(()=> {
-                return true})            
-            .catch(error => res.send(error))
+            
 
         return result == true ? res.redirect("/login"): res.send("Error al cargar la información")
     },

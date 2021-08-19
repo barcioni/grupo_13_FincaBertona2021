@@ -22,15 +22,15 @@ router.get("/:id", tiendaController.detail); //Funcionando con la nueva DB
 
 router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Funcionando con la nueva DB
 
-router.get("/editar/:id", tiendaController.edit); 
+router.get("/editar/:id", tiendaController.edit); //Funcionando con la nueva DB
 
-router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.actualizar);
+router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.update);
 
-router.get("/editarImagen/:id", tiendaController.edicionImagen);
+router.get("/editarImagen/:id", tiendaController.editImage); //Funcionando con la nueva DB
 
 router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
 
-router.delete("/eliminar/:id",tiendaController.eliminar)
+router.delete("/eliminar/:id",tiendaController.delete) //Funcionando con la nueva DB
 
 
 module.exports = router;

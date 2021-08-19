@@ -17,9 +17,9 @@
             <fieldset class="campo-formulario">
                 <label for="brand">Marca</label>
                 <select name="brand" id="brand">
-                    <option value="" selected disabled>Seleccione una marca</option>
+                    <option selected disabled>Seleccione una marca</option>
                     <% brands.forEach(brand => { %>
-                        <option value="<%= brands.id %>">
+                        <option value="<%= brand.id %>">
                             <%= brand.name %>
                         </option>
                     <% }) %>
