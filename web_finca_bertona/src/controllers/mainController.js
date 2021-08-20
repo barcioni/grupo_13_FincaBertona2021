@@ -14,4 +14,4 @@ const controlador = {
         res.render(path.resolve(__dirname,"../views", "checkout", "carrito.ejs"))
     },
 };
-module.exports = controlador ;
+module.exports = controlador;
