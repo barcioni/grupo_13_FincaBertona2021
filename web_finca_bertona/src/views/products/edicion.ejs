@@ -18,7 +18,7 @@
                         <label for="marca">Marca</label>
                         <select name="brand" id="brand">
                             <% brands.forEach(brand => { %>
-                                <% if (product.brand.id == brand.id) { %>
+                                <% if (brand.id == brand.id) { %>
                                     <option value="<%= brand.id %>" selected><%= brand.name %></option>
                                 <% } else { %>
                                     <option value="<%= brand.id %>"><%= brand.name %></option>
@@ -54,11 +54,12 @@
                         <label for="description">Descripción</label>
                         <input type="text" name="description" id="description" value="<%= product.description %>" >
                     </fieldset>
+                        <article id="contenedor-botones">
+                        <button type="submit" id="boton-editar">EDITAR PRODUCTO</button>
+                    </form>
+                <form action="/tienda/eliminar/<%= product.id %>>?_method=DELETE" method="post" id="edit-form" enctype="multipart/form-data">
+                    <button type="submit" id="boton-eliminar">ELIMINAR PRODUCTO</button>
                 </form>
-                <article id="contenedor-botones">
-                    <button type="submit" id="boton-editar">EDITAR PRODUCTO</button>
-                    <form action="/tienda/eliminar/<%= product.id %>?_method=DELETE" method="post" id="edit-form" enctype="multipart/form-data">
-                    <a href="/tienda/eliminar/<%= product.id %>"></a><button type="submit" id="boton-eliminar">ELIMINAR PRODUCTO</button>
                 </article>
                 </section> 
     </section>

@@ -14,23 +14,23 @@ var storage = multer.diskStorage({
   })
 const upload = multer({ storage: storage })
   
-router.get("/", tiendaController.tienda);
+router.get("/", tiendaController.list); //Funcionando con la nueva DB
 
-router.get("/alta", tiendaController.alta);
+router.get("/alta", tiendaController.add); //Funcionando con la nueva DB
 
-router.get("/:id", tiendaController.detalle);
+router.get("/:id", tiendaController.detail); //Funcionando con la nueva DB
 
-router.post ("/guardar", [upload.single ("image")], tiendaController.guardar)
+router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Funcionando con la nueva DB
 
-router.get("/editar/:id", tiendaController.edicion);
+router.get("/editar/:id", tiendaController.edit); //Funcionando con la nueva DB
 
-router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.actualizar);
+router.put ("/actualizar/:id",[upload.single ("image")], tiendaController.update); //Funcionando con la nueva DB
 
-router.get("/editarImagen/:id", tiendaController.edicionImagen);
+router.get("/editarImagen/:id", tiendaController.editImage); //Funcionando con la nueva DB
 
-router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.actualizarImagen)
+router.put ("/actualizarImagen/:id",[upload.single ("image")], tiendaController.updateImage)
 
-router.delete("/eliminar/:id",tiendaController.eliminar)
+router.delete("/eliminar/:id",tiendaController.delete) //Funcionando con la nueva DB
 
 
 module.exports = router;

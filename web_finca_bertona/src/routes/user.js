@@ -35,9 +35,9 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 //Formulario de registro
-router.get("/registro",[guestMiddleware], userController.registro);
+router.get("/registro",[guestMiddleware], userController.register);
 //Formulario de contacto
-router.get("/contacto", userController.contacto);
+router.get("/contacto", userController.contact);
 //Formulario de login
 router.get("/login",[guestMiddleware], userController.login);
 //Perfil
@@ -45,7 +45,7 @@ router.get("/perfil", [loggedMiddleware], userController.perfil);
 //Logout
 router.get("/logout", userController.logout);
 //Proceso de registro
-router.post("/guardarUsuario",[upload.single("image"), validaciones, logDBMiddleware], userController.guardar);
+router.post("/guardarUsuario",[upload.single("image"), validaciones, logDBMiddleware], userController.save);
 //Proceso de login
 router.post('/loginProcess', validaciones, userController.loginProcess)
 

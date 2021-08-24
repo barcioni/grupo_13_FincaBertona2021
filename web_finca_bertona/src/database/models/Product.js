@@ -2,58 +2,45 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product'; // esto debería estar en singular
     let cols = {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true
           },
           brand_id: {
-            type: Sequelize.INTEGER.UNSIGNED,
-            references: {
-              model: 'brands',
-              key: 'id' },
+            type: dataTypes.INTEGER.UNSIGNED,
             },
           year: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
           },
           varietal: {
-            type: Sequelize.STRING
+            type: dataTypes.STRING
           },
           graduacion:{
-            type: Sequelize.DECIMAL.UNSIGNED
+            type: dataTypes.DECIMAL.UNSIGNED
           },
           barrica: {
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           guarda:{
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           description:{
-            type: Sequelize.TEXT
+            type: dataTypes.TEXT
           },
           image:{
-            type: Sequelize.STRING(400)
+            type: dataTypes.STRING(400)
           },
           price:{
-            type: Sequelize.DECIMAL.UNSIGNED
+            type: dataTypes.DECIMAL.UNSIGNED
           },
           currency: {
-            type: Sequelize.STRING
-          },
-          createdAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-            defaultValue: Sequelize.NOW
-          },
-          updatedAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-            defaultValue: Sequelize.NOW
+            type: dataTypes.STRING
           },
     };
     let config = {
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
         deletedAt: false,
         tableName: "products"
     }
