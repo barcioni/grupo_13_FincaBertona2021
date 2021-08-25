@@ -3,7 +3,6 @@ const router = express.Router ();
 const path = require ("path")
 const userController = require ("../controllers/userController");
 // Middlewares
-const logDBMiddleware = require("../middlewares/logDBMiddleware");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const loggedMiddleware = require('../middlewares/loggedMiddleware');
 //Express Validator
@@ -45,7 +44,7 @@ router.get("/perfil", [loggedMiddleware], userController.perfil);
 //Logout
 router.get("/logout", userController.logout);
 //Proceso de registro
-router.post("/guardarUsuario",[upload.single("image"), validaciones, logDBMiddleware], userController.save);
+router.post("/guardarUsuario",[upload.single("image"), validaciones], userController.save);
 //Proceso de login
 router.post('/loginProcess', validaciones, userController.loginProcess)
 
