@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 10, 2021 at 07:50 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 25-08-2021 a las 02:07:50
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `finca_bertona_db`
+-- Base de datos: `finca_bertona_db`
 --
+CREATE DATABASE IF NOT EXISTS `finca_bertona_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `finca_bertona_db`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brands`
+-- Estructura de tabla para la tabla `brands`
 --
 
 CREATE TABLE `brands` (
@@ -37,7 +39,7 @@ CREATE TABLE `brands` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carts`
+-- Estructura de tabla para la tabla `carts`
 --
 
 CREATE TABLE `carts` (
@@ -52,7 +54,7 @@ CREATE TABLE `carts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Estructura de tabla para la tabla `products`
 --
 
 CREATE TABLE `products` (
@@ -74,7 +76,7 @@ CREATE TABLE `products` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sequelizemeta`
+-- Estructura de tabla para la tabla `sequelizemeta`
 --
 
 CREATE TABLE `sequelizemeta` (
@@ -82,7 +84,7 @@ CREATE TABLE `sequelizemeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `sequelizemeta`
+-- Volcado de datos para la tabla `sequelizemeta`
 --
 
 INSERT INTO `sequelizemeta` (`name`) VALUES
@@ -96,7 +98,7 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -114,18 +116,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `brands`
+-- Indices de la tabla `brands`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `carts`
+-- Indices de la tabla `carts`
 --
 ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`),
@@ -133,66 +135,66 @@ ALTER TABLE `carts`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `products`
+-- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `brand` (`brand`);
 
 --
--- Indexes for table `sequelizemeta`
+-- Indices de la tabla `sequelizemeta`
 --
 ALTER TABLE `sequelizemeta`
   ADD PRIMARY KEY (`name`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `brands`
+-- AUTO_INCREMENT de la tabla `brands`
 --
 ALTER TABLE `brands`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `carts`
+-- AUTO_INCREMENT de la tabla `carts`
 --
 ALTER TABLE `carts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `carts`
+-- Filtros para la tabla `carts`
 --
 ALTER TABLE `carts`
   ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
--- Constraints for table `products`
+-- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brand`) REFERENCES `brands` (`id`);
