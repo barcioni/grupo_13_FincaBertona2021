@@ -8,13 +8,13 @@ let campoMail = document.querySelector("input#email");
 let campoPassword = document.querySelector("input#clave");
 
 if (campoNombre.value == ""){
-    console.log('Este campo no puede estar vacío')
+    console.log('Este campo no puede quedar vacío')
 }
 if (campoMail.value == ""){
-    console.log('Este campo no puede estar vacío')
+    console.log('Este campo no puede quedar vacío')
 }
 if (campoPassword.value == ""){
-    console.log('Este campo no puede estar vacío')
+    console.log('Este campo no puede quedar vacío')
 }
 });
 });
