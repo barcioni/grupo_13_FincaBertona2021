@@ -54,7 +54,7 @@ const controlador = {
             Promise
             .all([pedidoProduct, pedidoBrand])
             .then(([product, brands]) => {
-                //return res.send(product)
+                return res.send(product)
                 res.render("products/edicion.ejs", {product, brands})})
                 .catch(error => res.send(error))
             },
