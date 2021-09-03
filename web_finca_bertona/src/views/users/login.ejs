@@ -18,7 +18,7 @@
             <label for="email"></label>
             <input type="email" name="email" id="email" class="control" placeholder= "E-mail">
             <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
+                <div class="feedback">
                     <%= errors.email.msg %>
                 </div>
             <% } %>
@@ -26,6 +26,11 @@
         <fieldset class= "campo-formulario">
             <label for="clave"></label>
             <input type="password" name="clave" id="clave" class="control" placeholder= "Contaseña">
+            <% if (locals.errors && errors.clave) { %>
+                <div class="feedback">
+                    <%= errors.clave.msg %>
+                </div>
+            <% } %>
         </fieldset>
         <div class="opciones-login">
             <a href="#" class="opciones-login__olvido-contraseña">¿Olvidó su contraseña?</a> <a href="/registro">Crear cuenta</a>          

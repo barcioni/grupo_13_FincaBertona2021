@@ -2,6 +2,7 @@ const express = require ("express");
 const router = express.Router();
 const path = require ("path");
 const tiendaController = require ("../controllers/tiendaController");
+const createProductMiddleware = require ("../middlewares/createProductMiddleware")
 const multer  = require('multer');
 
 var storage = multer.diskStorage({
@@ -20,7 +21,7 @@ router.get("/alta", tiendaController.add); //Funcionando con la nueva DB
 
 router.get("/:id", tiendaController.detail); //Funcionando con la nueva DB
 
-router.post ("/guardar", [upload.single ("image")], tiendaController.save); //Funcionando con la nueva DB
+router.post ("/guardar", [upload.single ("image"), createProductMiddleware], tiendaController.save); //Funcionando con la nueva DB
 
 router.get("/editar/:id", tiendaController.edit); //Funcionando con la nueva DB
 

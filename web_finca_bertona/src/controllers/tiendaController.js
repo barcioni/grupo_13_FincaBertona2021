@@ -3,6 +3,8 @@ const path = require ("path")
 const user = require ("../models/user");
 const brand = require('../models/brand');
 
+const { validationResult } = require("express-validator");
+
 const db = require('../database/models');
 const Product = db.Product
 const Brand = db.Brand
@@ -26,8 +28,9 @@ const controlador = {
             .catch(error => res.send(error))
     },
     save : function (req,res) {
-        Product
-        .create(
+        let errors = validationResult(req)
+        if (errors.isEmpty()){
+        Product.create(
             {
             brand_id: req.body.brand,
             year: req.body.year,
@@ -44,6 +47,15 @@ const controlador = {
             .then(()=> {
             return res.redirect('/tienda')})            
             .catch(error => res.send(error))
+        } else {
+            //return res.send (errors)
+            res.locals.errors = errors.mapped()
+            Brand.findAll( )
+            .then(brands => {
+                res.render("products/alta", { errors: errors.mapped(), old: req.body, brands})
+            })
+            .catch(error => res.send(error))
+        }
         },
         edit: (req,res) => {
             let pedidoProduct =  Product.findByPk(req.params.id,

@@ -40,7 +40,7 @@ const controlador = {
                         image: req.file.image != undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",
                     }
                 )
-
+                return res.send (req.body)
                 return res.redirect("/login")
             } catch (error) { res.send(error) }
         } else {
@@ -69,7 +69,7 @@ const controlador = {
             }
             return res.render('users/login', {
                 errors: {
-                    email: {
+                    clave: {
                         msg: 'Contraseña incorrecta'
                     }
                 }

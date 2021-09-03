@@ -58,6 +58,10 @@ fieldset input{
     border: solid 1px rgb(58, 5, 10);
     margin-top: 4px;
 }
+.feedback {
+    color: rgba(245, 6, 6, 0.89);
+    font-weight: lighter;
+}
 button{
     background-color: rgb(90, 14, 22);
     border-radius: 10px;
