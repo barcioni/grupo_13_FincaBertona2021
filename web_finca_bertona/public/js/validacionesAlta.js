@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 let errores = [];
 let altaProductos = document.querySelector("input.alta");
 if(altaProductos.value == ""){
-errores.push("El campo nombre no debe quedar vacío");
+errores.push("El campo no debe quedar vacío");
 }
 
 if(errores.length > 0){
