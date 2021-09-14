@@ -26,21 +26,21 @@
                 </select>
                 <% if (locals.errors && errors.brand) { %>
                     <p class="feedback"><%=errors.brand.msg%> </p>
-                   <% } %>
+                <% } %>
             </fieldset>
             <fieldset class= "campo-formulario">
                 <label for="year">Cosecha/Año:</label>
                 <input type="number" name= "year" id="year" class="alta" placeholder="Escriba el año de cosecha">
                 <% if (locals.errors && errors.year) { %>
                     <p class="feedback"><%=errors.year.msg%>  </p>
-                   <% } %>
+                <% } %>
             </fieldset>
             <fieldset class= "campo-formulario">
                 <label for="varietal">Varietal:</label>
                 <input type="text" name= "varietal" id="varietal" class="alta" placeholder="Escriba el varietal">
                 <% if (locals.errors && errors.varietal) { %>
                     <p class="feedback"><%=errors.varietal.msg%>  </p>
-                   <% } %>
+                <% } %>
             </fieldset>
             <fieldset class= "campo-formulario">
                 <label for="graduacion">Graduación alcohólica:</label>
@@ -59,14 +59,14 @@
                 <input type="number" name="price" value="$0,00" id= "price" class="alta" placeholder="Escriba el precio">
                 <% if (locals.errors && errors.price) { %>
                     <p class="feedback"><%=errors.price.msg%>  </p>
-                   <% } %>
+                <% } %>
             </fieldset>
             <fieldset class="campo-formulario">
                 <label for="description">Descripción:</label>
                 <input type="text" name= "description" id="description"  class="alta" placeholder="Escriba la descripción del producto">
                 <% if (locals.errors && errors.description) { %>
                     <p class="feedback"><%=errors.description.msg%>  </p>
-                   <% } %>
+                <% } %>
             </fieldset>
             <fieldset class="campo-formulario">
                 <label for="uploads">Subir imagen:</label>
@@ -76,6 +76,7 @@
         </section>         
 </main>
 <%- include('../include/footer')%>
+<script src="js/validacionesAlta.js"></script>
 </body>
 </html>
 
