@@ -23,7 +23,7 @@
                             <%= brand.name %>
                         </option>
                     <% }) %>
-                </select>
+                </select> 
                 <% if (locals.errors && errors.brand) { %>
                     <p class="feedback"><%=errors.brand.msg%> </p>
                 <% } %>
@@ -73,7 +73,10 @@
                 <input type="file" name="image" id="clave" class="alta" placeholder="Suba la imágen del producto">
             </fieldset>
             <button type="submit" class= "boton-formulario-enviar">CREAR PRODUCTO</button> 
-        </section>         
+        </section>        
+        <section class="errores">
+            <ul><li></li></ul>
+        </section> 
 </main>
 <%- include('../include/footer')%>
 <script src="js/validacionesAlta.js"></script>
