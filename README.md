@@ -55,6 +55,9 @@ https://trello.com/invite/b/m60xXzO9/74d15d0513ac73220d78d71e3b2e049f/5to-sprint
 SEXTO SPRINT
 https://trello.com/invite/b/3Rg0xR21/fe27de63554b142c3984e90e178d322e/6to-sprint
 
+SEPTIMO SPRINT
+https://trello.com/invite/b/K00VWCMk/aec1d4232fe3984b1c2db88588c61e59/7mo-sprint
+
 
 ***Wireframe base de datos***
 
