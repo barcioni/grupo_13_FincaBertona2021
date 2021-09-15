@@ -1,12 +1,17 @@
 window.addEventListener("load", function(){
-    let formValidation = document.querySelector("form.control");
+    let campoRegistro = document.querySelectorAll(".control");
+    let botonEnviar =  document.querySelector(".boton-formulario-enviar");
     
-    formValidation.addEventListener("submit", function(e){
+    botonEnviar.addEventListener("click", function(e){
     e.preventDefault();
-    
-    
-    });
-    
-    
-    
+    })
+    let errores = [];
+    if(campoRegistro.value.length < 1){
+    errores.name = "Este campo debe estar completo";
+    }
+    if(errores.length > 0){
+        campoEdicionProducto.innerText = (errores.name) ? errores.name : "";
+    }else{
+        botonEnviar.submit();
+    }
     });
