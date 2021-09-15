@@ -1,5 +1,21 @@
 window.addEventListener("load", function(){
-    let formValidation = document.querySelector("form.formulario-alta-productos");
+let alta = document.querySelectorAll(".alta");
+let botonEnviar =  document.querySelector(".boton-formulario-enviar");
+
+botonEnviar.addEventListener("click", function(){
+    
+})
+
+
+    });
+
+
+
+
+
+
+
+    /*    let formValidation = document.querySelector("form.formulario-alta-productos");
 let errores = [];
 let altaProductos = document.querySelector("input.alta");
 if(altaProductos.value == ""){
@@ -18,4 +34,3 @@ if(errores.length > 0){
     e.preventDefault();
     });
     */
-    });
