@@ -3,11 +3,11 @@ window.addEventListener("load", function(){
     let botonEnviar =  document.querySelector(".boton-formulario-enviar");
     
     botonEnviar.addEventListener("click", function(e){
-    e.preventDefault();
     })
     let errores = [];
     if(campoRegistro.value.length < 1){
-    errores.name = "Este campo debe estar completo";
+        e.preventDefault();
+        errores.name = "Este campo debe estar completo";
     }
     if(errores.length > 0){
         campoEdicionProducto.innerText = (errores.name) ? errores.name : "";

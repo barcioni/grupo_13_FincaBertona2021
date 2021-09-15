@@ -27,8 +27,7 @@ const controlador = {
     
         if (errors.isEmpty()) {
             //console.log("Está vacío");
-            try {
-                await User.create(
+            User.create(
                     {
                         nombre: req.body.nombre,
                         apellido: req.body.apellido,
@@ -42,10 +41,8 @@ const controlador = {
                     )
                     console.log (req.body)
                     return res.redirect("/login")
-                } catch (error) { res.send(error) }
         } else {
-            //return res.send (errors)
-            
+            //return res.send (errors)            
             res.locals.errors = errors.mapped()
             res.render("users/registro", { errors: errors.mapped(), old: req.body });
         }
