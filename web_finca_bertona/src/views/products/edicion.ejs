@@ -28,31 +28,31 @@
                     </fieldset>
                     <fieldset>
                         <label for="cosecha">Cosecha</label>
-                        <input type="text" name="year" id="year" value="<%= product.year %>" >
+                        <input type="text" name="year" id="year" class="campo-form-edicion" value="<%= product.year %>" >
                     </fieldset>
                     <fieldset>
                         <label for="price">Precio</label>
-                        <input type="number" name="price" id="price" value="<%= product.price %>" >
+                        <input type="number" name="price" id="price" class="campo-form-edicion" value="<%= product.price %>" >
                     </fieldset>
                     <fieldset>
                         <label for="varietal">Varietal</label>
-                        <input type="text" name="varietal" id="varietal" value="<%= product.varietal %>" >
+                        <input type="text" name="varietal" id="varietal" class="campo-form-edicion" value="<%= product.varietal %>" >
                     </fieldset>
                     <fieldset>
                         <label for="graduacion">Graduación alcohólica</label>
-                        <input type="number" name="graduacion" id="graduacion" value="<%= product.graduacion %>" >
+                        <input type="number" name="graduacion" id="graduacion" class="campo-form-edicion" value="<%= product.graduacion %>" >
                     </fieldset>
                     <fieldset>
                         <label for="barrica">Tiempo en barrica</label>
-                        <input type="text" name="barrica" id="barrica" value="<%= product.barrica %>" >
+                        <input type="text" name="barrica" id="barrica" class="campo-form-edicion" value="<%= product.barrica %>" >
                     </fieldset>
                     <fieldset>
                         <label for="guarda">Tiempo de guarda</label>
-                        <input type="text" name="guarda" id="guarda" value="<%= product.guarda %>" >
+                        <input type="text" name="guarda" id="guarda" class="campo-form-edicion" value="<%= product.guarda %>" >
                     </fieldset>
                     <fieldset>
                         <label for="description">Descripción</label>
-                        <input type="text" name="description" id="description" value="<%= product.description %>" >
+                        <input type="text" name="description" id="description" class="campo-form-edicion" value="<%= product.description %>" >
                     </fieldset>
                         <article id="contenedor-botones">
                         <button type="submit" id="boton-editar">EDITAR PRODUCTO</button>
@@ -62,6 +62,9 @@
                 </form>
                 </article>
                 </section> 
+                <section class="errores">
+                    <small class="textoErrores"></small>
+                </section>
     </section>
     <%- include('../include/footer')%>
     <script src="js/validacionesEdicionProducto.js"></script>
