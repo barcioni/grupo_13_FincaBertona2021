@@ -17,7 +17,7 @@ app.set("views", path.resolve(__dirname,"./views"));
 // Middlewares
 app.use(session({secret: "Secret", resave: false, saveUninitialized: false,})); // add req.session
 app.use(cookies ());
-app.use(express.urlencoded({extended:false})); // Not fund req.body
+app.use(express.urlencoded({extended:true})); // Not fund req.body
 app.use(methodOverride("_method")); // ?_method=PUT
 app.use(express.json());
 app.use(userLoggedMiddleware);

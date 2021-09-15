@@ -26,9 +26,9 @@ const controlador = {
         //return res.send(req.body)
     
         if (errors.isEmpty()) {
-            console.log("Está vacío");
+            //console.log("Está vacío");
             try {
-                let results = await User.create(
+                await User.create(
                     {
                         nombre: req.body.nombre,
                         apellido: req.body.apellido,
@@ -39,10 +39,10 @@ const controlador = {
                         clave: bcrypt.hashSync(req.body.clave, 10),
                         image: req.file.image != undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",
                     }
-                )
-                return res.send (req.body)
-                return res.redirect("/login")
-            } catch (error) { res.send(error) }
+                    )
+                    console.log (req.body)
+                    return res.redirect("/login")
+                } catch (error) { res.send(error) }
         } else {
             //return res.send (errors)
             
