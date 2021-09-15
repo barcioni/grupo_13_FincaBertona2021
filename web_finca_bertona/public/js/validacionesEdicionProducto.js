@@ -2,7 +2,7 @@ window.addEventListener("load", function(){
     let campoEdicionProducto = document.querySelectorAll(".campo-form-edicion");
     let botonEditar =  document.querySelector("#boton-editar");
     
-    botonEnviar.addEventListener("click", function(e){
+    botonEditar.addEventListener("click", function(e){
     e.preventDefault();
     })
     let errores = [];
