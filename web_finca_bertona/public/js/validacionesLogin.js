@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-let formValidation = document.querySelector("form.control");
+let formValidation = document.querySelector("form.formulario-login");
 
 formValidation.addEventListener("submit", function(e){
 e.preventDefault();

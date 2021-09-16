@@ -40,7 +40,9 @@ const controlador = {
                     }
                     )
                     console.log (req.body)
-                    return res.redirect("/login")
+                    .then(()=> {            
+                        return res.redirect('/login')})            
+                        .catch(error => res.send(error))
         } else {
             //return res.send (errors)            
             res.locals.errors = errors.mapped()
