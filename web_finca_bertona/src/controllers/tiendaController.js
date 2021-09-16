@@ -39,12 +39,13 @@ const controlador = {
             barrica: req.body.barrica,
             guarda: req.body.guarda,
             description: req.body.description,
-            image: req.file!= undefined && file.filename != undefined ? file.filename : "botella-ruta15.png",
+            image: req.file!= undefined && req.file.filename != undefined ? req.file.filename : "botella-ruta15.png",
             price: req.body.price,
             currency: "$"
             }
             )
             .then(()=> {
+            
             return res.redirect('/tienda')})            
             .catch(error => res.send(error))
         } else {

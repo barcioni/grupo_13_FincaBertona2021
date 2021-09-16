@@ -36,7 +36,7 @@ const controlador = {
                         fechaDeNacimiento: req.body.fechaDeNacimiento,
                         domicilio: req.body.domicilio,
                         clave: bcrypt.hashSync(req.body.clave, 10),
-                        image: req.file.image != undefined && file.filename != undefined ? file.filename : "guestUserDefault.png",
+                        image: req.file.image != undefined && req.file.filename != undefined ? req.file.filename : "guestUserDefault.png",
                     }
                     )
                     console.log (req.body)
@@ -59,7 +59,7 @@ const controlador = {
                 req.session.userLogged = userToLogin;
 
                 if (req.body.remember_user) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 6000) * 60000 })
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000000 * 6000000) * 60000000 })
                 }
 
                 return res.redirect('/perfil');
