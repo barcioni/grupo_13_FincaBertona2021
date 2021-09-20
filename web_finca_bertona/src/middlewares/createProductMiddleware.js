@@ -6,6 +6,7 @@ check("year").notEmpty().withMessage("Debes completar el campo año").bail(),
 check("varietal").notEmpty().withMessage("Debes completar el campo varietal").bail(),
 check("description").notEmpty().withMessage("Debes completar la descripción"),
 check("price").notEmpty().withMessage("Debes completar el campo precio").bail(),
+check("stock").notEmpty().withMessage("Debes completar con el stock disponible").bail(),
 ]
 ;
 

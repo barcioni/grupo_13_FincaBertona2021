@@ -9,29 +9,26 @@
     <header>
         <%- include('../include/nav')%>
     </header>
-    <main>
-        <h1>CARRITO</h1>
-        <% if (carts.length > 0) { %>
-            <li>
-                <span><%= item.product.name %> </span>
-                <span><%= item.product.quantity %> </span>
-                <span><%= item.product.price %> </span>
-            </li>
-         
-        <% } %>
-    </main>
+   
 
-    <!---<main> 
+    <main> 
     <section class="contenedor-seccion1">
         <h1 class="titulo-carrito">CARRITO</h1>
         <div class="contenedor__carritos_01y02">
+        <% if (carts.length > 0) { %>
+            <% carts.forEach(item => { %>
             <div class="carrito_01">
-               <img src="/imagenes/botella-funes.png" class="img__funes__carrito" alt="finca-bertona">
-               <p class="vino">Funes</p><p class="cosecha">Cosecha 2019</p><div class="cantidad">1</div><p class="precio">$1,200</p>
+                <img src="/uploads/products/<%= item.product.image%>" class="img__funes__carrito" alt="finca-bertona">
+               <p class="vino">MARCA</p>
+               <p class="cosecha">Cosecha <%= item.product.year %></p>
+               <div class="cantidad"><%= item.quantity %></div>
+               <p class="precio"><%= item.product.price %></p>
             </div>
+            <% }) %>
+            <% } %>
         </div>
     </section>
-    </main>--->
+    </main>
     <!----------------- Inicio footer ------------------------------------------------>
     <%- include('../include/footer')%>
     </body>

@@ -37,6 +37,9 @@ module.exports = (sequelize, dataTypes) => {
           currency: {
             type: dataTypes.STRING
           },
+          stock:{
+            type: dataTypes.INTEGER
+          },
     };
     let config = {
         timestamps: true,

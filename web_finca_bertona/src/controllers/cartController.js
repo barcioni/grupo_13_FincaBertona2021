@@ -7,10 +7,12 @@ const {Product, User, Brand, Cart} = db
 module.exports = {
     index: async (req,res) => {
         try {
-            const products = await Product.findAll();
+            
+            const products = await Product.findAll({include: ["brands"]});
             const user = await User.findByPk (req.session.userLogged) //req.session.user_id
             const carts = await Cart.findAll ({ include: ["product", "user"]},{where: user_id = req.session.userLogged  }
             );
+
           
             return res.render ("checkout/carrito", {
                 title: "Carrito",
@@ -33,6 +35,7 @@ module.exports = {
                 current_price: product.price,
                 release_date: Date.now ()
             })
+            return res.redirect ("/carrito")
         } catch (error) {
             res.send (error) 
         }

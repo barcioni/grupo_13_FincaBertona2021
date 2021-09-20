@@ -62,6 +62,13 @@
                 <% } %>
             </fieldset>
             <fieldset class="campo-formulario">
+                <label for="stock">Stock:</label>
+                <input type="number" name="stock" value="0" id= "stock" class="alta" placeholder="Coloque el stock disponible">
+                <% if (locals.errors && errors.stock) { %>
+                    <p class="feedback"><%=errors.stock.msg%>  </p>
+                <% } %>
+            </fieldset>
+            <fieldset class="campo-formulario">
                 <label for="description">Descripción:</label>
                 <input type="text" name= "description" id="description"  class="alta" placeholder="Escriba la descripción del producto">
                 <% if (locals.errors && errors.description) { %>

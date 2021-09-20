@@ -44,6 +44,9 @@ module.exports = {
           currency: {
             type: Sequelize.STRING
           },
+          stock:{
+            type: Sequelize.INTEGER
+          },
           createdAt: {
             type: Sequelize.DATE,
             allowNull: false,

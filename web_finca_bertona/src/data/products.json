@@ -10,7 +10,8 @@
     "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
     "price": 1000,
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
     "price": 900,
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "description": "Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.",
     "image": "botella-ruta15.png",
     "price": 800,
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
     "price": "700",
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
     "price": 500,
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   },
   {
     "id": 6,
@@ -75,6 +80,7 @@
     "description": "Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.",
     "image": "botella-funes.png",
     "price": 400,
-    "currency": "$"
+    "currency": "$",
+    "stock": 10
   }
 ]

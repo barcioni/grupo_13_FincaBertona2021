@@ -13,7 +13,7 @@ const User = db.User
 const controlador = {
     list: (req, res) => {
         Product.findAll({
-            include: [{ association: 'brands'}]
+            include: ['brands']
         })
             .then(products => {
                 //console.log (products)
@@ -42,7 +42,8 @@ const controlador = {
             description: req.body.description,
             image: req.file!= undefined && req.file.filename != undefined ? req.file.filename : "botella-ruta15.png",
             price: req.body.price,
-            currency: "$"
+            currency: "$",
+            stock: req.body.stock
             }
             )
             .then(()=> {
@@ -68,11 +69,11 @@ const controlador = {
             Promise
             .all([pedidoProduct, pedidoBrand])
             .then(([product, brands]) => {
-                return res.send(product)
+                //return res.send(product)
                 res.render("products/edicion.ejs", {product, brands})})
                 .catch(error => res.send(error))
             },
-            editImage: (req,res) => {
+        editImage: (req,res) => {
                 let pedidoProduct =  Product.findByPk(req.params.id,
                     {
                         include : [{association:'brands'}]
@@ -98,7 +99,8 @@ const controlador = {
                     description: req.body.description,
                     image: req.file!= undefined && file.filename != undefined ? file.filename : "botella-ruta15.png",
                     price: req.body.price,
-                    currency: "$"
+                    currency: "$",
+                    stock: req.body.stock
                     },
                     {
                         where: {id: req.params.id}
