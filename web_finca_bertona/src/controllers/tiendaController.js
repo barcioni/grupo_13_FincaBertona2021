@@ -8,6 +8,7 @@ const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const Product = db.Product
 const Brand = db.Brand
+const User = db.User
 
 const controlador = {
     list: (req, res) => {

@@ -8,6 +8,6 @@ router.get("/nuestraFamilia", mainController.nuestraFamilia);
 
 router.get("/vinos", mainController.vinos);
 
-router.get("/carrito", mainController.carrito);
+//router.get("/carrito", mainController.carrito);
 
 module.exports = router;

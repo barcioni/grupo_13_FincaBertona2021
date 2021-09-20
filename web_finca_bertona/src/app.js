@@ -36,7 +36,10 @@ app.use ("/tienda", rutasTienda);
 const rutasUser = require ("./routes/user");
 app.use ("/", rutasUser);
 
-app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
+const rutasCart = require ("./routes/cart");
+app.use ("/carrito", rutasCart);
+
+//app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
 
 
 //pagina 404

@@ -31,7 +31,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(400)
           },
           price:{
-            type: dataTypes.DECIMAL.UNSIGNED
+            type: dataTypes.DECIMAL.UNSIGNED,
+            allowNull: false
           },
           currency: {
             type: dataTypes.STRING
@@ -51,6 +52,10 @@ module.exports = (sequelize, dataTypes) => {
             as: "brands",
             foreignKey: "brand_id"
         })
+        Product.hasMany(models.Cart, { 
+          as: "carts",
+          foreignKey: "product_id"
+      })
     }
 
     return Product

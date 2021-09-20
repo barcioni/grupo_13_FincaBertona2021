@@ -29,10 +29,12 @@
                 <li class= "caracteriticas"><span class="caracteristicas-bold">Tiempo de guarda:</span> <%= product.guarda %></li>
             </ul>
         </article>
-            <form action="/cart/add" method="post" class="campo__formulario">
+            <form action="/carrito/add" method="POST" class="campo__formulario">
                 <fieldset id="quantity">
-                    <label for="quantity">Quantity</label>
-                    <input type="number" min="1" max="12" value="1" required>
+                    <label for="quantity">Cantidad</label>
+                    <input type="hidden" name="product" id="product" value="<%= product.id %>">
+                    <input type="hidden" name="user" id="user" value="<%= user.id %>">
+                    <input type="number" min="1" max="12" name="quantity" id="quantity" value="1" required>
                 </fieldset>
                 <% if(user!=undefined && user.admin) {%>
             

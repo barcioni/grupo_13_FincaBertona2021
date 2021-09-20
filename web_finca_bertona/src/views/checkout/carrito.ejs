@@ -9,21 +9,29 @@
     <header>
         <%- include('../include/nav')%>
     </header>
-    <main> 
+    <main>
+        <h1>CARRITO</h1>
+        <% if (carts.length > 0) { %>
+            <li>
+                <span><%= item.product.name %> </span>
+                <span><%= item.product.quantity %> </span>
+                <span><%= item.product.price %> </span>
+            </li>
+         
+        <% } %>
+    </main>
+
+    <!---<main> 
     <section class="contenedor-seccion1">
-        <h1 class="titulo-carrito">SHOPPING CART</h1>
+        <h1 class="titulo-carrito">CARRITO</h1>
         <div class="contenedor__carritos_01y02">
             <div class="carrito_01">
                <img src="/imagenes/botella-funes.png" class="img__funes__carrito" alt="finca-bertona">
                <p class="vino">Funes</p><p class="cosecha">Cosecha 2019</p><div class="cantidad">1</div><p class="precio">$1,200</p>
             </div>
-            <div class="carrito_02">
-                <img src="/imagenes/botella-ruta15.png" class="img__ruta15__carrito" alt="finca-bertona">
-                <p class="vino">Ruta 15</p><p class="cosecha">Cosecha 2017</p><div class="cantidad">1</div><p class="precio">$2,415</p>
-            </div>
         </div>
     </section>
-    </main>
+    </main>--->
     <!----------------- Inicio footer ------------------------------------------------>
     <%- include('../include/footer')%>
     </body>

@@ -4,47 +4,55 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     try {
       await queryInterface.createTable(
-        'carts',
-        {
+        'carts', {
           id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
           },
           user_id: {
             type: Sequelize.INTEGER,
+            allowNull: false,
             references: {
               model: 'users',
-              key: 'id' },
+              key: 'id'
+            },
           },
           product_id: {
             type: Sequelize.INTEGER,
+            allowNull: false,
             references: {
               model: 'products',
-              key: 'id' },
+              key: 'id'
+            },
           },
           quantity: {
             type: Sequelize.INTEGER,
+            allowNull: false,
+            defaultValue: 1
+          },
+          current_price: {
+            type: Sequelize.INTEGER,
             allowNull: false
           },
-          createdAt: {
-            type: Sequelize.DATE
-          },
-          updatedAt: {
-            type: Sequelize.DATE
+          release_date: {
+            type: Sequelize.DATE,
+            allowNull: false,
+            defaultValue: Sequelize.fn('NOW')
           }
-        })      
+        })
     } catch (error) {
       throw error;
-      
+
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     try {
-      await queryInterface.dropTable ("carts")
+      await queryInterface.dropTable("carts")
     } catch (error) {
-      throw error;
+      console.log(error);
     }
   }
 };

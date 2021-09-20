@@ -39,10 +39,10 @@ const controlador = {
                         image: req.file.image != undefined && req.file.filename != undefined ? req.file.filename : "guestUserDefault.png",
                     }
                     )
-                    console.log (req.body)
                     .then(()=> {            
                         return res.redirect('/login')})            
                         .catch(error => res.send(error))
+                        console.log (req.body)
         } else {
             //return res.send (errors)            
             res.locals.errors = errors.mapped()

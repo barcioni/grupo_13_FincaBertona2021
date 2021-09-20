@@ -12,39 +12,6 @@
   },
   {
     "id": 2,
-    "nombre": "Prueba",
-    "apellido": "Prueba",
-    "email": "prueba@prueba.com",
-    "admin": false,
-    "fechaDeNacimiento": "2021-07-22",
-    "domicilio": "Prueba",
-    "clave": "$2a$10$5Kyeu17tPegUOviUPJIJC.U.cioQUwsppszpUm4qbtWtE8u383J/a",
-    "image": "user-1626501119148.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "Prueba sin imagen",
-    "apellido": "Prueba sin imagen",
-    "email": "Pruebasinimagen@ggg.com",
-    "admin": false,
-    "fechaDeNacimiento": "2021-07-22",
-    "domicilio": "Prueba sin imagen",
-    "clave": "$2a$10$.IxQfwcjrWdr55F4w44N0.mIgIBDcyuT5QcdjGjhuydsfL4xbDHty",
-    "image": "guestUserDefault.png"
-  },
-  {
-    "id": 4,
-    "nombre": "Frank ",
-    "apellido": "Martucci",
-    "email": "frank@gmail.com",
-    "admin": false,
-    "fechaDeNacimiento": "2021-07-22",
-    "domicilio": "Las calles",
-    "clave": "$2a$10$cGDQYT8FJ3Lu/OobhPFhR.Tke2SxZ8XWVsZrzftRj.Vlh9eN65hWm",
-    "image": "guestUserDefault.png"
-  },
-  {
-    "id": 5,
     "nombre": "Barbara",
     "apellido": "Arcioni",
     "email": "barcioni7@gmail.com",
