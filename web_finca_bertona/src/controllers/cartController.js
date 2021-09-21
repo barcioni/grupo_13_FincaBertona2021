@@ -1,3 +1,4 @@
+const { Association } = require('sequelize');
 const sequelize = require('sequelize');
 const db = require('../database/models');
 const { checkout } = require('../routes/cart');
@@ -9,16 +10,19 @@ module.exports = {
         try {
             
             const products = await Product.findAll({include: ["brands"]});
+            const brands = await Brand.findAll()
             const user = await User.findByPk (req.session.userLogged) //req.session.user_id
             const carts = await Cart.findAll ({ include: ["product", "user"]},{where: user_id = req.session.userLogged  }
             );
 
-          
+            //return res.send (carts)
+
             return res.render ("checkout/carrito", {
                 title: "Carrito",
                 user: user,
                 products: products,
-                carts: carts
+                brands: brands,
+                carts: carts,
             })
         } catch (error) {
             res.send (error)            
@@ -41,7 +45,24 @@ module.exports = {
         }
     },
     update: async (req, res) => {
-        res.send ({data: req.body, id: req.params.id})
+        try {
+            const cart = await Cart.update (
+                {quantity: req.body.quantity}, 
+                {where: {id : req.body.cart_id} })
+            return res.redirect ("/carrito")
+        } catch (error) {
+            res.send (error) 
+        }
+    },
+    delete: async (req,res) => {
+        try {
+            const deleteItem = await Cart.destoy (
+                {where: {id: req.params.id}, force: true})
+            return res.redirect ("/carrito")
+
+        } catch (error) {
+            
+        }
     }
 
 };

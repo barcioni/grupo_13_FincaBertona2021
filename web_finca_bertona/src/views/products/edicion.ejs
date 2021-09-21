@@ -35,8 +35,11 @@
                         <input type="number" name="price" id="price" class="campo-form-edicion" value="<%= product.price %>" >
                     </fieldset>
                     <fieldset>
-                        <label for="price">Stock</label>
-                        <input type="number" name="stock" id="stock" class="campo-form-edicion" value="<%= product.stock %>" >
+                        <label for="stock-disponible">Stock disponible: <%=product.stock%> </label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="stock"> Agregar/Quitar stock </label>
+                        <input type="number" name="stock" id="stock" class="campo-form-edicion" value="0" >
                     </fieldset>
                     <fieldset>
                         <label for="varietal">Varietal</label>

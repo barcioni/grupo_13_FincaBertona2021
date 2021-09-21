@@ -14,19 +14,27 @@
     <main> 
     <section class="contenedor-seccion1">
         <h1 class="titulo-carrito">CARRITO</h1>
-        <div class="contenedor__carritos_01y02">
         <% if (carts.length > 0) { %>
             <% carts.forEach(item => { %>
+            <form action="/carrito/update?_method=PUT" method="post">
             <div class="carrito_01">
                 <img src="/uploads/products/<%= item.product.image%>" class="img__funes__carrito" alt="finca-bertona">
-               <p class="vino">MARCA</p>
-               <p class="cosecha">Cosecha <%= item.product.year %></p>
-               <div class="cantidad"><%= item.quantity %></div>
-               <p class="precio"><%= item.product.price %></p>
+                <p class="vino">MARCA </p>
+                <p class="cosecha">Cosecha <%= item.product.year %></p>
+                <fieldset id="fieldset-cantidad">
+                    <input type="hidden" name="cart" id="cart_id" value="<%= item.id %>">
+                    <input type="number" name="quantity" id="quantity" class="cantidad" value="<%= item.quantity%>" >                  
+                </fieldset>
+                <p class="precio">$<%= item.product.price %></p>
+                <p class="cantidad"> TOTAL = <%= parseInt(item.product.price)*parseInt(item.quantity)%></p>
+                <!---<form action="/carrito/eliminar/<%= item.id %>>?_method=DELETE" method="post" id="delete-carrito-form" enctype="multipart/form-data">
+                    <button type="submit" id="boton-eliminar">Quitar del carrito</button>
+                </form>--->
             </div>
             <% }) %>
             <% } %>
-        </div>
+            <button type="submit" id= "actualizar-carrito">Actualizar carrito</button>
+        </form>
     </section>
     </main>
     <!----------------- Inicio footer ------------------------------------------------>

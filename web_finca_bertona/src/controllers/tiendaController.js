@@ -86,9 +86,10 @@ const controlador = {
                     res.render("products/edicionImagen.ejs", {product, brands})})
                     .catch(error => res.send(error))
                 },
-            update: function (req,res) {
-                Product
-                .update(
+            update: async (req,res) => {
+                const product = await Product.findByPk(req.params.id)
+                try {
+                    const productUpdate = await Product.update(
                     {
                     brand_id: req.body.brand,
                     year: req.body.year,
@@ -100,15 +101,17 @@ const controlador = {
                     image: req.file!= undefined && file.filename != undefined ? file.filename : "botella-ruta15.png",
                     price: req.body.price,
                     currency: "$",
-                    stock: req.body.stock
+                    stock: parseInt(product.stock) + parseInt (req.body.stock)
                     },
                     {
                         where: {id: req.params.id}
                     }
                     )
-                    .then(()=> {
-                    return res.redirect('/tienda')})            
-                    .catch(error => res.send(error))
+                    return res.redirect('/tienda')
+                } catch (error) {
+                    res.send(error)
+                }
+                
                 },
                 updateImage:(req,res)=>{
                     Product.update(
