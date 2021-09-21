@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2021 at 02:22 AM
+-- Generation Time: Sep 21, 2021 at 03:49 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -29,6 +29,7 @@ USE `finca_bertona_db`;
 -- Table structure for table `brands`
 --
 
+DROP TABLE IF EXISTS `brands`;
 CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -50,14 +51,25 @@ INSERT INTO `brands` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- Table structure for table `carts`
 --
 
+DROP TABLE IF EXISTS `carts`;
 CREATE TABLE `carts` (
   `id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `quantity` int(11) NOT NULL,
-  `createdAt` datetime DEFAULT NULL,
-  `updatedAt` datetime DEFAULT NULL
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
+  `current_price` int(11) NOT NULL,
+  `release_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `current_price`, `release_date`) VALUES
+(1, 3, 5, 4, 500, '2021-09-20 21:19:01'),
+(2, 3, 5, 4, 500, '2021-09-20 21:20:38'),
+(3, 3, 5, 4, 500, '2021-09-20 21:21:55'),
+(4, 3, 5, 7, 500, '2021-09-20 21:40:11');
 
 -- --------------------------------------------------------
 
@@ -65,6 +77,7 @@ CREATE TABLE `carts` (
 -- Table structure for table `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `brand_id` int(11) DEFAULT NULL,
@@ -77,6 +90,7 @@ CREATE TABLE `products` (
   `image` varchar(400) DEFAULT NULL,
   `price` decimal(10,0) DEFAULT NULL,
   `currency` varchar(255) DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -85,13 +99,14 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `brand_id`, `year`, `varietal`, `graduacion`, `barrica`, `guarda`, `description`, `image`, `price`, `currency`, `createdAt`, `updatedAt`) VALUES
-(1, 1, 2016, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '1000', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 1, 2017, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '900', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 1, 2018, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '800', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 2, 2018, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '700', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, 2, 2019, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '500', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(6, 2, 2020, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '400', '$', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `products` (`id`, `brand_id`, `year`, `varietal`, `graduacion`, `barrica`, `guarda`, `description`, `image`, `price`, `currency`, `stock`, `createdAt`, `updatedAt`) VALUES
+(1, 1, 2016, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '1000', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 2, 2017, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '900', '$', 12, '0000-00-00 00:00:00', '2021-09-20 22:35:17'),
+(3, 1, 2018, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '800', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 2, 2018, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '700', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 2, 2019, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '500', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 2, 2020, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '400', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 1, 2022, 'Prueba', '6', 'Prueba', 'Prueba', 'PRUEBAPRUEBAPRUEBAPRUEBAPRUEBA', 'botella-ruta15.png', '500', '$', 15, '2021-09-20 21:04:09', '2021-09-20 21:04:09');
 
 -- --------------------------------------------------------
 
@@ -99,6 +114,7 @@ INSERT INTO `products` (`id`, `brand_id`, `year`, `varietal`, `graduacion`, `bar
 -- Table structure for table `sequelizemeta`
 --
 
+DROP TABLE IF EXISTS `sequelizemeta`;
 CREATE TABLE `sequelizemeta` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -119,6 +135,7 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
@@ -138,12 +155,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nombre`, `apellido`, `email`, `admin`, `fechaDeNacimiento`, `domicilio`, `clave`, `image`, `createdAt`, `updatedAt`) VALUES
-(1, 'Prueba', 'Prueba', 'prueba@prueba.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$vd5rfV2qAiJ7UjNKEh1UX.ofhkxrs7dRH9LR7w3n3rdp74ludwRjW', 'guestUserDefault.png', '2021-08-19 05:39:25', '2021-08-19 05:39:25'),
-(2, 'Prueba', 'Prueba', 'prueba@prueba.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$azWGcwErcg8ze.T0C.i5JudnS9YyDUSkUXZ5f6p8yHTqwiGVGlMES', 'guestUserDefault.png', '2021-08-19 05:41:38', '2021-08-19 05:41:38'),
-(3, 'Prueba', 'Prueba', 'prueba@prueba.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$SBfWwGB5swBDzfUh9yFoFOiW1ndpGmX3iiU//eyOePVqapQTcBE1K', 'guestUserDefault.png', '2021-08-19 05:43:10', '2021-08-19 05:43:10'),
-(4, 'Prueba', 'Prueba', 'prueba@prueba.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$LRGfAnLGBkAty3vQDR3MseSQ66vlQV3lViDOVgW.3Yin8paGlpojm', 'guestUserDefault.png', '2021-08-19 05:43:20', '2021-08-19 05:43:20'),
-(5, 'Prueba', 'Prueba', 'prueba@prueba.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$iteoNYvdvaJtT6dtUVBnGemHu3GidT271YQKXDAk/2dgttjo5ORXa', 'guestUserDefault.png', '2021-08-19 05:45:00', '2021-08-19 05:45:00'),
-(6, 'María Adela del Rosario', 'Bertona', 'rosariobertona96@gmail.com', 1, '2021-07-22 00:00:00', 'Calle 123', '$2a$10$Hmz.fXOsxuK0I0x8G/SNq.lOt5mANsvgbDtMaNsNBt.y2Tho27kDe', 'guestUserDefault.png', '2021-08-19 05:46:38', '2021-08-19 05:46:38');
+(1, 'María Adela del Rosario', 'Bertona', 'rosariobertona96@gmail.com', 1, '2021-07-22 00:00:00', 'Calle 123', '$2a$10$rbgCkQehKQ.YqQbsvQdpvOW2xT/9VQbsgPS9f2/aHFp7x7B4KNr0C', 'user-1626501051316.JPG', NULL, NULL),
+(2, 'Barbara', 'Arcioni', 'barcioni7@gmail.com', 1, '2021-07-22 00:00:00', 'asdfghjk 254689', '$2a$10$48cYYaWGBmqZ7LUSHn/a6OU92UhWjqY1NwitWBpks47EqFiupzgH2', 'guestUserDefault.png', NULL, NULL),
+(3, 'Usuario', 'Prueba', 'usuarioprueba@gmail.com', 0, '2021-07-22 00:00:00', 'PruebaPruebaPrueba', '$2a$10$35Yus7NbAhc/OlzdfPzIjONouDO1rg7m0HEnEUirSCicp691lqzta', 'guestUserDefault.png', '2021-09-20 21:18:12', '2021-09-20 21:18:12');
 
 --
 -- Indexes for dumped tables
@@ -198,19 +212,19 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
