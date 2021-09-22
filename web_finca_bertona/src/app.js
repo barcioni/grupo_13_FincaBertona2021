@@ -5,6 +5,8 @@ const methodOverride = require("method-override");
 const session = require("express-session"); //Session
 const cookies = require ("cookie-parser"); //Cookies
 const userLoggedMiddleware = require ("./middlewares/userLoggedMiddleware")
+const cors = require ("cors");
+app.use (cors());
 
 
 // Server start

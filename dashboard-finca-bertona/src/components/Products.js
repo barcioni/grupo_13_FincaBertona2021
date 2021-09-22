@@ -20,8 +20,9 @@ function Products() {
 
     return (
 	<div>
-    <h1>ACÁ VAN LA TARJETA DE PRODUCTOS</h1>
+    <h1>ACÁ VA LA TARJETA DE PRODUCTOS</h1>
 	<div>
+		<p>{ products.total}</p>
 	{
 		products.length > 0 && products.map((product, i) => {
 			return (
