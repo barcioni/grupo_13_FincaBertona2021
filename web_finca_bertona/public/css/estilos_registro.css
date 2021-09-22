@@ -77,6 +77,14 @@ main{
     background: rgb(240, 139, 148);
     color: black;
 }
+.contenedorTextoErrores{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40%;
+}
+.textoErrores{
+    color: darkred;
+}
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){

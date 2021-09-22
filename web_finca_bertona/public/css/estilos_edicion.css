@@ -89,6 +89,14 @@ form input{
     background: rgb(107, 29, 36);
     font-weight: 600;
 }
+.contenedorTextoErrores{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40%;
+}
+.textoErrores{
+    color: darkred;
+}
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){

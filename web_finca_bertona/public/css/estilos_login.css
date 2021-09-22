@@ -102,6 +102,14 @@ a{
 #recordar-email input{
     margin-right: 7px;
 }
+.contenedorTextoErrores{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40%;
+}
+.textoErrores{
+    color: darkred;
+}
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){

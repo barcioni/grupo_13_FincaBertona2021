@@ -38,6 +38,7 @@
                     <input 
                     type="text" 
                     name= "email"  
+                    id= "email" 
                     class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.email : null %>"
                     placeholder="Escriba su direccion de mail">
@@ -47,7 +48,7 @@
                 </fieldset>
                 <fieldset class= "campo-formulario">
                     <label for="fecha-de-nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" name="fechaDeNacimiento" value="2021-07-22" id= "fecha-de.nacimiento" class="control" placeholder= "Escriba su fecha de nacimiento">
+                    <input type="date" name="fechaDeNacimiento" value="2021-07-22" id= "fecha-de.nacimiento" class="control fecha" placeholder= "Escriba su fecha de nacimiento">
                     <% if (locals.errors && errors.fechaDeNacimiento) { %>
                         <p class="feedback"><%=errors.fechaDeNacimiento.msg%>  </p>
                     <% } %>
@@ -77,9 +78,9 @@
                 </fieldset>
                 <button type="submit" class= "boton-formulario-enviar">ENVIAR</button>  
             </form>
-            <section class="errores">
+            <section class="errores contenedorTextoErrores">
                 <small class="textoErrores"></small>
-            </section> 
+            </section>  
     </main>
     <%- include('../include/footer')%>
     <script src="js/validacionesRegistro.js"></script>
