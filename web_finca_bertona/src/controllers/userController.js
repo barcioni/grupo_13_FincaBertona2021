@@ -36,7 +36,7 @@ const controlador = {
                         fechaDeNacimiento: req.body.fechaDeNacimiento,
                         domicilio: req.body.domicilio,
                         clave: bcrypt.hashSync(req.body.clave, 10),
-                        image: req.file.image != undefined && req.file.filename != undefined ? req.file.filename : "guestUserDefault.png",
+                        image: req.file != undefined && req.file.filename != undefined ? req.file.filename : "guestUserDefault.png",
                     }
                     )
                     .then(()=> {            
