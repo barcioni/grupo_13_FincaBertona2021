@@ -31,7 +31,9 @@ var storage = multer.diskStorage({
   //Proceso de registro
   router.post("/guardarUsuario",[upload.single("image"), registerMiddleware], userController.save);
   //Proceso de login
-  router.post('/loginProcess', /*validaciones,*/ userController.loginProcess)
+  router.post('/loginProcess', /*validaciones,*/ userController.loginProcess);
+
+  router.post("/comentario", userController.Coment)
   
   module.exports = router;
   

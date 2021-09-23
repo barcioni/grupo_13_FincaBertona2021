@@ -61,7 +61,14 @@ module.exports = {
             res.send (error) 
         }
     },
-    delete: async (req,res) => {
+    delete: function (req,res) {
+        Cart.destroy(
+            {where: {id: req.params.id}, force: true}) 
+            .then(()=>{
+                return res.redirect('/carrito')})
+                .catch(error => res.send(error)) 
+            },
+    /*async (req,res) => {
         try {
             const deleteItem = await Cart.destoy (
                 {where: {id: req.params.id}, force: true})
@@ -70,8 +77,9 @@ module.exports = {
         } catch (error) {
             
         }
-    }
+    }*/
 
+    
 };
 
 
