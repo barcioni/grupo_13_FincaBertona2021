@@ -21,7 +21,9 @@
       <% } else { %>
         <li><a href="/login">Login</a></li>
       <% } %>
+      <% if (locals.isLogged) { %>
       <li><a href="/carrito"><i class="fa fa-shopping-cart"></i></a></li>
+      <% } %>
       <!---<li><a href="/tienda/alta">Alta</a></li>
       <li><a href="/editar/:id">Edición</a></li>------->
       </ul>

@@ -28,13 +28,17 @@
                     <button type="submit" id="actualizar-cantidad">Actualizar cantidad </button>
                 </form>
                 <p class="precio">$<%= item.product.price %></p>
-                <p class="subtotal"> TOTAL = <%= parseInt(item.product.price)*parseInt(item.quantity)%></p>
+                <p class="subtotal"> TOTAL: $<%= parseInt(item.product.price)*parseInt(item.quantity)%></p>
                 <form action="/carrito/eliminar/<%= item.id %>>?_method=DELETE" method="post" id="delete-carrito-form" enctype="multipart/form-data">
-                    <button type="submit" id="boton-eliminar">Quitar del carrito</button>
+                    <button type="submit" id="boton-eliminar"><i class="far fa-trash-alt"></i></button>
                 </form>
             </div>
             <% }) %>
-            <p> TOTAL GENERAL: <%= totalG %> </p>
+            <section id= "total-general">
+            <p> EL TOTAL DE TU CARRITO ES DE </p>
+            <p id= "número-total-general">$<%= totalG %></p>
+            </section>
+            <a href="/" class="proceder-al-pago"><p>Proceder al pago</p></a>
             <% } %>
         </section>
     </main>

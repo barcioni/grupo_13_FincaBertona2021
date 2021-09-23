@@ -41,11 +41,12 @@ main{
     width: 20%;
 }
 
-.carrito_01, .carrito_02{
+.carrito_01{
     display: flex;
+    justify-content: space-around;
+    align-items: center
 }
 .vino, .cosecha, .precio{
-    margin-top: 15%;
     padding-right: 50px;
     font-weight: 700;
 }
@@ -73,7 +74,7 @@ main{
     margin: auto;
 }
 #actualizar-cantidad{
-    background: rgb(58, 12, 16);
+    background: rgb(139, 31, 40);
     color: rgb(240, 212, 212);
     padding: 10px 10px;
     border-radius: 15px;
@@ -81,8 +82,39 @@ main{
     font-size: 0.5rem;
     margin: 1% 10% 0% 10%;
     }
+#boton-eliminar{
+    margin: 0 15px;
+    font-size: 2rem;
+    background-color: #fff;
+    color: rgb(58, 12, 16);
+    font-weight: 600;
+    border: none;
+}
+
 #total-carrito{
     text-align: center;
+}
+
+#total-general{
+    align-content: center;
+    margin: auto;
+    padding: auto;
+    text-align: right;
+    padding-right: 8%;
+    font-size: 1.3rem;
+}
+#número-total-general{
+    padding-right: 10%;
+}
+
+.proceder-al-pago{
+    color: rgb(107, 21, 30);
+    margin: 13% 0 0 23%;
+    padding-right: 30%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+
 }
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */

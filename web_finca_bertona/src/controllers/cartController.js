@@ -10,13 +10,16 @@ module.exports = {
         try {            
             //let products = await Product.findAll();
             let brands = await Brand.findAll()
-            let user = await User.findByPk (req.session.userLogged) //req.session.user_id
-            let carts = await Cart.findAll ({ include: ["product", "user"]},{where: {user_id: 3} } //req.session.userLogged
+            let user = await User.findByPk (3) //req.session.user_id
+            let carts = await Cart.findAll ({ include: ["product", "user"]},{where: {user_id: user.id} } //req.session.userLogged
             );
             let total = carts.map(item => 
                 parseInt(item.product.price)*parseInt(item.quantity))
             const autoSuma = (previousValue, currentValue) => previousValue + currentValue;
             total = total.reduce (autoSuma, 0)
+
+            //console.log();
+            //return res.send(carts)
 
 
             return res.render ("checkout/carrito", {
