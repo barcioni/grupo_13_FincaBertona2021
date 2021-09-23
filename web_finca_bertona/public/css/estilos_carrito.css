@@ -53,13 +53,18 @@ main{
     color: rgb(90, 14, 22);
     font-weight: 500;
 }
-.cantidad{
-    margin: 13% 50px 8% 0;
+#quantity{
+    margin: 0;
     border: solid 2px rgb(90, 14, 22);
     border-radius: 9px;
     color: rgb(90, 14, 22);
     padding: 1% 2%;
     text-align: center;
+}
+#form-cantidad{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 #fieldset-cantidad{
     border:none;
@@ -67,15 +72,18 @@ main{
     align-content: center;
     margin: auto;
 }
-#actualizar-carrito{
+#actualizar-cantidad{
     background: rgb(58, 12, 16);
     color: rgb(240, 212, 212);
-    padding: 15px 30px;
+    padding: 10px 10px;
     border-radius: 15px;
     align-self: center;
-    font-size: 1rem;
-    margin: 1% 40% 0% 40%;
+    font-size: 0.5rem;
+    margin: 1% 10% 0% 10%;
     }
+#total-carrito{
+    text-align: center;
+}
 /* ===================================== COMIENZO MEDIA QUERIES =============================================== */
     /* ======================================= 0 ===================================== */
         @media screen and (min-width:768px){

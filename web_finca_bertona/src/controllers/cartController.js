@@ -7,19 +7,17 @@ const {Product, User, Brand, Cart} = db
 
 module.exports = {
     index: async (req,res) => {
-        try {
-            
+        try {            
             //let products = await Product.findAll();
             let brands = await Brand.findAll()
             let user = await User.findByPk (req.session.userLogged) //req.session.user_id
-            let carts = await Cart.findAll ({ include: ["product", "user"]},{where: user_id = req.session.userLogged  }
+            let carts = await Cart.findAll ({ include: ["product", "user"]},{where: {user_id: 3} } //req.session.userLogged
             );
             let total = carts.map(item => 
                 parseInt(item.product.price)*parseInt(item.quantity))
             const autoSuma = (previousValue, currentValue) => previousValue + currentValue;
             total = total.reduce (autoSuma, 0)
 
-            //return res.send (carts)
 
             return res.render ("checkout/carrito", {
                 title: "Carrito",
@@ -50,12 +48,11 @@ module.exports = {
         }
     },
     update: async (req, res) => {
-        return res.send(req.body)
+        //return res.send(req.body)
         try {
             const cart = await Cart.update (
                 {quantity: req.body.quantity}, 
                 {where: {id : req.body.cart_id} })
-
             return res.redirect ("/carrito")
         } catch (error) {
             res.send (error) 

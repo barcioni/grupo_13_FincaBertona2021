@@ -1,5 +1,6 @@
 <!Doctype html>
 <html>
+
 <head>
     <%- include('../include/head')%>
     <link rel="stylesheet" href="/css/estilos_carrito.css">
@@ -9,36 +10,36 @@
     <header>
         <%- include('../include/nav')%>
     </header>
-   
 
-    <main> 
-    <section class="contenedor-seccion1">
-        <h1 class="titulo-carrito">CARRITO</h1>
-        <% if (carts.length > 0) { %>
+
+    <main>
+        <section class="contenedor-seccion1">
+            <h1 class="titulo-carrito">CARRITO</h1>
+            <% if (carts.length > 0) { %>
             <% carts.forEach(item => { %>
-                <div class="carrito_01">
-                    <img src="/uploads/products/<%= item.product.image%>" class="img__funes__carrito" alt="finca-bertona">
-                    <p class="vino">MARCA </p>
-                    <p class="cosecha">Cosecha <%= item.product.year %></p>
-                <form action="/carrito/update?_method=PUT" method="post">
+            <div class="carrito_01">
+                <img src="/uploads/products/<%= item.product.image%>" class="img__funes__carrito" alt="finca-bertona">
+                <p class="cosecha">Cosecha <%= item.product.year %></p>
+                <form action="/carrito/update/<%= item.product.id %>?_method=PUT" method="post" id= form-cantidad>
                     <fieldset id="fieldset-cantidad">
-                    <input type="hidden" name="cart" id="cart_id" value="<%= item.id %>">
-                    <input type="number" name="quantity" id="quantity" class="cantidad" value="<%= item.quantity%>" >                  
-                </fieldset>
-                <button type="submit" id= "actualizar-carrito">Actualizar carrito</button>
-            </form>
+                        <input type="hidden" name="cart_id" id="cart_id" value="<%= item.id %>">
+                        <input type="number" name="quantity" id="quantity" value="<%= item.quantity%>">
+                    </fieldset>
+                    <button type="submit" id="actualizar-cantidad">Actualizar cantidad </button>
+                </form>
                 <p class="precio">$<%= item.product.price %></p>
-                <p class="cantidad"> TOTAL = <%= parseInt(item.product.price)*parseInt(item.quantity)%></p>
-                <!---<form action="/carrito/eliminar/<%= item.id %>>?_method=DELETE" method="post" id="delete-carrito-form" enctype="multipart/form-data">
+                <p class="subtotal"> TOTAL = <%= parseInt(item.product.price)*parseInt(item.quantity)%></p>
+                <form action="/carrito/eliminar/<%= item.id %>>?_method=DELETE" method="post" id="delete-carrito-form" enctype="multipart/form-data">
                     <button type="submit" id="boton-eliminar">Quitar del carrito</button>
-                </form>--->
+                </form>
             </div>
             <% }) %>
             <p> TOTAL GENERAL: <%= totalG %> </p>
             <% } %>
-    </section>
+        </section>
     </main>
     <!----------------- Inicio footer ------------------------------------------------>
     <%- include('../include/footer')%>
-    </body>
-    </html>
+</body>
+
+</html>
