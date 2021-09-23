@@ -17,23 +17,22 @@ function Products() {
 		console.log("%cactualización" , "color:yellow");
 	}, [products]);
 
-
     return (
 	<div>
-    <h1>ACÁ VA LA TARJETA DE PRODUCTOS</h1>
-	<div>
-		<p>{ products.total}</p>
-	{
-		products.length > 0 && products.map((product, i) => {
-			return (
-				<div className="col-sm-6 col-md-3 my-4" key={i}>
-					<h5>{products.total}</h5>
-					<p>{product.year}</p>
-				</div>
-			)
-		})
-	}
-	</div>
+    <h1>PRODUCTOS</h1>
+		<div>
+			<p>{ products.total}</p>
+		{
+			products.length > 0 && products.map((product, i) => {
+				return (
+					<div className="col-sm-6 col-md-3 my-4" key={i}>
+						<h5>{products.total}</h5>
+						<p>{product.year}</p>
+					</div>
+				)
+			})
+		}
+		</div>
 	</div>
 	
 	)

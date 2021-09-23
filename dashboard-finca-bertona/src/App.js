@@ -11,9 +11,7 @@ function App() {
       </header>
       <div>
         <Products/>
-
       </div>
-    
     </div>
   );
 }
