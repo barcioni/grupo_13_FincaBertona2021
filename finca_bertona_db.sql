@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2021 at 03:49 PM
+-- Generation Time: Sep 23, 2021 at 10:04 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -29,7 +29,6 @@ USE `finca_bertona_db`;
 -- Table structure for table `brands`
 --
 
-DROP TABLE IF EXISTS `brands`;
 CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -51,7 +50,6 @@ INSERT INTO `brands` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- Table structure for table `carts`
 --
 
-DROP TABLE IF EXISTS `carts`;
 CREATE TABLE `carts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -66,10 +64,8 @@ CREATE TABLE `carts` (
 --
 
 INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `current_price`, `release_date`) VALUES
-(1, 3, 5, 4, 500, '2021-09-20 21:19:01'),
-(2, 3, 5, 4, 500, '2021-09-20 21:20:38'),
-(3, 3, 5, 4, 500, '2021-09-20 21:21:55'),
-(4, 3, 5, 7, 500, '2021-09-20 21:40:11');
+(10, 3, 5, 11, 500, '2021-09-23 15:48:24'),
+(11, 3, 3, 5, 800, '2021-09-23 18:26:30');
 
 -- --------------------------------------------------------
 
@@ -77,7 +73,6 @@ INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `current_price`,
 -- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `brand_id` int(11) DEFAULT NULL,
@@ -101,7 +96,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `brand_id`, `year`, `varietal`, `graduacion`, `barrica`, `guarda`, `description`, `image`, `price`, `currency`, `stock`, `createdAt`, `updatedAt`) VALUES
 (1, 1, 2016, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '1000', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 2, 2017, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '900', '$', 12, '0000-00-00 00:00:00', '2021-09-20 22:35:17'),
+(2, 2, 2017, 'Malbec', '12', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '900', '$', 20, '0000-00-00 00:00:00', '2021-09-21 22:41:47'),
 (3, 1, 2018, 'Malbec', '14', '8 meses', '8 a 10 años', 'Color rojo rubí intenso. Aromas a frutos como moras y frambuesas con sutiles notas especiadas. Posee una gran estructura, aportada por el intenso carácter frutado y especias, donde destaca un largo final y persistencia.', 'botella-ruta15.png', '800', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (4, 2, 2018, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '700', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (5, 2, 2019, 'Malbec', '14', '4 meses', '3 a 5 años', 'Vino joven que estaca por su carácter frutado y un excelente equilibrio entre taninos, alcohol y acidez.', 'botella-funes.png', '500', '$', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -114,7 +109,6 @@ INSERT INTO `products` (`id`, `brand_id`, `year`, `varietal`, `graduacion`, `bar
 -- Table structure for table `sequelizemeta`
 --
 
-DROP TABLE IF EXISTS `sequelizemeta`;
 CREATE TABLE `sequelizemeta` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -135,7 +129,6 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
@@ -157,7 +150,11 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `nombre`, `apellido`, `email`, `admin`, `fechaDeNacimiento`, `domicilio`, `clave`, `image`, `createdAt`, `updatedAt`) VALUES
 (1, 'María Adela del Rosario', 'Bertona', 'rosariobertona96@gmail.com', 1, '2021-07-22 00:00:00', 'Calle 123', '$2a$10$rbgCkQehKQ.YqQbsvQdpvOW2xT/9VQbsgPS9f2/aHFp7x7B4KNr0C', 'user-1626501051316.JPG', NULL, NULL),
 (2, 'Barbara', 'Arcioni', 'barcioni7@gmail.com', 1, '2021-07-22 00:00:00', 'asdfghjk 254689', '$2a$10$48cYYaWGBmqZ7LUSHn/a6OU92UhWjqY1NwitWBpks47EqFiupzgH2', 'guestUserDefault.png', NULL, NULL),
-(3, 'Usuario', 'Prueba', 'usuarioprueba@gmail.com', 0, '2021-07-22 00:00:00', 'PruebaPruebaPrueba', '$2a$10$35Yus7NbAhc/OlzdfPzIjONouDO1rg7m0HEnEUirSCicp691lqzta', 'guestUserDefault.png', '2021-09-20 21:18:12', '2021-09-20 21:18:12');
+(3, 'Usuario', 'Prueba', 'usuarioprueba@gmail.com', 0, '2021-07-22 00:00:00', 'PruebaPruebaPrueba', '$2a$10$35Yus7NbAhc/OlzdfPzIjONouDO1rg7m0HEnEUirSCicp691lqzta', 'guestUserDefault.png', '2021-09-20 21:18:12', '2021-09-20 21:18:12'),
+(4, 'Prueba', 'Prueba', 'usuarioprueba2@gmail.com', 0, '2021-07-22 00:00:00', 'PruebaPruebaPrueba', '$2a$10$HaJOI5rN6X1mZEaCTn1oAeM5iC.FH8mFYibMw1NEwRb6L.hAr2ALq', 'guestUserDefault.png', '2021-09-22 20:35:42', '2021-09-22 20:35:42'),
+(5, 'Prueba', 'Prueba', 'usuarioprueba2@gmail.com', 0, '2021-08-22 00:00:00', 'Prueba', '$2a$10$3iud7DyjXadtXBiepEnp7uht75WWQJdHUeFhUfw2/oxxeCeBPZalm', 'guestUserDefault.png', '2021-09-22 20:36:23', '2021-09-22 20:36:23'),
+(6, 'Prueba', 'Prueba', 'usuarioprueba2@gmail.com', 0, '2021-07-22 00:00:00', 'Prueba', '$2a$10$ua3LPlwXPITwLFF0wM6XbePWcocoZFmyrH63LgZZ84SbM5zN6pp/m', 'user-1632343055646.jpg', '2021-09-22 20:37:35', '2021-09-22 20:37:35'),
+(7, 'Maria', 'Usuario', 'mariausuario@gmail.com', 0, '2021-07-22 00:00:00', 'maria usuario', '$2a$10$dcH4FUpseNQ8/WiKG4WDPuyUiPG5Z5UO133JkN8h6pcR8T1OXtmQ6', 'guestUserDefault.png', '2021-09-22 23:33:32', '2021-09-22 23:33:32');
 
 --
 -- Indexes for dumped tables
@@ -212,7 +209,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -224,7 +221,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
