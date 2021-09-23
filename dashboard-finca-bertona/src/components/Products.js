@@ -8,7 +8,9 @@ function Products() {
 		console.log("%cse creó el componente", "color: green");
 		fetch ("http://localhost:3030/api/products")
 		.then (response => response.json ())
-		.then (data => {setProducts (data)})
+		.then (data => { 
+			console.log(data);
+			setProducts (data.data)})
 		
 		.catch ( error => console.error (error))
 	}, [ ]);
@@ -21,12 +23,11 @@ function Products() {
 	<div>
     <h1>PRODUCTOS</h1>
 		<div>
-			<p>{ products.total}</p>
+			<p>{ products.length}</p>
 		{
 			products.length > 0 && products.map((product, i) => {
 				return (
 					<div className="col-sm-6 col-md-3 my-4" key={i}>
-						<h5>{products.total}</h5>
 						<p>{product.year}</p>
 					</div>
 				)
