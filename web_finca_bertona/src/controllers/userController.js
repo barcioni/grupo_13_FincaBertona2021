@@ -88,14 +88,14 @@ const controlador = {
             user: req.session.userLogged
         });
     },
-    Coment: (req, res) => {
-        return res.redirect ("/");
-    },
-
+    
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
+    },
+    Coment: (req, res) => {
+        return res.redirect ("/");
     }
 };
 
