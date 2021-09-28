@@ -1,41 +1,46 @@
 import React from "react";
 import { useEffect, useState} from "react";
 
-function Products() {
+function Brands() {
 
-    const [ products, setProducts] = useState ([ ])
+    const [ brands, setBrands] = useState ([ ])
 	useEffect(() => {
 		console.log("%cse creó el componente", "color: green");
-		fetch ("http://localhost:3030/api/products")
+		fetch ("http://localhost:3030/api/brands")
 		.then (response => response.json ())
 		.then (data => { 
 			console.log(data);
-			setProducts (data.data)})
+			setBrands (data.data)})
 		
 		.catch ( error => console.error (error))
 	}, [ ]);
 	
 	useEffect(() => {
 		console.log("%cactualización" , "color:yellow");
-	}, [products]);
+	}, [brands]);
+
+    
 
     return (
 	<div>
-    <h1>PRODUCTOS</h1>
+    <h1>MARCAS</h1>
 		<div>
-			<p>Cantidad de productos: { products.length}</p>
+			<p>Cantidad: { brands.length}</p>
 			<div>
-			<h1> LISTADO DE PRODUCTOS</h1>
+			<h1> LISTADO </h1>
 		{
-			products.length > 0 && products.map((product, i) => {
+			brands.length > 0 && brands.map((brand, i) => {
 				return (
 					<div key={i}>
-						<img></img>
-						<li>{product.brands.name} Cosecha {product.year}</li>
+						<li>{brand.name}</li>
+                        <p>Cantidad de productos {brand.products.length}</p>
+
 					</div>
 				)
 			})
 		}
+        
+        
 		</div>
 	</div>
 	</div>
@@ -46,4 +51,5 @@ function Products() {
 }
 
 
-export default Products;
+
+export default Brands;

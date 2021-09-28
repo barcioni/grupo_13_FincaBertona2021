@@ -48,6 +48,9 @@ app.use ("/api/products", rutasProductApi)
 const rutasUserApi = require ("./routes/api/userApiRoute");
 app.use ("/api/users", rutasUserApi)
 
+const rutasBrandApi = require ("./routes/api/brandApiRoute");
+app.use ("/api/brands", rutasBrandApi)
+
 //app.get("/carrito",(req,res)=>res.render(path.resolve(__dirname,"../views", "carrito.ejs")))
 
 

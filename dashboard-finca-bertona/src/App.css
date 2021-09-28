@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*----------------AGREGANDO ESTILOS RO (PRUEBAS)-------------------------------------------*/
+
+.Main-box{
+  display: flex;
+  justify-content: space-around;
+
+}
